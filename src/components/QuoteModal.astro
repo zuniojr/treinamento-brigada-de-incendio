@@ -1,0 +1,244 @@
+---
+---
+
+<div id="quote-modal" class="modal-overlay" aria-hidden="true">
+  <div class="modal-content glass-card">
+    <button onclick="closeQuoteModal()" class="modal-close" aria-label="Fechar formulário">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+
+    <div class="modal-header">
+      <div class="badge-alert">
+        <span class="dot"></span>
+        <span>Orçamento Rápido Corporativo</span>
+      </div>
+      <h2 class="modal-title">Solicitar Proposta Técnica</h2>
+      <p class="modal-sub">Preencha os dados abaixo para receber uma cotação sob medida para sua empresa em minutos.</p>
+    </div>
+
+    <form id="quote-form" onsubmit="handleQuoteSubmit(event)">
+      <div class="form-group">
+        <label for="company_name">Nome da Empresa / Condomínio *</label>
+        <input type="text" id="company_name" required placeholder="Ex: Grupo Industrial Silva / Edifício Central" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contact_name">Seu Nome e Cargo *</label>
+          <input type="text" id="contact_name" required placeholder="Ex: João - TST / RH" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Telefone / WhatsApp *</label>
+          <input type="tel" id="phone" required placeholder="(11) 99999-9999" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="segment">Segmento *</label>
+          <select id="segment" required>
+            <option value="">Selecione o segmento...</option>
+            <option value="Indústria">Indústria / Fábrica</option>
+            <option value="Construção Civil">Construção Civil</option>
+            <option value="Condomínio">Condomínio Residencial/Comercial</option>
+            <option value="Hospital/Clínica">Hospital / Clínica de Saúde</option>
+            <option value="Escola/Universidade">Escola / Universidade</option>
+            <option value="Hotelaria">Hotel / Pousada</option>
+            <option value="Shopping/Varejo">Shopping / Centro Comercial</option>
+            <option value="Centro Logístico">Centro Logístico / Galpão</option>
+            <option value="Supermercado">Supermercado / Atacado</option>
+            <option value="Escritório">Escritório Corporativo</option>
+            <option value="Órgão Público">Órgão Público</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="employees">Qtd. de Brigadistas / Funcionários *</label>
+          <select id="employees" required>
+            <option value="Até 10 brigadistas">Até 10 brigadistas</option>
+            <option value="11 a 25 brigadistas">11 a 25 brigadistas</option>
+            <option value="26 a 50 brigadistas">26 a 50 brigadistas</option>
+            <option value="Mais de 50 brigadistas">Mais de 50 brigadistas</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="selected_course">Módulo do Treinamento</label>
+        <input type="text" id="selected_course" placeholder="Formação NR-23, Reciclagem, Simulados..." />
+      </div>
+
+      <button type="submit" class="btn btn-primary submit-btn">
+        <span>Enviar e Abrir no WhatsApp</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<script is:inline>
+  function openQuoteModal(courseName = '') {
+    const modal = document.getElementById('quote-modal');
+    const courseInput = document.getElementById('selected_course');
+    
+    if (courseInput && courseName) {
+      courseInput.value = courseName;
+    }
+    
+    modal?.classList.add('active');
+    modal?.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeQuoteModal() {
+    const modal = document.getElementById('quote-modal');
+    modal?.classList.remove('active');
+    modal?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  function handleQuoteSubmit(e) {
+    e.preventDefault();
+    const company = document.getElementById('company_name')?.value || '';
+    const contact = document.getElementById('contact_name')?.value || '';
+    const phone = document.getElementById('phone')?.value || '';
+    const segment = document.getElementById('segment')?.value || '';
+    const employees = document.getElementById('employees')?.value || '';
+    const course = document.getElementById('selected_course')?.value || 'Brigada de Incêndio (Geral)';
+
+    const message = `*SOLICITAÇÃO DE ORÇAMENTO CORPORATIVO*%0A%0A` +
+      `🏢 *Empresa/Condomínio:* ${company}%0A` +
+      `👤 *Contato:* ${contact}%0A` +
+      `📞 *Telefone:* ${phone}%0A` +
+      `📌 *Segmento:* ${segment}%0A` +
+      `👥 *Qtd. Brigadistas:* ${employees}%0A` +
+      `🎓 *Módulo:* ${course}%0A%0A` +
+      `_Aguardando proposta técnica para nossa empresa._`;
+
+    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+    closeQuoteModal();
+  }
+
+  // Close modal on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeQuoteModal();
+  });
+</script>
+
+<style>
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(11, 17, 32, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    padding: 1.5rem;
+  }
+
+  .modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal-content {
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    color: var(--text-muted);
+    transition: var(--transition);
+  }
+
+  .modal-close:hover {
+    color: #FFFFFF;
+    transform: rotate(90deg);
+  }
+
+  .modal-header {
+    margin-bottom: 1.75rem;
+  }
+
+  .modal-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0.75rem 0 0.25rem 0;
+  }
+
+  .modal-sub {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  input, select {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+  }
+
+  input:focus, select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px var(--primary-glow);
+  }
+
+  select option {
+    background: var(--bg-card);
+    color: #FFFFFF;
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  @media (max-width: 576px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

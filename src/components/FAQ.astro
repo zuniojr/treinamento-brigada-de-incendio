@@ -1,0 +1,208 @@
+---
+const faqs = [
+  {
+    question: "Quem precisa da brigada de incêndio?",
+    answer: "Conforme a NR-23 e as Instruções Técnicas estaduais do Corpo de Bombeiros, praticamente todas as edificações comerciais, industriais, de prestação de serviços, condomínios residenciais e comerciais, escolas e estabelecimentos de saúde necessitam compor e treinar uma Brigada de Incêndio proporcional ao seu grau de risco."
+  },
+  {
+    question: "Qual é a validade do treinamento de brigada de incêndio?",
+    answer: "A certificação de formação da Brigada de Incêndio possui validade de 12 meses (1 ano). Após este período, é obrigatória a realização da reciclagem anual para atualizar os brigadistas sobre novas rotas de fuga, manutenção de equipamentos e práticas de combate."
+  },
+  {
+    question: "O treinamento de brigada de incêndio é obrigatório por lei?",
+    answer: "Sim, é uma exigência legal federal (CLT - Norma Regulamentadora NR-23) e estadual (Legislação do Corpo de Bombeiros). A ausência da brigada impede a emissão ou renovação do AVCB (Auto de Vistoria do Corpo de Bombeiros), sujeitando a empresa a multas pesadas e interdições."
+  },
+  {
+    question: "O certificado emitido possui validade perante os órgãos fiscalizadores?",
+    answer: "Sim. Todos os nossos certificados são assinados por Engenheiros de Segurança do Trabalho e Responsáveis Técnicos habilitados junto ao CREA e Corpo de Bombeiros, com validade plena em todo o território nacional para comprovação fiscal e securitária."
+  },
+  {
+    question: "O treinamento pode ser realizado diretamente na nossa empresa (In-Company)?",
+    answer: "Sim! Oferecemos a modalidade In-Company, onde nossa equipe de instrutores leva toda a estrutura móvel, extintores de treinamento, manequins para RCP e material didático até a sua empresa, minimizando o deslocamento dos funcionários."
+  },
+  {
+    question: "Quanto tempo dura o treinamento de brigada de incêndio?",
+    answer: "A carga horária é dimensionada conforme a NBR 14276 e o nível de risco da empresa: Nível Básico (de 4h a 8h), Nível Intermediário (de 12h a 16h) e Nível Avançado (de 24h a 32h). Formulamos a grade horária ideal após a avaliação do seu estabelecimento."
+  }
+];
+---
+
+<section id="faq" class="section-padding faq-section">
+  <div class="container">
+    <div class="section-header" data-animate="fade-up">
+      <span class="section-subtitle">Dúvidas Frequentes</span>
+      <h2 class="section-title">Perguntas Frequentes sobre a Brigada de Incêndio</h2>
+      <p class="section-desc">Esclareça suas principais dúvidas referentes à legislação, prazos e metodologia de treinamento.</p>
+    </div>
+
+    <div class="faq-accordion" id="faq-accordion">
+      {faqs.map((faq, index) => (
+        <div
+          class={`faq-item glass-card ${index === 0 ? 'open' : ''}`}
+          data-animate="fade-up"
+          data-delay={String(index * 80)}
+        >
+          <button
+            class="faq-question"
+            aria-expanded={index === 0 ? "true" : "false"}
+            id={`faq-btn-${index}`}
+          >
+            <span class="faq-question-text">{faq.question}</span>
+            <span class="faq-icon-wrap" aria-hidden="true">
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-body" id={`faq-body-${index}`} role="region" aria-labelledby={`faq-btn-${index}`}>
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var accordion = document.getElementById('faq-accordion');
+    if (!accordion) return;
+
+    var items = accordion.querySelectorAll('.faq-item');
+
+    function setHeight(body, open) {
+      if (open) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+      } else {
+        body.style.maxHeight = '0px';
+      }
+    }
+
+    // Initialize
+    items.forEach(function (item, i) {
+      var body = item.querySelector('.faq-body');
+      var btn = item.querySelector('.faq-question');
+      var isOpen = item.classList.contains('open');
+
+      body.style.overflow = 'hidden';
+      body.style.transition = 'max-height 0.42s cubic-bezier(0.16, 1, 0.3, 1)';
+      body.style.maxHeight = isOpen ? body.scrollHeight + 'px' : '0px';
+
+      btn.addEventListener('click', function () {
+        var alreadyOpen = item.classList.contains('open');
+
+        // Close all
+        items.forEach(function (it) {
+          it.classList.remove('open');
+          it.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          setHeight(it.querySelector('.faq-body'), false);
+        });
+
+        // Open clicked if it was closed
+        if (!alreadyOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+          setHeight(body, true);
+        }
+      });
+    });
+  })();
+</script>
+
+<style>
+  .faq-section {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, var(--bg-main) 100%);
+  }
+
+  .faq-accordion {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .faq-item {
+    padding: 0;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .faq-item.open {
+    border-color: rgba(230, 25, 25, 0.35);
+    box-shadow: 0 0 20px rgba(230, 25, 25, 0.08);
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 1.4rem 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .faq-question:hover .faq-question-text {
+    color: var(--primary);
+  }
+
+  .faq-question-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+    line-height: 1.4;
+  }
+
+  .faq-item.open .faq-question-text {
+    color: var(--primary);
+  }
+
+  .faq-icon-wrap {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(230, 25, 25, 0.08);
+    border: 1px solid rgba(230, 25, 25, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+  }
+
+  .faq-item.open .faq-icon-wrap {
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .faq-icon {
+    color: var(--primary);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .faq-item.open .faq-icon {
+    transform: rotate(180deg);
+    color: #fff;
+  }
+
+  .faq-body {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .faq-answer {
+    padding: 0 1.6rem 1.5rem 1.6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1rem;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+</style>

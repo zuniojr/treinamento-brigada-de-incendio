@@ -1,0 +1,113 @@
+---
+const differentials = [
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>`,
+    title: "Instrutores Experientes",
+    description: "Equipe formada por Engenheiros de Segurança do Trabalho e Bombeiros Militares e Civis com anos de atuação em emergências."
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>`,
+    title: "Treinamentos Práticos",
+    description: "Simulações reais de combate a incêndio com extintores, mangueiras e primeiros socorros diretamente na prática."
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`,
+    title: "Certificação Oficial",
+    description: "Emissão de certificados individuais e de grupo homologados, atestando conformidade legal para fiscalizações e AVCB."
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>`,
+    title: "Atendimento em Toda a Região",
+    description: "Treinamento In-Company no próprio ambiente de trabalho da sua empresa ou em nosso Centro de Treinamento avançado."
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>`,
+    title: "Conteúdo Atualizado",
+    description: "Material alinhado com as mais recentes atualizações da NR-23, NBR 14276 e Instruções Técnicas do Corpo de Bombeiros."
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>`,
+    title: "Empresas de Todos os Portes",
+    description: "Módulos dimensionados de acordo com o nível de risco e quantidade de funcionários de cada estabelecimento."
+  }
+];
+---
+
+<section id="diferenciais" class="section-padding differentials-section">
+  <div class="container">
+    <div class="section-header" data-animate="fade-up">
+      <span class="section-subtitle">Por que somos referência</span>
+      <h2 class="section-title">Diferenciais que Garantem a Segurança e Conformidade da sua Empresa</h2>
+      <p class="section-desc">Combinamos conhecimento técnico de elite com metodologias práticas focadas no aprendizado ágil dos colaboradores.</p>
+    </div>
+
+    <div class="differentials-grid">
+      {differentials.map((item, i) => (
+        <div class="diff-card glass-card" data-animate="fade-up" data-delay={String(i * 100)}>
+          <div class="diff-icon" set:html={item.icon} />
+          <h3 class="diff-title">{item.title}</h3>
+          <p class="diff-desc">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .differentials-section {
+    background: linear-gradient(180deg, var(--bg-main) 0%, rgba(15, 23, 42, 0.7) 100%);
+    position: relative;
+  }
+
+  .differentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .diff-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .diff-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(230, 25, 25, 0.12);
+    border: 1px solid rgba(230, 25, 25, 0.25);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+  }
+
+  .diff-card:hover .diff-icon {
+    background: var(--primary);
+    color: #FFFFFF;
+    box-shadow: 0 0 20px var(--primary-glow);
+    transform: scale(1.05);
+  }
+
+  .diff-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+  }
+
+  .diff-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .differentials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

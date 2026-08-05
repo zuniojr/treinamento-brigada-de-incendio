@@ -1,0 +1,163 @@
+---
+const benefits = [
+  {
+    title: "Redução Significativa de Riscos",
+    desc: "Identificação antecipada de focos de incêndio e potenciais falhas de segurança nas instalações corporativas.",
+    badge: "Prevenção"
+  },
+  {
+    title: "Atendimento Rigoroso às Normas (NR-23)",
+    desc: "Evite autuações, paralisações e multas pesadas de órgãos fiscalizadores mantendo sua documentação e equipe 100% regulares.",
+    badge: "Conformidade Legal"
+  },
+  {
+    title: "Maior Segurança dos Colaboradores",
+    desc: "Ambiente de trabalho preparado e consciente promove a tranquilidade dos funcionários e melhora o clima organizacional.",
+    badge: "Cultura Preventiva"
+  },
+  {
+    title: "Prontidão para Emergências",
+    desc: "Equipes treinadas para agir nos primeiros minutos de uma ocorrência, impedindo que pequenos focos se tornem tragédias.",
+    badge: "Resposta Rápida"
+  },
+  {
+    title: "Proteção Integral do Patrimônio",
+    desc: "Minimização de prejuízos materiais, destruição de maquinários, documentos e paralisação operacional da empresa.",
+    badge: "Ativo Físico"
+  },
+  {
+    title: "Proteção Incondicional da Vida",
+    desc: "O maior valor de qualquer organização é a vida humana. O treinamento de evacuação e primeiros socorros salva vidas reais.",
+    badge: "Valor Supremo"
+  }
+];
+---
+
+<section id="por-que-investir" class="section-padding why-invest-section">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-intro" data-animate="fade-right">
+        <span class="section-subtitle">Retorno Corporativo & Segurança</span>
+        <h2 class="section-title text-left">Por Que Investir em Treinamento de Brigada de Incêndio?</h2>
+        <p class="why-desc">
+          Além de ser uma exigência legal imprescindível para a obtenção e renovação do AVCB (Auto de Vistoria do Corpo de Bombeiros), manter uma brigada capacitada é um investimento estratégico na continuidade do seu negócio.
+        </p>
+
+        <div class="why-highlight-box">
+          <div class="badge-alert">
+            <span class="dot"></span>
+            <span>Segurança Jurídica & Operacional</span>
+          </div>
+          <p class="highlight-text">
+            Empresas com brigadas de incêndio ativas reduzem drasticamente sinistros e contam com melhores condições na contratação de seguros corporativos.
+          </p>
+        </div>
+
+        <button onclick="openQuoteModal()" class="btn btn-primary" style="margin-top: 1.5rem;">
+          <span>Solicitar Proposta para sua Empresa</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+
+      <div class="benefits-cards" data-animate="fade-left">
+        {benefits.map((item) => (
+          <div class="benefit-card glass-card">
+            <div class="card-header">
+              <span class="benefit-tag">{item.badge}</span>
+            </div>
+            <h3 class="benefit-title">{item.title}</h3>
+            <p class="benefit-desc">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-invest-section {
+    background: var(--bg-main);
+    position: relative;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .why-desc {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .why-highlight-box {
+    background: rgba(230, 25, 25, 0.1);
+    border: 1px solid rgba(230, 25, 25, 0.2);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight-text {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-top: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .benefits-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .benefit-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .benefit-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: rgba(14, 165, 233, 0.1);
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+  }
+
+  .benefit-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+  }
+
+  .benefit-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 992px) {
+    .why-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>

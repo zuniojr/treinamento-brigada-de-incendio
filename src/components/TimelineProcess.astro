@@ -1,0 +1,234 @@
+---
+const steps = [
+  {
+    step: "01",
+    title: "Solicitação & Cotação",
+    desc: "A empresa entra em contato via WhatsApp, telefone ou formulário e nos informa a necessidade da equipe."
+  },
+  {
+    step: "02",
+    title: "Levantamento de Necessidades",
+    desc: "Analisamos a ocupação da edificação, o grau de risco (Leve, Médio ou Alto) e a quantidade mínima de brigadistas."
+  },
+  {
+    step: "03",
+    title: "Planejamento Customizado",
+    desc: "Definição das datas, local (In-Company ou Centro de Treinamento) e montagem do plano didático sob medida."
+  },
+  {
+    step: "04",
+    title: "Execução do Treinamento",
+    desc: "Aplicação das aulas teóricas e simulação prática intensiva com equipamentos reais e controle de pânico."
+  },
+  {
+    step: "05",
+    title: "Certificação Homologada",
+    desc: "Entrega imediata dos certificados individuais dos brigadistas e do atestado de formação para o Corpo de Bombeiros."
+  }
+];
+---
+
+<section id="como-funciona" class="section-padding timeline-section">
+  <div class="container">
+    <div class="section-header" data-animate="fade-up">
+      <span class="section-subtitle">Passo a Passo Transparente</span>
+      <h2 class="section-title">Como Funciona a Contratação e Execução do Treinamento</h2>
+      <p class="section-desc">Fluxo descomplicado e eficiente para regularizar sua empresa com agilidade máxima.</p>
+    </div>
+
+    <div class="timeline-container" id="timeline-container">
+      <!-- Linha de progresso animada -->
+      <div class="timeline-line-track">
+        <div class="timeline-line-fill" id="timeline-fill"></div>
+      </div>
+
+      <div class="timeline-steps">
+        {steps.map((item, index) => (
+          <div
+            class={`timeline-item ${index % 2 === 0 ? 'even' : 'odd'}`}
+            data-animate={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+            data-delay={String(index * 120)}
+          >
+            <div class="step-badge" data-step-badge={index}>
+              <span class="step-number">{item.step}</span>
+            </div>
+
+            <div class="step-card glass-card">
+              <div class="step-tag">Etapa {item.step}</div>
+              <h3 class="step-title">{item.title}</h3>
+              <p class="step-desc">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="timeline-cta" data-animate="fade-up" data-delay="200">
+      <button onclick="openQuoteModal()" class="btn btn-primary">
+        <span>Iniciar Etapa 01 — Solicitar Orçamento</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var fill = document.getElementById('timeline-fill');
+    var container = document.getElementById('timeline-container');
+    if (!fill || !container) return;
+
+    var animated = false;
+
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !animated) {
+          animated = true;
+          fill.style.transition = 'height 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s';
+          fill.style.height = '100%';
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    obs.observe(container);
+  })();
+</script>
+
+<style>
+  .timeline-section {
+    background: var(--bg-main);
+    position: relative;
+  }
+
+  .timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 3.5rem auto;
+  }
+
+  /* Linha de trilho estática */
+  .timeline-line-track {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: rgba(255,255,255,0.06);
+    transform: translateX(-50%);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  /* Linha de progresso animada */
+  .timeline-line-fill {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 12px var(--primary-glow);
+  }
+
+  .timeline-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .timeline-item.even {
+    flex-direction: row-reverse;
+  }
+
+  .step-badge {
+    width: 54px;
+    height: 54px;
+    background: var(--bg-card);
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 20px var(--primary-glow), 0 0 0 6px rgba(230, 25, 25, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    transition: var(--transition);
+  }
+
+  .step-badge:hover {
+    background: var(--primary);
+    transform: translateX(-50%) scale(1.15);
+    box-shadow: 0 0 30px var(--primary-glow);
+  }
+
+  .step-number {
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--primary);
+    transition: color 0.3s;
+  }
+
+  .step-badge:hover .step-number {
+    color: #fff;
+  }
+
+  .step-card {
+    width: 43%;
+    padding: 1.5rem 1.75rem;
+  }
+
+  .step-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .step-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+  }
+
+  .step-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  .timeline-cta {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .timeline-line-track {
+      left: 25px;
+    }
+    .timeline-steps {
+      gap: 2rem;
+    }
+    .timeline-item,
+    .timeline-item.even {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-left: 65px;
+    }
+    .step-badge {
+      left: 25px;
+    }
+    .step-card {
+      width: 100%;
+    }
+  }
+</style>

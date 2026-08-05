@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Differentials from '../components/Differentials.astro';
+import StatsSection from '../components/StatsSection.astro';
+import WhyInvest from '../components/WhyInvest.astro';
+import TrainingCards from '../components/TrainingCards.astro';
+import TimelineProcess from '../components/TimelineProcess.astro';
+import ClientSegments from '../components/ClientSegments.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import CTASection from '../components/CTASection.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import QuoteModal from '../components/QuoteModal.astro';
+---
+
+<Layout 
+  title="Treinamento de Brigada de Incêndio para Empresas | NR-23 & NBR 14276"
+  description="Especialistas em Treinamento de Brigada de Incêndio corporativo para empresas de todos os portes. Atenda a NR-23 com instrutores qualificados, simulação prática e certificação válida em todo Brasil."
+>
+  <Header />
+  
+  <main id="main-content">
+    <Hero />
+    <Differentials />
+    <StatsSection />
+    <WhyInvest />
+    <TrainingCards />
+    <TimelineProcess />
+    <ClientSegments />
+    <Testimonials />
+    <FAQ />
+    <CTASection />
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  <QuoteModal />
+</Layout>

@@ -1,0 +1,311 @@
+---
+---
+
+<header id="main-header" class="header">
+  <div class="container header-container">
+    <a href="#" class="logo" aria-label="Página Inicial - Treinamento de Brigada de Incêndio">
+      <img src="/logo.png" alt="Treinamento Brigada de Incêndio" class="main-logo-img" />
+    </a>
+
+    <nav class="nav-desktop" aria-label="Navegação Principal">
+      <a href="#sobre" class="nav-link">SOBRE</a>
+      <a href="#servicos" class="nav-link">SERVIÇOS</a>
+      <a href="#blog" class="nav-link">BLOG</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:08009998888" class="phone-link" aria-label="Ligar para a Brigada de Incêndio">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <span class="phone-number">0800 999 8888</span>
+      </a>
+
+      <button onclick="openQuoteModal()" class="btn btn-primary header-cta">
+        <span>FALE CONOSCO</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+
+      <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Abrir menu de navegação">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <nav class="mobile-nav">
+      <a href="#sobre" class="mobile-link">SOBRE</a>
+      <a href="#servicos" class="mobile-link">SERVIÇOS</a>
+      <a href="#blog" class="mobile-link">BLOG</a>
+      <hr class="mobile-divider" />
+      <a href="tel:08009998888" class="mobile-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        0800 999 8888
+      </a>
+      <button onclick="openQuoteModal(); closeMobileMenu();" class="btn btn-primary" style="width:100%; margin-top: 1rem;">
+        FALE CONOSCO
+      </button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Header scroll state handler
+  const header = document.getElementById('main-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  function closeMobileMenu() {
+    mobileMenu?.classList.remove('active');
+    mobileBtn?.classList.remove('active');
+  }
+
+  mobileBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('active');
+    mobileBtn?.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Active nav link observer
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+  const sectionIds = Array.from(navLinks).map(l => l.getAttribute('href')?.slice(1)).filter(Boolean);
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach((link) => {
+            const isActive = link.getAttribute('href') === `#${id}`;
+            link.classList.toggle('active', isActive);
+          });
+        }
+      });
+    },
+    { rootMargin: '-30% 0px -60% 0px', threshold: 0 }
+  );
+
+  sectionIds.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) sectionObserver.observe(el);
+  });
+</script>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
+    padding: 1.25rem 0;
+    background: transparent;
+  }
+
+  .header.scrolled {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0.85rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .main-logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 768px) {
+    .main-logo-img {
+      height: 55px;
+    }
+  }
+
+  /* Navigation */
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: var(--text-main);
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: var(--transition);
+    border-radius: 2px;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link.active {
+    color: var(--text-main);
+  }
+
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  /* Actions */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .phone-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+  }
+
+  .phone-link:hover {
+    color: var(--primary);
+  }
+
+  .header-cta {
+    padding: 0.65rem 1.35rem;
+    font-size: 0.9rem;
+  }
+
+  /* Mobile Toggle */
+  .mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 6px;
+    z-index: 1001;
+  }
+
+  .mobile-toggle span {
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-main);
+    transition: var(--transition);
+  }
+
+  .mobile-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--bg-main);
+    border-left: 1px solid var(--border);
+    padding: 6rem 2rem 2rem 2rem;
+    transition: var(--transition);
+    z-index: 999;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+  }
+
+  .mobile-menu.active {
+    right: 0;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .mobile-link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .mobile-link:hover {
+    color: var(--primary);
+  }
+
+  .mobile-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 1rem 0;
+  }
+
+  .mobile-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 992px) {
+    .nav-desktop, .phone-link {
+      display: none;
+    }
+    .mobile-toggle {
+      display: flex;
+    }
+  }
+</style>
