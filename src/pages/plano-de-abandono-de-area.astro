@@ -1,0 +1,450 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import QuoteModal from '../components/QuoteModal.astro';
+---
+
+<Layout 
+  title="Plano de Abandono de Área (PAE) | BrigadaFire"
+  description="Elaboração e implantação do Plano de Ação de Emergência (PAE) e Plano de Abandono de Área para empresas, indústrias e condomínios, conforme NBR 15219."
+>
+  <Header />
+
+  <main id="main-content" class="abandonment-page">
+    <!-- Hero Banner -->
+    <section class="abandonment-hero">
+      <div class="abandonment-hero-bg">
+        <div class="abandonment-glow"></div>
+      </div>
+      <div class="container abandonment-hero-container">
+        <div class="abandonment-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2v20"></path>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+          <span>PREVENÇÃO & EMERGÊNCIA</span>
+        </div>
+        <h1 class="font-display">PLANO DE ABANDONO DE <span class="text-fire">ÁREA</span></h1>
+        <p class="hero-subtitle">
+          Elaboração, implantação e treinamento do Plano de Ação de Emergência (PAE). Rotas de fuga eficientes e equipe preparada para uma evacuação segura e rápida.
+        </p>
+        <div class="hero-cta-group">
+          <button type="button" onclick="openQuoteModal()" class="btn-hero-primary">Solicitar Orçamento do PAE</button>
+          <a href="https://wa.me/5511999999999" target="_blank" class="btn-hero-secondary">Falar com Especialista</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- O que inclui (Grid) -->
+    <section class="services-section container">
+      <div class="section-header text-center">
+        <h2 class="section-title font-display">O QUE ESTÁ INCLUSO NO <span class="text-fire">PLANO (PAE)?</span></h2>
+        <p class="section-desc">Nosso escopo completo garante que sua edificação cumpra a NBR 15219 e as instruções normativas do Corpo de Bombeiros para emergências.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <path d="M3 3v18h18"></path>
+              <path d="m19 9-5 5-4-4-3 3"></path>
+            </svg>
+          </div>
+          <h3>Mapeamento de Riscos e Rotas</h3>
+          <p>Análise técnica de toda a planta, identificando os perigos estruturais e definindo as rotas de fuga mais seguras para cada setor da edificação.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Definição da Cadeia de Comando</h3>
+          <p>Estruturação de quem toma as decisões durante a emergência: líderes de abandono, coordenadores gerais e equipe de comunicação externa.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3>Elaboração do Documento (PAE)</h3>
+          <p>Documento técnico completo com os procedimentos operacionais padrão (POPs) para incêndio, vazamentos, explosões ou pânico.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+          </div>
+          <h3>Planejamento do Ponto de Encontro</h3>
+          <p>Estudo e determinação de locais seguros e desimpedidos fora da edificação para contagem e triagem das pessoas evacuadas.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+          </div>
+          <h3>Sistemas de Alerta e Comunicação</h3>
+          <p>Definição dos meios e códigos de comunicação interna para disparar os alertas de abandono sem causar pânico prematuro.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3>Organização dos Exercícios Simulados</h3>
+          <p>Treinamento prático anual obrigatório (simulado de abandono) com relatório técnico de avaliação do tempo resposta e falhas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner de CTA Final -->
+    <section class="cta-banner-section container">
+      <div class="cta-banner-box">
+        <div class="cta-content">
+          <h2 class="font-display">PREPARE SUA EMPRESA PARA <span class="text-fire">EMERGÊNCIAS</span></h2>
+          <p>O tempo de resposta é o fator mais importante em uma evacuação. Vamos desenhar o plano ideal para a sua estrutura.</p>
+        </div>
+        <div class="cta-actions">
+          <button type="button" onclick="openQuoteModal()" class="btn-primary-action">Solicitar Plano de Abandono</button>
+          <a href="/contato" class="btn-secondary-action">Falar com Especialista</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  <QuoteModal />
+</Layout>
+
+<style>
+  /* Base Styles */
+  .abandonment-page {
+    background-color: var(--bg-main);
+    padding-top: var(--nav-height, 80px);
+    min-height: 100vh;
+    color: var(--text-main);
+  }
+
+  /* Hero Section */
+  .abandonment-hero {
+    position: relative;
+    padding: 5.5rem 0 4rem;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.07));
+    background: radial-gradient(circle at 50% 0%, rgba(230, 48, 0, 0.1) 0%, transparent 70%);
+  }
+
+  .abandonment-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  .abandonment-glow {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 50%;
+    background: radial-gradient(ellipse at center, rgba(230, 48, 0, 0.15) 0%, transparent 70%);
+    filter: blur(40px);
+  }
+
+  .abandonment-hero-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .abandonment-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(230, 48, 0, 0.1);
+    border: 1px solid rgba(230, 48, 0, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+  }
+
+  .abandonment-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 750px;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-hero-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 48, 0, 0.3);
+  }
+
+  .btn-hero-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 48, 0, 0.4);
+  }
+
+  .btn-hero-secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Services Grid Section */
+  .services-section {
+    padding: 6rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    background: rgba(20, 20, 22, 0.5);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .service-card:hover {
+    background: rgba(30, 30, 33, 0.8);
+    border-color: rgba(230, 48, 0, 0.3);
+    transform: translateY(-5px);
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(230, 48, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(230, 48, 0, 0.2);
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .service-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  /* CTA Banner Section */
+  .cta-banner-section {
+    padding: 2rem 0 6rem;
+  }
+
+  .cta-banner-box {
+    background: linear-gradient(135deg, rgba(20, 20, 22, 0.9) 0%, rgba(30, 10, 5, 0.9) 100%);
+    border: 1px solid rgba(230, 48, 0, 0.3);
+    border-radius: 16px;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-banner-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e63000' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Cg/%3E%3C/svg%3E");
+    z-index: 0;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    margin-bottom: 1rem;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
+
+  .cta-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary-action {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary-action:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary-action {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary-action:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .abandonment-hero {
+      padding: 4rem 0 3rem;
+    }
+    
+    .hero-cta-group {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .btn-hero-primary, .btn-hero-secondary {
+      width: 100%;
+    }
+
+    .cta-banner-box {
+      padding: 2.5rem 1.5rem;
+    }
+    
+    .cta-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .btn-primary-action, .btn-secondary-action {
+      width: 100%;
+    }
+  }
+</style>

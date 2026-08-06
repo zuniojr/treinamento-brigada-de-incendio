@@ -58,6 +58,12 @@ export const GET: APIRoute = async ({ site }) => {
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>${siteUrl}/plano-de-abandono-de-area</loc>
+    <lastmod>${lastMod}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>${siteUrl}/diferenciais</loc>
     <lastmod>${lastMod}</lastmod>
     <changefreq>monthly</changefreq>
