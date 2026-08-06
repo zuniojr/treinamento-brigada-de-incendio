@@ -408,3 +408,104 @@ img {
 [data-delay="600"] { transition-delay: 0.60s; }
 [data-delay="700"] { transition-delay: 0.70s; }
 [data-delay="800"] { transition-delay: 0.80s; }
+
+/* =============================================
+   TABLES (blog article content)
+   ============================================= */
+.article-body .table-default {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.article-body .table-default thead {
+  background: rgba(230, 48, 0, 0.08);
+  border-bottom: 1px solid var(--border-fire);
+}
+
+.article-body .table-default th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  border-right: 1px solid var(--border-alert);
+}
+
+.article-body .table-default th:last-child {
+  border-right: none;
+}
+
+.article-body .table-default td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.article-body .table-default tr:last-child td {
+  border-bottom: none;
+}
+
+.article-body .table-default tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* =============================================
+   CHECKLIST (blog article content)
+   ============================================= */
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.checklist-item strong {
+  color: var(--primary-light);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.checklist-item span {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .article-body .table-default th,
+  .article-body .table-default td {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .checklist {
+    padding: 1.25rem;
+  }
+
+  .checklist-item {
+    font-size: 0.9rem;
+  }
+}

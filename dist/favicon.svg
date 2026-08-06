@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="grad-shield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+    <linearGradient id="grad-flame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+  </defs>
+  <path d="M256 32L64 96V240C64 360 148 448 256 480C364 448 448 360 448 240V96L256 32Z" fill="url(#grad-shield)" stroke="#38BDF8" stroke-width="12" stroke-linejoin="round"/>
+  <!-- Flame Icon Inside Shield -->
+  <path d="M256 140C256 140 290 190 290 230C290 255 275 275 256 275C237 275 222 255 222 230C222 190 256 140 256 140Z" fill="url(#grad-flame)"/>
+  <path d="M256 210C256 210 274 235 274 252C274 263 266 270 256 270C246 270 238 263 238 252C238 235 256 210 256 210Z" fill="#FDE047"/>
+  <!-- Safety Cross / Badge -->
+  <rect x="236" y="320" width="40" height="70" rx="6" fill="#FFFFFF"/>
+  <rect x="221" y="335" width="70" height="40" rx="6" fill="#FFFFFF"/>
+</svg>

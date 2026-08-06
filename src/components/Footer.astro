@@ -3,241 +3,210 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="footer">
-  <!-- Accent line at top -->
-  <div class="footer-accent-line"></div>
-
   <div class="container">
+    <!-- Top Grid Section (5 Columns) -->
     <div class="footer-grid">
       <!-- Col 1: Brand Info -->
-      <div class="footer-brand">
-        <a href="#" class="footer-logo" aria-label="Voltar ao topo">
+      <div class="footer-brand-col">
+        <a href="/" class="footer-logo" aria-label="Página Inicial">
           <div class="logo-fallback" style="display:flex; align-items:center; gap:0.5rem;">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="var(--primary)">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
-            <span class="logo-fallback-text" style="font-family:'Bebas Neue', sans-serif; font-size:1.4rem; color:var(--text-main); letter-spacing:0.05em;">BRIGADA<span style="color:var(--primary);">FIRE</span></span>
+            <span class="logo-fallback-text" style="font-family:'Bebas Neue', sans-serif; font-size:1.5rem; color:var(--text-main); letter-spacing:0.05em;">BRIGADA<span style="color:var(--primary);">FIRE</span></span>
           </div>
         </a>
 
         <p class="footer-desc">
-          Referência em treinamentos corporativos de prevenção e combate a incêndio, formação de brigadistas e primeiros socorros em conformidade com as normas NR-23 e NBR 14276.
+          Treinamentos corporativos de formação e reciclagem de Brigada de Incêndio de alta performance e excelência técnica conforme a NR-23.
         </p>
-
-        <div class="footer-socials">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn corporativo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram da empresa">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook da empresa">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-          </a>
-        </div>
       </div>
 
-      <!-- Col 2: Quick Links -->
+      <!-- Col 2: Navegação -->
       <div class="footer-col">
         <h3 class="col-title">Navegação</h3>
         <ul class="footer-links">
-          <li><a href="/#diferenciais">Diferenciais</a></li>
-          <li><a href="/#por-que-investir">Por que Investir</a></li>
-          <li><a href="/#treinamentos">Cursos e Módulos</a></li>
+          <li><a href="/">Início</a></li>
+          <li><a href="/#sobre">Sobre Nós</a></li>
+          <li><a href="/diferenciais">Nossos Diferenciais</a></li>
+          <li><a href="/#treinamentos">Treinamentos</a></li>
           <li><a href="/blog">Blog</a></li>
         </ul>
       </div>
 
-      <!-- Col 3: Services -->
+      <!-- Col 3: Serviços -->
       <div class="footer-col">
-        <h3 class="col-title">Treinamentos</h3>
+        <h3 class="col-title">Serviços</h3>
         <ul class="footer-links">
           <li><a href="/#treinamentos">Formação de Brigada (NR-23)</a></li>
-          <li><a href="/#treinamentos">Atualização / Reciclagem Anual</a></li>
+          <li><a href="/#treinamentos">Reciclagem e Atualização</a></li>
           <li><a href="/#treinamentos">Simulados de Emergência</a></li>
-          <li><a href="/#treinamentos">Plano de Abandono de Edificações</a></li>
+          <li><a href="/#treinamentos">Plano de Abandono de Área</a></li>
           <li><a href="/#treinamentos">Primeiros Socorros Corporativos</a></li>
         </ul>
       </div>
 
-      <!-- Col 4: Contact -->
+      <!-- Col 4: Atendimento -->
       <div class="footer-col">
-        <h3 class="col-title">Atendimento Corporativo</h3>
-        <ul class="contact-list">
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <span>Central 0800: <strong>0800 999 8888</strong></span>
-          </li>
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            <span>WhatsApp: <strong>(11) 99999-9999</strong></span>
-          </li>
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <span>E-mail: contato@treinamentobrigadadeincendio.com.br</span>
-          </li>
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="2.5"><path d="M21 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Atendimento em todo o Brasil (In-Company e Centros Homologados)</span>
-          </li>
+        <h3 class="col-title">Atendimento</h3>
+        <ul class="footer-links">
+          <li><a href="/diferenciais">Treinamento In-Company</a></li>
+          <li><a href="/#treinamentos">Módulos Personalizados</a></li>
+          <li><a href="/#faq">Consultoria Técnica</a></li>
+          <li><a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">Suporte Dedicado</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 5: Institucional -->
+      <div class="footer-col">
+        <h3 class="col-title">Institucional</h3>
+        <ul class="footer-links">
+          <li><a href="/#faq">Termos de Uso</a></li>
+          <li><a href="/#faq">Considerações Importantes</a></li>
+          <li><a href="/#faq">Política de Privacidade</a></li>
+          <li><a href="/#faq">Trabalhe Conosco</a></li>
+          <li><a href="javascript:void(0)" onclick="openQuoteModal()">Contato</a></li>
         </ul>
       </div>
     </div>
 
+    <!-- Bottom Bar Section -->
     <div class="footer-bottom">
-      <p>© {currentYear} Treinamento de Brigada de Incêndio Corporativo. Todos os direitos reservados.</p>
-      <p class="footer-legal">Conformidade total com a Norma Regulamentadora NR-23 e ABNT NBR 14276.</p>
+      <p class="copyright-text">
+        © {currentYear} BrigadaFire. Todos os direitos reservados.
+      </p>
+
+      <div class="footer-social-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <style>
   .footer {
-    background: var(--bg-footer);
-    border-top: 1px solid var(--border);
+    background: #080C14;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     padding: 5rem 0 2.5rem 0;
     color: var(--text-muted);
-    position: relative;
-  }
-
-  .footer-accent-line {
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent 0%, var(--primary) 50%, transparent 100%);
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .footer-grid {
     display: grid;
-    grid-template-columns: 1.4fr 0.9fr 1.1fr 1.4fr;
-    gap: 3.5rem;
-    margin-bottom: 4rem;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Coluna Brand */
+  .footer-brand-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-right: 1.5rem;
   }
 
   .footer-logo {
     display: inline-block;
-    margin-bottom: 1.25rem;
   }
 
   .footer-desc {
-    font-size: 0.88rem;
-    line-height: 1.65;
-    margin-bottom: 1.5rem;
-    color: var(--text-subtle);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #94A3B8;
   }
 
-  .footer-socials {
+  /* Colunas de Links */
+  .footer-col {
     display: flex;
-    gap: 0.75rem;
-  }
-
-  .footer-socials a {
-    width: 38px;
-    height: 38px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    transition: var(--transition);
-  }
-
-  .footer-socials a:hover {
-    background: var(--primary);
-    color: #FFFFFF;
-    border-color: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 0 16px var(--primary-glow);
+    flex-direction: column;
+    gap: 1.25rem;
   }
 
   .col-title {
     font-size: 0.95rem;
     font-weight: 700;
-    color: var(--text-main);
-    margin-bottom: 1.35rem;
+    color: #FFFFFF;
     letter-spacing: -0.01em;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-size: 0.85rem;
   }
 
   .footer-links {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.85rem;
+    padding: 0;
+    margin: 0;
   }
 
   .footer-links a {
     font-size: 0.88rem;
-    color: var(--text-muted);
-    transition: var(--transition);
+    color: #94A3B8;
+    text-decoration: none;
+    transition: color 0.2s ease;
   }
 
   .footer-links a:hover {
-    color: var(--primary-light);
-    padding-left: 4px;
+    color: #FFFFFF;
   }
 
-  .contact-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .contact-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: var(--text-muted);
-  }
-
-  .contact-list li svg {
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .contact-list strong {
-    color: var(--text-main);
-  }
-
+  /* Footer Bottom */
   .footer-bottom {
-    padding-top: 2rem;
-    border-top: 1px solid var(--border);
+    padding-top: 2.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 0.82rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-    color: var(--text-subtle);
+    font-size: 0.85rem;
   }
 
-  .footer-legal {
-    color: var(--text-subtle);
-    font-size: 0.8rem;
+  .copyright-text {
+    color: #94A3B8;
   }
 
-  @media (max-width: 992px) {
+  .footer-social-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-social-links a {
+    color: #94A3B8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .footer-social-links a:hover {
+    color: #FFFFFF;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
     .footer-grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 2.5rem;
+    }
+    .footer-brand-col {
+      grid-column: span 3;
+      padding-right: 0;
     }
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 640px) {
     .footer-grid {
       grid-template-columns: 1fr;
+      gap: 2.25rem;
+    }
+    .footer-brand-col {
+      grid-column: span 1;
     }
     .footer-bottom {
       flex-direction: column;
-      text-align: center;
+      gap: 1.25rem;
+      align-items: flex-start;
     }
   }
 </style>
