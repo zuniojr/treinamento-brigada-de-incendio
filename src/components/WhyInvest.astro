@@ -3,32 +3,38 @@ const benefits = [
   {
     title: "Redução Significativa de Riscos",
     desc: "Identificação antecipada de focos de incêndio e potenciais falhas de segurança nas instalações corporativas.",
-    badge: "Prevenção"
+    badge: "Prevenção",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`
   },
   {
     title: "Atendimento Rigoroso às Normas (NR-23)",
     desc: "Evite autuações, paralisações e multas pesadas de órgãos fiscalizadores mantendo sua documentação e equipe 100% regulares.",
-    badge: "Conformidade Legal"
+    badge: "Conformidade Legal",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`
   },
   {
     title: "Maior Segurança dos Colaboradores",
     desc: "Ambiente de trabalho preparado e consciente promove a tranquilidade dos funcionários e melhora o clima organizacional.",
-    badge: "Cultura Preventiva"
+    badge: "Cultura Preventiva",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>`
   },
   {
     title: "Prontidão para Emergências",
     desc: "Equipes treinadas para agir nos primeiros minutos de uma ocorrência, impedindo que pequenos focos se tornem tragédias.",
-    badge: "Resposta Rápida"
+    badge: "Resposta Rápida",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>`
   },
   {
     title: "Proteção Integral do Patrimônio",
     desc: "Minimização de prejuízos materiais, destruição de maquinários, documentos e paralisação operacional da empresa.",
-    badge: "Ativo Físico"
+    badge: "Ativo Físico",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>`
   },
   {
     title: "Proteção Incondicional da Vida",
     desc: "O maior valor de qualquer organização é a vida humana. O treinamento de evacuação e primeiros socorros salva vidas reais.",
-    badge: "Valor Supremo"
+    badge: "Valor Supremo",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`
   }
 ];
 ---
@@ -36,33 +42,37 @@ const benefits = [
 <section id="por-que-investir" class="section-padding why-invest-section">
   <div class="container">
     <div class="why-grid">
+
+      <!-- Left: intro text -->
       <div class="why-intro" data-animate="fade-right">
-        <span class="section-subtitle">Retorno Corporativo & Segurança</span>
+        <span class="section-subtitle">Retorno Corporativo &amp; Segurança</span>
         <h2 class="section-title text-left">Por Que Investir em Treinamento de Brigada de Incêndio?</h2>
         <p class="why-desc">
-          Além de ser uma exigência legal imprescindível para a obtenção e renovação do AVCB (Auto de Vistoria do Corpo de Bombeiros), manter uma brigada capacitada é um investimento estratégico na continuidade do seu negócio.
+          Além de ser uma exigência legal imprescindível para a obtenção e renovação do AVCB, manter uma brigada capacitada é um investimento estratégico na continuidade do seu negócio.
         </p>
 
         <div class="why-highlight-box">
-          <div class="badge-alert">
+          <div class="badge-alert" style="margin-bottom: 0.85rem;">
             <span class="dot"></span>
-            <span>Segurança Jurídica & Operacional</span>
+            <span>Segurança Jurídica &amp; Operacional</span>
           </div>
           <p class="highlight-text">
             Empresas com brigadas de incêndio ativas reduzem drasticamente sinistros e contam com melhores condições na contratação de seguros corporativos.
           </p>
         </div>
 
-        <button onclick="openQuoteModal()" class="btn btn-primary" style="margin-top: 1.5rem;">
+        <button onclick="openQuoteModal()" class="btn btn-primary why-cta" id="why-invest-cta">
           <span>Solicitar Proposta para sua Empresa</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </button>
       </div>
 
-      <div class="benefits-cards" data-animate="fade-left">
-        {benefits.map((item) => (
-          <div class="benefit-card glass-card">
-            <div class="card-header">
+      <!-- Right: benefit cards grid 2x3 -->
+      <div class="benefits-grid" data-animate="fade-left">
+        {benefits.map((item, i) => (
+          <div class="benefit-card" data-animate="fade-up" data-delay={String(i * 70)}>
+            <div class="benefit-header">
+              <div class="benefit-icon" set:html={item.icon} />
               <span class="benefit-tag">{item.badge}</span>
             </div>
             <h3 class="benefit-title">{item.title}</h3>
@@ -70,6 +80,7 @@ const benefits = [
           </div>
         ))}
       </div>
+
     </div>
   </div>
 </section>
@@ -82,82 +93,133 @@ const benefits = [
 
   .why-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 4rem;
-    align-items: center;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 5rem;
+    align-items: start;
   }
 
+  /* ---- Intro ---- */
   .text-left {
     text-align: left;
   }
 
   .why-desc {
     color: var(--text-muted);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin-bottom: 2rem;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
   .why-highlight-box {
-    background: rgba(230, 25, 25, 0.1);
-    border: 1px solid rgba(230, 25, 25, 0.2);
+    background: linear-gradient(135deg, rgba(230, 48, 0, 0.08) 0%, rgba(230, 48, 0, 0.04) 100%);
+    border: 1px solid var(--primary-border);
+    border-left: 3px solid var(--primary);
     border-radius: var(--radius-md);
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .highlight-text {
     font-size: 0.95rem;
     color: var(--text-main);
-    margin-top: 0.75rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
-  .benefits-cards {
+  .why-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---- Benefits grid 2x3 ---- */
+  .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
   }
 
   .benefit-card {
-    padding: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.4rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 0.6rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
   }
 
-  .card-header {
-    margin-bottom: 0.75rem;
+  .benefit-card:hover {
+    border-color: var(--primary-border);
+    background: var(--bg-card-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+  }
+
+  .benefit-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+  }
+
+  .benefit-icon {
+    width: 38px;
+    height: 38px;
+    background: var(--primary-dim);
+    border: 1px solid var(--primary-border);
+    color: var(--primary-light);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+  }
+
+  .benefit-card:hover .benefit-icon {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
   }
 
   .benefit-tag {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--primary);
-    background: rgba(14, 165, 233, 0.1);
-    padding: 0.25rem 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--primary-light);
+    background: var(--primary-dim);
+    padding: 0.22rem 0.6rem;
     border-radius: var(--radius-full);
-    border: 1px solid rgba(14, 165, 233, 0.2);
+    border: 1px solid var(--primary-border);
+    white-space: nowrap;
   }
 
   .benefit-title {
-    font-size: 1.1rem;
+    font-size: 0.98rem;
     font-weight: 700;
     color: var(--text-main);
-    margin-bottom: 0.5rem;
+    line-height: 1.35;
   }
 
   .benefit-desc {
-    font-size: 0.88rem;
+    font-size: 0.83rem;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
+  /* ---- Responsive ---- */
   @media (max-width: 992px) {
     .why-grid {
       grid-template-columns: 1fr;
       gap: 3rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>

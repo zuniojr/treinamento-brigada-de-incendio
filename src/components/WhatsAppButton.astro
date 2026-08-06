@@ -1,158 +1,91 @@
 ---
 ---
 
-<div class="whatsapp-float-container" id="wa-float">
-  <div class="whatsapp-tooltip">
-    <div class="tooltip-inner">
-      <span class="tooltip-title">Atendimento Imediato</span>
-      <span class="tooltip-sub">Fale com nosso Engenheiro agora</span>
-    </div>
-    <div class="tooltip-arrow"></div>
-  </div>
-
-  <a
-    href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20or%C3%A7amento%20para%20Treinamento%20de%20Brigada%20de%20Inc%C3%AAndio."
-    target="_blank"
-    rel="noopener noreferrer"
-    class="whatsapp-btn"
-    aria-label="Atendimento via WhatsApp — Fale com um Engenheiro"
-    id="wa-btn"
-  >
-    <!-- Pulse rings -->
-    <span class="pulse-ring ring-1"></span>
-    <span class="pulse-ring ring-2"></span>
-
-    <!-- WhatsApp icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32" fill="currentColor">
-      <path d="M16 2C8.268 2 2 8.268 2 16c0 2.478.664 4.8 1.823 6.803L2 30l7.374-1.793A13.929 13.929 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2Zm0 2c6.627 0 12 5.373 12 12S22.627 28 16 28a11.93 11.93 0 0 1-6.287-1.793l-.449-.267-4.645 1.128 1.176-4.525-.295-.466A11.933 11.933 0 0 1 4 16C4 9.373 9.373 4 16 4Zm-3.38 5.5c-.306 0-.8.115-1.22.573-.419.458-1.6 1.563-1.6 3.811 0 2.248 1.638 4.42 1.867 4.726.229.306 3.17 5.096 7.833 6.952 3.872 1.527 4.663 1.224 5.506 1.148.843-.077 2.72-1.11 3.102-2.182.382-1.072.382-1.99.268-2.182-.115-.19-.42-.305-.878-.534-.458-.229-2.72-1.34-3.14-1.493-.42-.153-.726-.229-1.03.23-.306.458-1.18 1.492-1.448 1.797-.267.306-.535.344-.993.115-.458-.23-1.933-.713-3.685-2.273-1.362-1.213-2.282-2.713-2.549-3.172-.267-.458-.028-.706.2-.935.205-.205.458-.534.687-.801.229-.267.305-.458.458-.763.153-.305.077-.573-.038-.801-.115-.229-1.03-2.487-1.41-3.405-.38-.9-.765-.777-1.03-.79-.267-.01-.572-.013-.878-.013Z"/>
-    </svg>
-  </a>
-</div>
+<a 
+  href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20Treinamento%20de%20Brigada%20de%20Inc%C3%AAndio." 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  class="floating-whatsapp"
+  aria-label="Falar pelo WhatsApp com um especialista"
+>
+  <span class="whatsapp-tooltip">Falar com Especialista</span>
+  <div class="whatsapp-pulse"></div>
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+  </svg>
+</a>
 
 <style>
-  .whatsapp-float-container {
+  .floating-whatsapp {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  /* Tooltip */
-  .whatsapp-tooltip {
-    position: relative;
-    background: rgba(15, 23, 42, 0.96);
-    border: 1px solid rgba(37, 211, 102, 0.25);
-    border-radius: var(--radius-md);
-    padding: 0.6rem 1rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(37, 211, 102, 0.1);
-    backdrop-filter: blur(12px);
-    white-space: nowrap;
-    opacity: 0;
-    transform: translateX(12px);
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .whatsapp-float-container:hover .whatsapp-tooltip {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .tooltip-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-  }
-
-  .tooltip-title {
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: #25D366;
-    line-height: 1.2;
-  }
-
-  .tooltip-sub {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-  }
-
-  /* Arrow */
-  .tooltip-arrow {
-    position: absolute;
-    right: -7px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent;
-    border-left: 7px solid rgba(15, 23, 42, 0.96);
-  }
-
-  /* Main button */
-  .whatsapp-btn {
-    position: relative;
-    width: 62px;
-    height: 62px;
+    z-index: 990;
+    width: 60px;
+    height: 60px;
     background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
     color: #FFFFFF;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex-shrink: 0;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.40);
+    transition: var(--transition);
+    text-decoration: none;
   }
 
-  .whatsapp-btn:hover {
-    transform: scale(1.12) translateY(-2px);
-    box-shadow: 0 14px 35px rgba(37, 211, 102, 0.65);
+  .floating-whatsapp:hover {
+    transform: scale(1.1) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(37, 211, 102, 0.60);
   }
 
-  /* Pulse rings */
-  .pulse-ring {
+  .whatsapp-pulse {
     position: absolute;
+    inset: -4px;
     border-radius: 50%;
-    border: 2px solid rgba(37, 211, 102, 0.6);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    animation: wa-pulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    border: 2px solid #25D366;
+    opacity: 0;
+    animation: wa-pulse 2.5s infinite;
     pointer-events: none;
   }
 
-  .ring-2 {
-    animation-delay: 0.8s;
-    border-color: rgba(37, 211, 102, 0.35);
-  }
-
   @keyframes wa-pulse {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1.75);
-      opacity: 0;
-    }
+    0%   { opacity: 0.8; transform: scale(1); }
+    100% { opacity: 0;   transform: scale(1.45); }
   }
 
-  @media (max-width: 576px) {
-    .whatsapp-float-container {
-      bottom: 1.25rem;
-      right: 1.25rem;
+  .whatsapp-tooltip {
+    position: absolute;
+    right: 72px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    color: var(--text-main);
+    padding: 0.45rem 0.9rem;
+    border-radius: var(--radius-md);
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .floating-whatsapp:hover .whatsapp-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 768px) {
+    .floating-whatsapp {
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 54px;
+      height: 54px;
     }
     .whatsapp-tooltip {
       display: none;
-    }
-    .whatsapp-btn {
-      width: 56px;
-      height: 56px;
     }
   }
 </style>

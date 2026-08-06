@@ -2,58 +2,66 @@
 ---
 
 <section class="hero">
-  <!-- Hero Background Overlay & Realistic Firefighter Training Image -->
+  <!-- Background -->
   <div class="hero-bg">
-    <img 
-      src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=85" 
-      alt="Brigada de incêndio corporativa em treinamento prático com equipamentos de combate" 
+    <img
+      src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=85"
+      alt="Brigada de incêndio corporativa em treinamento prático com equipamentos de combate"
       class="hero-img"
       loading="eager"
       width="1920"
       height="1080"
     />
+    <!-- Main overlay gradient -->
     <div class="hero-overlay"></div>
+    <!-- Diagonal flame accent (signature element) -->
+    <div class="hero-diagonal"></div>
+    <!-- Ambient glow -->
     <div class="hero-glow"></div>
   </div>
 
   <div class="container hero-container">
     <div class="hero-content">
-      <!-- Yellow Alert Badge (Strictly for NR-23 Norms) -->
+      <!-- NR-23 Badge -->
       <div class="badge-alert hero-badge" data-animate="fade-down" data-delay="100">
         <span class="dot"></span>
-        <span>Atendimento às Normas NR-23 & NBR 14276</span>
+        <span>Atendimento às Normas NR-23 &amp; NBR 14276</span>
       </div>
 
+      <!-- Main title -->
       <h1 class="hero-title" data-animate="fade-up" data-delay="150">
-        Treinamento de Brigada de Incêndio <span class="highlight-blue">para Empresas</span>
+        <span class="hero-title-display">Treinamento</span>
+        <span class="hero-title-display text-gradient-fire">Brigada de</span>
+        <span class="hero-title-sub">Incêndio <span class="hero-for">para Empresas</span></span>
       </h1>
 
-      <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
-        Capacite sua equipe com treinamentos teóricos e práticos de alto nível. Proteja vidas, garanta a conformidade legal do seu estabelecimento e preserve o patrimônio corporativo contra emergências.
+      <p class="hero-subtitle" data-animate="fade-up" data-delay="220">
+        Capacite sua equipe com treinamentos teóricos e práticos de alto nível. Proteja vidas, garanta a conformidade legal e preserve o patrimônio corporativo contra emergências.
       </p>
 
-      <div class="hero-actions" data-animate="fade-up" data-delay="280">
-        <button onclick="openQuoteModal()" class="btn btn-primary btn-hero">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      <div class="hero-actions" data-animate="fade-up" data-delay="300">
+        <button onclick="openQuoteModal()" class="btn btn-primary btn-hero" id="hero-cta-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
           <span>Solicitar Orçamento</span>
         </button>
 
-        <a 
-          href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Treinamento%20de%20Brigada%20de%20Inc%C3%AAndio%20para%20minha%20empresa." 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Treinamento%20de%20Brigada%20de%20Inc%C3%AAndio%20para%20minha%20empresa."
+          target="_blank"
+          rel="noopener noreferrer"
           class="btn btn-whatsapp btn-hero"
+          id="hero-cta-whatsapp"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          <span>Falar pelo WhatsApp</span>
+          <span>Falar no WhatsApp</span>
         </a>
       </div>
 
-      <!-- Trust Metrics Grid -->
-      <div class="hero-stats" data-animate="fade-up" data-delay="400">
+      <!-- Trust stats -->
+      <div class="hero-stats" data-animate="fade-up" data-delay="420">
         <div class="stat-item">
           <div class="stat-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E61919" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           </div>
           <div>
             <span class="stat-value">100%</span>
@@ -61,26 +69,42 @@
           </div>
         </div>
 
+        <div class="stat-sep"></div>
+
         <div class="stat-item">
           <div class="stat-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E61919" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           </div>
           <div>
-            <span class="stat-value"><span class="hero-counter" data-counter-target="1500" data-counter-prefix="+" data-counter-suffix="">+0</span></span>
+            <span class="stat-value">
+              <span class="hero-counter" data-counter-target="1500" data-counter-prefix="+" data-counter-suffix="">+0</span>
+            </span>
             <span class="stat-label">Empresas Treinadas</span>
           </div>
         </div>
 
+        <div class="stat-sep"></div>
+
         <div class="stat-item">
           <div class="stat-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E61919" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
           </div>
           <div>
-            <span class="stat-value"><span class="hero-counter" data-counter-target="15" data-counter-prefix="" data-counter-suffix=" anos">0 anos</span></span>
+            <span class="stat-value">
+              <span class="hero-counter" data-counter-target="15" data-counter-prefix="" data-counter-suffix=" anos">0 anos</span>
+            </span>
             <span class="stat-label">de Experiência</span>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll-indicator" aria-hidden="true">
+    <span class="scroll-label">Role para explorar</span>
+    <div class="scroll-chevrons">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
     </div>
   </div>
 </section>
@@ -88,14 +112,12 @@
 <script is:inline>
   (function () {
     function easeOutExpo(t) { return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); }
-
     function runCounter(el) {
       var target = parseInt(el.dataset.counterTarget, 10);
       var prefix = el.dataset.counterPrefix || '';
       var suffix = el.dataset.counterSuffix || '';
-      var duration = 1600;
+      var duration = 1800;
       var start = performance.now();
-
       function tick(now) {
         var p = Math.min((now - start) / duration, 1);
         var val = Math.round(easeOutExpo(p) * target);
@@ -105,7 +127,6 @@
       }
       requestAnimationFrame(tick);
     }
-
     var els = document.querySelectorAll('.hero-counter');
     if (!els.length) return;
     var obs = new IntersectionObserver(function (entries) {
@@ -123,17 +144,15 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 8rem;
-    padding-bottom: 5rem;
+    padding-top: 9rem;
+    padding-bottom: 7rem;
     overflow: hidden;
   }
 
+  /* ---- Background ---- */
   .hero-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: 1;
   }
 
@@ -141,145 +160,223 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    filter: brightness(0.65) contrast(1.1);
+    object-position: center 30%;
+    filter: brightness(0.55) contrast(1.15) saturate(0.9);
   }
 
+  /* Main gradient overlay — heavy left, light right */
   .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      108deg,
+      rgba(10, 10, 10, 0.98) 0%,
+      rgba(10, 10, 10, 0.88) 42%,
+      rgba(10, 10, 10, 0.55) 70%,
+      rgba(10, 10, 10, 0.30) 100%
+    );
+  }
+
+  /* Diagonal flame accent — signature element */
+  .hero-diagonal {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(
-      180deg, 
-      rgba(11, 17, 32, 0.85) 0%, 
-      rgba(11, 17, 32, 0.75) 50%, 
-      rgba(11, 17, 32, 1) 100%
+      108deg,
+      transparent 50%,
+      rgba(230, 48, 0, 0.12) 50%,
+      rgba(230, 48, 0, 0.08) 65%,
+      transparent 80%
     );
+    pointer-events: none;
   }
 
   .hero-glow {
     position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(230, 25, 25, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
-    filter: blur(60px);
+    top: 15%;
+    left: 5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(230, 48, 0, 0.18) 0%, transparent 65%);
+    filter: blur(70px);
     pointer-events: none;
   }
 
+  /* ---- Content ---- */
   .hero-container {
     position: relative;
     z-index: 2;
   }
 
   .hero-content {
-    max-width: 860px;
+    max-width: 820px;
   }
 
   .hero-badge {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
+  /* Title — Bebas Neue for display lines */
   .hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
-    color: #FFFFFF;
-    letter-spacing: -0.03em;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 1.75rem;
+    line-height: 0.95;
   }
 
-  .highlight-blue {
-    background: linear-gradient(135deg, #FF4D4D 0%, #991B1B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .hero-title-display {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 8vw, 7.5rem);
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+
+  .hero-title-sub {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+  }
+
+  .hero-for {
+    color: var(--text-muted);
+    font-weight: 600;
   }
 
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 2.5rem;
-    max-width: 760px;
+    max-width: 640px;
   }
 
+  /* ---- Buttons ---- */
   .hero-actions {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
     flex-wrap: wrap;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
   }
 
   .btn-hero {
-    padding: 1.1rem 2.2rem;
-    font-size: 1.05rem;
+    padding: 1.05rem 2rem;
+    font-size: 1rem;
   }
 
-  /* Stats Grid */
+  /* ---- Stats ---- */
   .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .stat-sep {
+    width: 1px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.12);
+    flex-shrink: 0;
   }
 
   .stat-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    background: rgba(15, 23, 42, 0.6);
-    padding: 1rem 1.25rem;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border);
-    backdrop-filter: blur(10px);
+    gap: 0.85rem;
+    padding: 0 1.5rem;
+  }
+
+  .stat-item:first-child {
+    padding-left: 0;
   }
 
   .stat-icon {
-    width: 48px;
-    height: 48px;
-    background: rgba(230, 25, 25, 0.12);
-    border: 1px solid rgba(230, 25, 25, 0.25);
+    width: 44px;
+    height: 44px;
+    background: var(--primary-dim);
+    border: 1px solid var(--primary-border);
     border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--primary-light);
     flex-shrink: 0;
   }
 
   .stat-value {
     display: block;
-    font-size: 1.05rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 800;
     color: var(--text-main);
     line-height: 1.2;
+    letter-spacing: -0.01em;
   }
 
   .stat-label {
     display: block;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 1px;
+  }
+
+  /* ---- Scroll indicator ---- */
+  .hero-scroll-indicator {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    animation: float-indicator 2.5s ease-in-out infinite;
+    opacity: 0.5;
+  }
+
+  .scroll-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     color: var(--text-muted);
   }
 
+  .scroll-chevrons svg {
+    display: block;
+    color: var(--text-muted);
+  }
+
+  @keyframes float-indicator {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* ---- Responsive ---- */
   @media (max-width: 992px) {
-    .hero-title {
-      font-size: 2.6rem;
-    }
-    .hero-subtitle {
-      font-size: 1.1rem;
-    }
+    .hero-title-display { font-size: clamp(3.5rem, 9vw, 6rem); }
+    .stat-sep { display: none; }
+    .stat-item { padding: 0; }
+    .hero-stats { gap: 1.25rem; }
   }
 
   @media (max-width: 576px) {
     .hero {
-      padding-top: 6.5rem;
-    }
-    .hero-title {
-      font-size: 2.1rem;
+      padding-top: 7rem;
+      padding-bottom: 5rem;
     }
     .hero-actions {
       flex-direction: column;
@@ -287,6 +384,8 @@
     }
     .btn-hero {
       width: 100%;
+      justify-content: center;
     }
+    .hero-scroll-indicator { display: none; }
   }
 </style>

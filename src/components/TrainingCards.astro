@@ -2,8 +2,8 @@
 const courses = [
   {
     title: "Formação de Brigada de Incêndio",
-    tag: "Norma NR-23 / NBR 14276",
-    duration: "Carga Horária: 8h a 32h",
+    tag: "NR-23 / NBR 14276",
+    duration: "8h a 32h",
     description: "Capacitação completa para novos brigadistas com aulas teóricas e práticas de combate a incêndio e primeiros socorros.",
     image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80",
     alt: "Instrutor orientando equipe de brigada de incêndio em simulação prática"
@@ -11,7 +11,7 @@ const courses = [
   {
     title: "Atualização de Brigadistas",
     tag: "Reciclagem Periódica",
-    duration: "Carga Horária: 8h",
+    duration: "8h",
     description: "Treinamento anual obrigatório para renovação de conhecimentos, revisão de procedimentos e novas diretrizes técnicas.",
     image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=600&q=80",
     alt: "Brigadistas realizando reciclagem prática de manuseio de equipamentos"
@@ -19,7 +19,7 @@ const courses = [
   {
     title: "Simulados de Emergência",
     tag: "Prática em Campo",
-    duration: "Carga Horária: Sob Medida",
+    duration: "Sob Medida",
     description: "Simulação de situações reais de sinistro na própria edificação da empresa para testar tempo de resposta e organização.",
     image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80",
     alt: "Simulação prática de evacuação de emergência corporativa"
@@ -27,7 +27,7 @@ const courses = [
   {
     title: "Plano de Abandono",
     tag: "Planejamento Estratégico",
-    duration: "Carga Horária: 4h a 8h",
+    duration: "4h a 8h",
     description: "Elaboração e treinamento das rotas de fuga, sinalizações de emergência e coordenação de saídas seguras.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
     alt: "Edificação corporativa moderna com planejamento de rotas de fuga e evacuação"
@@ -35,7 +35,7 @@ const courses = [
   {
     title: "Uso de Extintores e Mangueiras",
     tag: "Combate Direto",
-    duration: "Carga Horária: 4h",
+    duration: "4h",
     description: "Instrução prática sobre classes de incêndio (A, B, C, D e K), manuseio correto de extintores e montagem de linhas de mangueiras.",
     image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80",
     alt: "Treinamento prático de combate a incêndio utilizando extintor industrial"
@@ -43,7 +43,7 @@ const courses = [
   {
     title: "Primeiros Socorros Corporativos",
     tag: "Suporte Básico de Vida",
-    duration: "Carga Horária: 8h",
+    duration: "8h",
     description: "Atendimento pré-hospitalar, ressuscitação cardiopulmonar (RCP), uso de DEA, contenção de hemorragias e imobilizações.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
     alt: "Equipe realizando treinamento prático de primeiros socorros e ressuscitação"
@@ -51,15 +51,15 @@ const courses = [
   {
     title: "Evacuação de Edificações",
     tag: "Gestão de Pânico",
-    duration: "Carga Horária: 4h",
+    duration: "4h",
     description: "Técnicas de orientação de multidões, evacuação rápida de andares, contagem de pessoal nos pontos de encontro e controle de pânico.",
     image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=600&q=80",
     alt: "Profissionais orientando a evacuação organizada de colaboradores"
   },
   {
     title: "Prevenção e Combate a Incêndio",
-    tag: "Módulo Integrado Avançado",
-    duration: "Carga Horária: 16h a 40h",
+    tag: "Módulo Avançado",
+    duration: "16h a 40h",
     description: "Capacitação completa e aprofundada envolvendo análise de riscos, controle de pânico, prevenção de sinistros e combate tático.",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
     alt: "Instrutor orientando equipe de segurança em módulo avançado de incêndio"
@@ -77,31 +77,35 @@ const courses = [
 
     <div class="courses-grid">
       {courses.map((course, i) => (
-        <div class="course-card glass-card" data-animate="fade-up" data-delay={String((i % 4) * 100)}>
+        <div class="course-card" data-animate="fade-up" data-delay={String((i % 4) * 80)}>
           <div class="card-img-wrapper">
-            <img 
-              src={course.image} 
-              alt={course.alt} 
-              class="course-img" 
-              loading="lazy" 
-              width="600" 
+            <img
+              src={course.image}
+              alt={course.alt}
+              class="course-img"
+              loading="lazy"
+              width="600"
               height="350"
             />
+            <div class="card-img-overlay"></div>
             <span class="course-tag">{course.tag}</span>
           </div>
 
           <div class="card-body">
-            <span class="course-duration">{course.duration}</span>
+            <div class="course-meta">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>{course.duration}</span>
+            </div>
             <h3 class="course-title">{course.title}</h3>
             <p class="course-desc">{course.description}</p>
-            
+
             <div class="card-footer">
-              <button 
+              <button
                 onclick={`openQuoteModal('${course.title}')`}
                 class="btn btn-outline card-btn"
               >
                 <span>Solicitar Cotação</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
             </div>
           </div>
@@ -113,95 +117,149 @@ const courses = [
 
 <style>
   .courses-section {
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, var(--bg-main) 100%);
+    background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-main) 100%);
   }
 
   .courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
   }
 
+  /* ---- Card ---- */
   .course-card {
-    padding: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
   }
 
+  .course-card:hover {
+    border-color: var(--primary-border);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card), 0 0 25px var(--primary-glow);
+  }
+
+  /* ---- Image ---- */
   .card-img-wrapper {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 180px;
     overflow: hidden;
+    flex-shrink: 0;
   }
 
   .course-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transition);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+    filter: brightness(0.85);
   }
 
   .course-card:hover .course-img {
-    transform: scale(1.08);
+    transform: scale(1.1);
+    filter: brightness(0.70) saturate(1.1);
+  }
+
+  .card-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.75) 100%);
   }
 
   .course-tag {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: rgba(15, 23, 42, 0.85);
+    top: 0.85rem;
+    left: 0.85rem;
+    background: rgba(10, 10, 10, 0.80);
     backdrop-filter: blur(8px);
-    border: 1px solid var(--border-light);
-    color: var(--primary);
-    font-size: 0.75rem;
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--primary-border);
+    color: var(--primary-light);
+    font-size: 0.7rem;
     font-weight: 700;
-    padding: 0.35rem 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
     border-radius: var(--radius-full);
+    transition: var(--transition);
   }
 
+  .course-card:hover .course-tag {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+  }
+
+  /* ---- Body ---- */
   .card-body {
-    padding: 1.5rem;
+    padding: 1.35rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
   }
 
-  .course-duration {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+  .course-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-subtle);
+    font-size: 0.75rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.03em;
   }
 
   .course-title {
-    font-size: 1.2rem;
+    font-size: 1.02rem;
     font-weight: 700;
     color: var(--text-main);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
   }
 
   .course-desc {
-    font-size: 0.9rem;
+    font-size: 0.83rem;
     color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    line-height: 1.65;
     flex-grow: 1;
+    margin-bottom: 1.25rem;
   }
 
+  /* ---- Footer ---- */
   .card-footer {
     padding-top: 1rem;
     border-top: 1px solid var(--border);
+    margin-top: auto;
   }
 
   .card-btn {
     width: 100%;
-    font-size: 0.9rem;
-    padding: 0.65rem 1rem;
+    font-size: 0.83rem;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-sm);
   }
 
-  @media (max-width: 768px) {
+  /* ---- Responsive ---- */
+  @media (max-width: 1200px) {
+    .courses-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .courses-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 500px) {
     .courses-grid {
       grid-template-columns: 1fr;
     }

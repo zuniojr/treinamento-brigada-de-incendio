@@ -2,84 +2,113 @@
 ---
 
 <header id="main-header" class="header">
+  <!-- Top accent bar -->
+  <div class="header-top-bar"></div>
+
   <div class="container header-container">
     <a href="#" class="logo" aria-label="Página Inicial - Treinamento de Brigada de Incêndio">
-      <img src="/logo.png" alt="Treinamento Brigada de Incêndio" class="main-logo-img" />
+      <img src="/logo.png" alt="Treinamento Brigada de Incêndio" class="main-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="logo-fallback" style="display:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="var(--primary)">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <span class="logo-fallback-text">BRIGADA<span>FIRE</span></span>
+      </div>
     </a>
 
-    <nav class="nav-desktop" aria-label="Navegação Principal">
-      <a href="#sobre" class="nav-link">SOBRE</a>
-      <a href="#servicos" class="nav-link">SERVIÇOS</a>
-      <a href="#blog" class="nav-link">BLOG</a>
-    </nav>
+    <div class="header-right">
+      <nav class="nav-desktop" aria-label="Navegação Principal">
+        <a href="#diferenciais" class="nav-link">Diferenciais</a>
+        <a href="#treinamentos" class="nav-link">Treinamentos</a>
+        <a href="#como-funciona" class="nav-link">Como Funciona</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
 
-    <div class="header-actions">
-      <a href="tel:08009998888" class="phone-link" aria-label="Ligar para a Brigada de Incêndio">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        <span class="phone-number">0800 999 8888</span>
-      </a>
+      <div class="header-actions">
+        <a href="tel:08009998888" class="phone-link" aria-label="Ligar para a Brigada de Incêndio">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span class="phone-number">0800 999 8888</span>
+        </a>
 
-      <button onclick="openQuoteModal()" class="btn btn-primary header-cta">
-        <span>FALE CONOSCO</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-      </button>
+        <button onclick="openQuoteModal()" class="btn btn-primary header-cta" id="header-cta-btn">
+          <span>Solicitar Orçamento</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
 
-      <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Abrir menu de navegação">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+        <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </div>
 
   <!-- Mobile Drawer Menu -->
-  <div id="mobile-menu" class="mobile-menu">
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
     <nav class="mobile-nav">
-      <a href="#sobre" class="mobile-link">SOBRE</a>
-      <a href="#servicos" class="mobile-link">SERVIÇOS</a>
-      <a href="#blog" class="mobile-link">BLOG</a>
+      <a href="#diferenciais" class="mobile-link">Diferenciais</a>
+      <a href="#treinamentos" class="mobile-link">Treinamentos</a>
+      <a href="#como-funciona" class="mobile-link">Como Funciona</a>
+      <a href="#faq" class="mobile-link">FAQ</a>
       <hr class="mobile-divider" />
       <a href="tel:08009998888" class="mobile-phone">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         0800 999 8888
       </a>
-      <button onclick="openQuoteModal(); closeMobileMenu();" class="btn btn-primary" style="width:100%; margin-top: 1rem;">
-        FALE CONOSCO
+      <button onclick="openQuoteModal(); closeMobileMenu();" class="btn btn-primary" style="width:100%; margin-top: 0.75rem; justify-content: center;">
+        Solicitar Orçamento
       </button>
     </nav>
   </div>
 </header>
 
 <script>
-  // Header scroll state handler
-  const header = document.getElementById('main-header');
+  const header = document.getElementById('main-header') as HTMLElement;
+  const mobileBtn = document.getElementById('mobile-menu-btn') as HTMLButtonElement;
+  const mobileMenu = document.getElementById('mobile-menu') as HTMLElement;
+
+  // Scroll state
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 50) {
       header?.classList.add('scrolled');
     } else {
       header?.classList.remove('scrolled');
     }
-  });
+  }, { passive: true });
 
-  // Mobile menu toggle
-  const mobileBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-
+  // Mobile menu
   function closeMobileMenu() {
     mobileMenu?.classList.remove('active');
     mobileBtn?.classList.remove('active');
+    mobileBtn?.setAttribute('aria-expanded', 'false');
+    mobileMenu?.setAttribute('aria-hidden', 'true');
   }
 
   mobileBtn?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('active');
-    mobileBtn?.classList.toggle('active');
+    const isOpen = mobileMenu?.classList.contains('active');
+    if (isOpen) {
+      closeMobileMenu();
+    } else {
+      mobileMenu?.classList.add('active');
+      mobileBtn?.classList.add('active');
+      mobileBtn?.setAttribute('aria-expanded', 'true');
+      mobileMenu?.setAttribute('aria-hidden', 'false');
+    }
   });
 
   document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
 
-  // Active nav link observer
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!header?.contains(e.target as Node)) {
+      closeMobileMenu();
+    }
+  });
+
+  // Active nav observer
   const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
   const sectionIds = Array.from(navLinks).map(l => l.getAttribute('href')?.slice(1)).filter(Boolean);
 
@@ -89,8 +118,7 @@
         if (entry.isIntersecting) {
           const id = entry.target.id;
           navLinks.forEach((link) => {
-            const isActive = link.getAttribute('href') === `#${id}`;
-            link.classList.toggle('active', isActive);
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
           });
         }
       });
@@ -99,12 +127,26 @@
   );
 
   sectionIds.forEach((id) => {
-    const el = document.getElementById(id);
+    const el = document.getElementById(id!);
     if (el) sectionObserver.observe(el);
   });
 </script>
 
 <style>
+  /* ---- Top accent bar ---- */
+  .header-top-bar {
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary) 100%);
+    background-size: 200% 100%;
+    animation: shimmer-bar 3s linear infinite;
+  }
+
+  @keyframes shimmer-bar {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* ---- Header ---- */
   .header {
     position: fixed;
     top: 0;
@@ -112,76 +154,104 @@
     width: 100%;
     z-index: 1000;
     transition: var(--transition);
-    padding: 1.25rem 0;
     background: transparent;
   }
 
   .header.scrolled {
     background: var(--bg-glass);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid var(--border);
-    padding: 0.85rem 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.50);
   }
 
   .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
   }
 
-  /* Logo */
+  .header.scrolled .header-container {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+  /* ---- Logo ---- */
   .logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
+    flex-shrink: 0;
   }
 
   .main-logo-img {
-    height: 70px;
+    height: 58px;
     width: auto;
     object-fit: contain;
   }
-  
-  @media (max-width: 768px) {
-    .main-logo-img {
-      height: 55px;
-    }
+
+  .logo-fallback {
+    align-items: center;
+    gap: 0.5rem;
   }
 
-  /* Navigation */
-  .nav-desktop {
+  .logo-fallback-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    color: var(--text-main);
+    line-height: 1;
+  }
+
+  .logo-fallback-text span {
+    color: var(--primary);
+  }
+
+  /* ---- Right group ---- */
+  .header-right {
     display: flex;
     align-items: center;
     gap: 2rem;
   }
 
+  /* ---- Nav ---- */
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
   .nav-link {
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 0.82rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
     transition: var(--transition);
     position: relative;
+    padding-bottom: 4px;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: width 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .nav-link:hover {
     color: var(--text-main);
   }
 
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: var(--primary);
-    transition: var(--transition);
-    border-radius: 2px;
-  }
-
-  .nav-link:hover::after {
+  .nav-link:hover::after,
+  .nav-link.active::after {
     width: 100%;
   }
 
@@ -189,78 +259,84 @@
     color: var(--text-main);
   }
 
-  .nav-link.active::after {
-    width: 100%;
-  }
-
-  /* Actions */
+  /* ---- Actions ---- */
   .header-actions {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 0.85rem;
   }
 
   .phone-link {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.45rem;
     color: var(--text-muted);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: var(--transition);
+    white-space: nowrap;
+    padding: 0.4rem 0.6rem;
+    border-radius: var(--radius-sm);
   }
 
   .phone-link:hover {
-    color: var(--primary);
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.05);
   }
 
   .header-cta {
-    padding: 0.65rem 1.35rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.84rem;
   }
 
-  /* Mobile Toggle */
+  /* ---- Mobile toggle ---- */
   .mobile-toggle {
     display: none;
     flex-direction: column;
     gap: 5px;
-    padding: 6px;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s;
     z-index: 1001;
   }
 
+  .mobile-toggle:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
   .mobile-toggle span {
-    width: 24px;
+    width: 22px;
     height: 2px;
     background-color: var(--text-main);
+    border-radius: 2px;
     transition: var(--transition);
+    transform-origin: center;
   }
 
   .mobile-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
-
   .mobile-toggle.active span:nth-child(2) {
     opacity: 0;
+    transform: scaleX(0);
   }
-
   .mobile-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  /* Mobile Menu */
+  /* ---- Mobile drawer ---- */
   .mobile-menu {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 80%;
-    max-width: 320px;
-    height: 100vh;
-    background: var(--bg-main);
+    width: min(85vw, 340px);
+    height: 100dvh;
+    background: #0F0F0F;
     border-left: 1px solid var(--border);
     padding: 6rem 2rem 2rem 2rem;
-    transition: var(--transition);
+    transition: right 0.38s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 999;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+    box-shadow: -12px 0 40px rgba(0, 0, 0, 0.75);
   }
 
   .mobile-menu.active {
@@ -270,42 +346,55 @@
   .mobile-nav {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.1rem;
   }
 
   .mobile-link {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-muted);
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0;
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: color 0.2s, padding-left 0.2s;
+    letter-spacing: 0.02em;
   }
 
   .mobile-link:hover {
-    color: var(--primary);
+    color: var(--primary-light);
+    padding-left: 6px;
   }
 
   .mobile-divider {
     border: none;
     border-top: 1px solid var(--border);
-    margin: 1rem 0;
+    margin: 0.75rem 0;
   }
 
   .mobile-phone {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: var(--primary);
+    color: var(--primary-light);
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
+  /* ---- Responsive ---- */
   @media (max-width: 992px) {
     .nav-desktop, .phone-link {
       display: none;
     }
     .mobile-toggle {
       display: flex;
+    }
+    .header-cta {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .main-logo-img {
+      height: 48px;
     }
   }
 </style>

@@ -36,25 +36,29 @@ const steps = [
       <p class="section-desc">Fluxo descomplicado e eficiente para regularizar sua empresa com agilidade máxima.</p>
     </div>
 
-    <div class="timeline-container" id="timeline-container">
-      <!-- Linha de progresso animada -->
-      <div class="timeline-line-track">
-        <div class="timeline-line-fill" id="timeline-fill"></div>
+    <div class="timeline-wrapper" id="timeline-container">
+      <!-- Vertical track -->
+      <div class="timeline-track">
+        <div class="timeline-fill" id="timeline-fill"></div>
       </div>
 
       <div class="timeline-steps">
         {steps.map((item, index) => (
           <div
-            class={`timeline-item ${index % 2 === 0 ? 'even' : 'odd'}`}
+            class={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
             data-animate={index % 2 === 0 ? 'fade-right' : 'fade-left'}
-            data-delay={String(index * 120)}
+            data-delay={String(index * 110)}
           >
-            <div class="step-badge" data-step-badge={index}>
-              <span class="step-number">{item.step}</span>
+            <!-- Number badge -->
+            <div class="step-node">
+              <span class="step-num">{item.step}</span>
             </div>
 
-            <div class="step-card glass-card">
-              <div class="step-tag">Etapa {item.step}</div>
+            <!-- Card -->
+            <div class="step-card">
+              <!-- Large decorative number -->
+              <span class="step-bg-num" aria-hidden="true">{item.step}</span>
+              <div class="step-tag-label">Etapa {item.step}</div>
               <h3 class="step-title">{item.title}</h3>
               <p class="step-desc">{item.desc}</p>
             </div>
@@ -64,9 +68,9 @@ const steps = [
     </div>
 
     <div class="timeline-cta" data-animate="fade-up" data-delay="200">
-      <button onclick="openQuoteModal()" class="btn btn-primary">
+      <button onclick="openQuoteModal()" class="btn btn-primary" id="timeline-cta-btn">
         <span>Iniciar Etapa 01 — Solicitar Orçamento</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </button>
     </div>
   </div>
@@ -77,20 +81,17 @@ const steps = [
     var fill = document.getElementById('timeline-fill');
     var container = document.getElementById('timeline-container');
     if (!fill || !container) return;
-
-    var animated = false;
-
+    var done = false;
     var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting && !animated) {
-          animated = true;
-          fill.style.transition = 'height 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s';
+      entries.forEach(function (e) {
+        if (e.isIntersecting && !done) {
+          done = true;
+          fill.style.transition = 'height 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s';
           fill.style.height = '100%';
-          obs.unobserve(entry.target);
+          obs.unobserve(e.target);
         }
       });
-    }, { threshold: 0.15 });
-
+    }, { threshold: 0.12 });
     obs.observe(container);
   })();
 </script>
@@ -101,132 +102,186 @@ const steps = [
     position: relative;
   }
 
-  .timeline-container {
+  /* ---- Wrapper ---- */
+  .timeline-wrapper {
     position: relative;
-    max-width: 900px;
-    margin: 0 auto 3.5rem auto;
+    max-width: 960px;
+    margin: 0 auto 4rem auto;
   }
 
-  /* Linha de trilho estática */
-  .timeline-line-track {
+  /* ---- Vertical line ---- */
+  .timeline-track {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 50%;
-    width: 3px;
-    background: rgba(255,255,255,0.06);
+    width: 2px;
+    background: rgba(255, 255, 255, 0.06);
     transform: translateX(-50%);
     border-radius: 2px;
     overflow: hidden;
   }
 
-  /* Linha de progresso animada */
-  .timeline-line-fill {
+  .timeline-fill {
     width: 100%;
     height: 0%;
     background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
     border-radius: 2px;
-    box-shadow: 0 0 12px var(--primary-glow);
+    box-shadow: 0 0 16px var(--primary-glow);
   }
 
+  /* ---- Steps ---- */
   .timeline-steps {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 3rem;
   }
 
   .timeline-item {
     display: flex;
     align-items: center;
-    position: relative;
     width: 100%;
+    position: relative;
   }
 
-  .timeline-item.even {
+  .timeline-item.left {
     flex-direction: row-reverse;
   }
 
-  .step-badge {
-    width: 54px;
-    height: 54px;
+  .timeline-item.right {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  /* ---- Node ---- */
+  .step-node {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 60px;
+    height: 60px;
     background: var(--bg-card);
     border: 2px solid var(--primary);
-    box-shadow: 0 0 20px var(--primary-glow), 0 0 0 6px rgba(230, 25, 25, 0.08);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
+    box-shadow: 0 0 0 6px rgba(230, 48, 0, 0.08), 0 0 24px var(--primary-glow);
     transition: var(--transition);
+    flex-shrink: 0;
   }
 
-  .step-badge:hover {
+  .timeline-item:hover .step-node {
     background: var(--primary);
-    transform: translateX(-50%) scale(1.15);
-    box-shadow: 0 0 30px var(--primary-glow);
+    box-shadow: 0 0 0 8px rgba(230, 48, 0, 0.12), 0 0 36px var(--primary-glow);
+    transform: translateX(-50%) scale(1.12);
   }
 
-  .step-number {
-    font-weight: 800;
-    font-size: 0.95rem;
-    color: var(--primary);
-    transition: color 0.3s;
+  .step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.15rem;
+    color: var(--primary-light);
+    letter-spacing: 0.05em;
+    transition: color 0.25s;
   }
 
-  .step-badge:hover .step-number {
+  .timeline-item:hover .step-num {
     color: #fff;
   }
 
+  /* ---- Card ---- */
   .step-card {
     width: 43%;
-    padding: 1.5rem 1.75rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
   }
 
-  .step-tag {
+  .timeline-item:hover .step-card {
+    border-color: var(--primary-border);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Large decorative number in background */
+  .step-bg-num {
+    position: absolute;
+    top: -0.5rem;
+    right: 1rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 6rem;
+    color: rgba(230, 48, 0, 0.04);
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    transition: color 0.3s;
+  }
+
+  .timeline-item:hover .step-bg-num {
+    color: rgba(230, 48, 0, 0.07);
+  }
+
+  .step-tag-label {
     font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--primary);
+    letter-spacing: 0.10em;
+    color: var(--primary-light);
     margin-bottom: 0.5rem;
+    position: relative;
   }
 
   .step-title {
-    font-size: 1.15rem;
+    font-size: 1.12rem;
     font-weight: 700;
     color: var(--text-main);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+    position: relative;
+    letter-spacing: -0.01em;
   }
 
   .step-desc {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
-    line-height: 1.55;
+    line-height: 1.65;
+    position: relative;
   }
 
+  /* ---- CTA ---- */
   .timeline-cta {
     text-align: center;
   }
 
+  /* ---- Responsive ---- */
   @media (max-width: 768px) {
-    .timeline-line-track {
-      left: 25px;
+    .timeline-track {
+      left: 28px;
     }
+
     .timeline-steps {
       gap: 2rem;
     }
+
     .timeline-item,
-    .timeline-item.even {
+    .timeline-item.left,
+    .timeline-item.right {
       flex-direction: row;
       justify-content: flex-start;
-      padding-left: 65px;
+      padding-left: 72px;
     }
-    .step-badge {
-      left: 25px;
+
+    .step-node {
+      left: 28px;
+      width: 52px;
+      height: 52px;
     }
+
     .step-card {
       width: 100%;
     }
