@@ -1,0 +1,534 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import QuoteModal from '../components/QuoteModal.astro';
+---
+
+<Layout 
+  title="Consultoria Técnica de Segurança Contra Incêndio | BrigadaFire"
+  description="Consultoria especializada em dimensionamento de brigadas (NR-23/NBR 14276), vistorias prediais, elaboração de Plano de Ação de Emergência (PAE) e adequação para AVCB/CLCB."
+>
+  <Header />
+
+  <main id="main-content" class="consulting-page">
+    <!-- Hero Banner -->
+    <section class="consulting-hero">
+      <div class="consulting-hero-bg">
+        <div class="consulting-glow"></div>
+      </div>
+      <div class="container consulting-hero-container">
+        <div class="consulting-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>ENGENHARIA & COMPLIANCE PREDIAL</span>
+        </div>
+        <h1 class="font-display">CONSULTORIA TÉCNICA DE <span class="text-fire">SEGURANÇA</span></h1>
+        <p class="hero-subtitle">
+          Diagnóstico especializado, dimensionamento exato de brigadistas, elaboração de planos de emergência e adequação normativa para vistorias do Corpo de Bombeiros (AVCB / CLCB).
+        </p>
+        <div class="hero-cta-group">
+          <button type="button" onclick="openQuoteModal()" class="btn-hero-primary">Solicitar Vistoria / Consultoria</button>
+          <a href="https://wa.me/5511999999999" target="_blank" class="btn-hero-secondary">Falar com Engenheiro no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços de Consultoria (Grid de Serviços) -->
+    <section class="services-section container">
+      <div class="section-header text-center">
+        <h2 class="section-title font-display">SOLUÇÕES EM CONSULTORIA <span class="text-fire">TÉCNICA</span></h2>
+        <p class="section-desc">Garantimos conformidade legal total perante a NR-23, NBR 14276 e as Instruções Técnicas (IT) vigentes do Corpo de Bombeiros Militar.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Serviço 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <polyline points="16 11 18 13 22 9"></polyline>
+            </svg>
+          </div>
+          <h3>Dimensionamento de Brigada (NBR 14276)</h3>
+          <p>Cálculo exato da quantidade necessária de brigadistas por pavimento, turno e setor, evitando autuações por dimensionamento incorreto nas vistorias.</p>
+        </div>
+
+        <!-- Serviço 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3>Plano de Ação de Emergência (PAE)</h3>
+          <p>Elaboração e atualização do documento técnico que estabelece os procedimentos de alerta, abandono, combate inicial e rotas de fuga da edificação.</p>
+        </div>
+
+        <!-- Serviço 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3>Acompanhamento para Emissão do AVCB / CLCB</h3>
+          <p>Consultoria técnica para adequação prévia e emissão do Atestado de Formação da Brigada exigido pelo Corpo de Bombeiros na vistoria oficial.</p>
+        </div>
+
+        <!-- Serviço 4 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3>Auditoria Preventiva de Equipamentos de Incêndio</h3>
+          <p>Inspeção visual e técnica em extintores, mangueiras, hidrantes, sinalização fotoluminescente, iluminação de emergência e portas corta-fogo.</p>
+        </div>
+
+        <!-- Serviço 5 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+          </div>
+          <h3>Planejamento de Simulados de Abandono de Área</h3>
+          <p>Organização e cronograma para execução de exercícios simulados com medição de tempo de evacuação, teste de sirenes e relatório pós-simulado.</p>
+        </div>
+
+        <!-- Serviço 6 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>Parecer Técnico e Emissão de ART (CREA)</h3>
+          <p>Emissão de Anotação de Responsabilidade Técnica (ART) por Engenheiro de Segurança do Trabalho para instrução de brigadas e laudos de segurança.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quem Precisa de Consultoria (Cards de Casos de Uso) -->
+    <section class="use-cases-section container">
+      <div class="section-header">
+        <h2 class="section-title font-display">QUANDO SUA EMPRESA PRECISA DE <span class="text-fire">CONSULTORIA?</span></h2>
+        <p class="section-desc">Situações em que o apoio de um Engenheiro de Segurança faz toda a diferença para evitar penalidades e proteger o patrimônio:</p>
+      </div>
+
+      <div class="use-cases-grid">
+        <div class="case-card">
+          <div class="case-number">01</div>
+          <h3>Renovação ou Obtenção do AVCB</h3>
+          <p>O Corpo de Bombeiros exige a renovação do atestado da brigada de incêndio para liberar ou renovar o Auto de Vistoria do imóvel.</p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-number">02</div>
+          <h3>Expansão de Planta Industrial ou Mudança de Layout</h3>
+          <p>Alterações físicas, novos maquinários ou ampliação do número de funcionários alteram a carga de incêndio e exigem redimensionamento.</p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-number">03</div>
+          <h3>Fiscalização do Ministério do Trabalho (NR-23)</h3>
+          <p>Notificações ou auditorias fiscais referente às exigências da Norma Regulamentadora NR-23 e treinamento de equipe interna.</p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-number">04</div>
+          <h3>Condomínios Residenciais e Comerciais</h3>
+          <p>Necessidade de adequação de rotas de fuga, cadastramento de brigadistas voluntários e instrução de portaria/zeladoria.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner de CTA Final -->
+    <section class="cta-banner-section container">
+      <div class="cta-banner-box">
+        <div class="cta-content">
+          <h2 class="font-display">SOLICITE UMA VISTORIA TÉCNICA NA SUA <span class="text-fire">EDIFICAÇÃO</span></h2>
+          <p>Nossa equipe de engenharia realiza o diagnóstico da sua empresa para garantir adequação total às normas vigentes.</p>
+        </div>
+        <div class="cta-actions">
+          <button type="button" onclick="openQuoteModal()" class="btn-primary-action">Solicitar Consultoria Técnica</button>
+          <a href="/contato" class="btn-secondary-action">Falar com a Equipe</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  <QuoteModal />
+</Layout>
+
+<style>
+  /* Base Styles */
+  .consulting-page {
+    background-color: var(--bg-main);
+    padding-top: var(--nav-height, 80px);
+    min-height: 100vh;
+    color: var(--text-main);
+  }
+
+  /* Hero Section */
+  .consulting-hero {
+    position: relative;
+    padding: 5.5rem 0 4rem;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.07));
+    background: radial-gradient(circle at 50% 0%, rgba(230, 48, 0, 0.1) 0%, transparent 70%);
+  }
+
+  .consulting-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .consulting-glow {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 65%);
+    filter: blur(40px);
+  }
+
+  .consulting-hero-container {
+    position: relative;
+    z-index: 1;
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .consulting-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(230, 48, 0, 0.12);
+    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
+    color: var(--primary-light, #FF4A1A);
+    padding: 0.4rem 1.2rem;
+    border-radius: var(--radius-full, 9999px);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .consulting-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 6.5vw, 4.75rem);
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.25rem;
+    color: #FFFFFF;
+  }
+
+  .text-fire {
+    color: var(--primary);
+    background: linear-gradient(135deg, #FF4A1A 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 780px;
+    margin: 0 auto 2.25rem;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-hero-primary {
+    background: var(--gradient-fire, linear-gradient(135deg, #E63000 0%, #A82200 100%));
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--radius-sm, 8px);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 20px rgba(230, 48, 0, 0.4);
+  }
+
+  .btn-hero-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(230, 48, 0, 0.55);
+  }
+
+  .btn-hero-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-sm, 8px);
+    text-decoration: none;
+    transition: var(--transition-fast);
+  }
+
+  .btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #FFFFFF;
+  }
+
+  /* Services Grid Section */
+  .services-section {
+    padding: 5rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #FFFFFF;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md, 16px);
+    padding: 2rem;
+    transition: var(--transition-fast);
+  }
+
+  .service-card:hover {
+    border-color: var(--border-fire);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .service-icon {
+    background: rgba(230, 48, 0, 0.12);
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Use Cases Section */
+  .use-cases-section {
+    padding: 2rem 1.5rem 6rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.75rem;
+  }
+
+  .case-card {
+    background: rgba(17, 17, 17, 0.85);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md, 16px);
+    padding: 1.75rem;
+    position: relative;
+    transition: var(--transition-fast);
+  }
+
+  .case-card:hover {
+    border-color: var(--border-fire);
+  }
+
+  .case-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--primary);
+    background: rgba(230, 48, 0, 0.1);
+    border: 1px solid var(--border-fire);
+    border-radius: 10px;
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .case-card h3 {
+    font-size: 1.15rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .case-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* CTA Banner */
+  .cta-banner-section {
+    max-width: 1100px;
+    margin: 0 auto 6rem;
+    padding: 0 1.5rem;
+  }
+
+  .cta-banner-box {
+    background: linear-gradient(135deg, rgba(25, 20, 20, 0.95) 0%, rgba(35, 20, 20, 0.95) 100%);
+    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
+    border-radius: var(--radius-lg, 24px);
+    padding: 3.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .cta-content h2 {
+    font-size: 2.25rem;
+    color: #FFFFFF;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 0;
+    max-width: 580px;
+  }
+
+  .cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  .btn-primary-action {
+    background: var(--gradient-fire, linear-gradient(135deg, #E63000 0%, #A82200 100%));
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 1.75rem;
+    border: none;
+    border-radius: var(--radius-sm, 8px);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(230, 48, 0, 0.35);
+    white-space: nowrap;
+  }
+
+  .btn-primary-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 48, 0, 0.5);
+  }
+
+  .btn-secondary-action {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid var(--border-light, rgba(255, 255, 255, 0.2));
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.85rem 1.75rem;
+    border-radius: var(--radius-sm, 8px);
+    text-decoration: none;
+    text-align: center;
+    transition: var(--transition-fast);
+  }
+
+  .btn-secondary-action:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: #FFFFFF;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .cta-banner-box {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem 2rem;
+    }
+    .cta-actions {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-cta-group {
+      flex-direction: column;
+    }
+    .btn-hero-primary, .btn-hero-secondary {
+      width: 100%;
+    }
+  }
+</style>

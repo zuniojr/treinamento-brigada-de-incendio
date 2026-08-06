@@ -1,0 +1,592 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import QuoteModal from '../components/QuoteModal.astro';
+---
+
+<Layout 
+  title="Trabalhe Conosco | Faça Parte do Time BrigadaFire"
+  description="Oportunidades de carreira para Instrutores de Brigada de Incêndio, Engenheiros de Segurança do Trabalho, Bombeiros Civis e Consultores Comerciais."
+>
+  <Header />
+
+  <main id="main-content" class="careers-page">
+    <!-- Hero Banner -->
+    <section class="careers-hero">
+      <div class="careers-hero-bg">
+        <div class="careers-glow"></div>
+      </div>
+      <div class="container careers-hero-container">
+        <div class="careers-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <span>OPORTUNIDADES & CARREIRA</span>
+        </div>
+        <h1 class="font-display">FAÇA PARTE DO NOSSO <span class="text-fire">TIME DE ELITE</span></h1>
+        <p class="hero-subtitle">
+          Procuramos profissionais apaixonados por segurança do trabalho, instrução técnica de combate a incêndio e excelência no atendimento corporativo.
+        </p>
+      </div>
+    </section>
+
+    <!-- Por que trabalhar conosco (Cards Grid) -->
+    <section class="why-us-section container">
+      <div class="section-header text-center">
+        <h2 class="section-title font-display">POR QUE TRABALHAR NA <span class="text-fire">BRIGADAFIRE</span>?</h2>
+        <p class="section-desc">Oferecemos um ambiente dinâmico, focado na capacitação contínua e no impacto direto na preservação de vidas.</p>
+      </div>
+
+      <div class="perks-grid">
+        <div class="perk-card">
+          <div class="perk-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3>Excelência e Rigor Técnico</h3>
+          <p>Trabalhe com infraestrutura de ponta, metodologias ativas e simulações alinhadas às mais rigorosas normas do Corpo de Bombeiros e NR-23.</p>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <h3>Flexibilidade In-Company</h3>
+          <p>Oportunidades tanto para contratação corporativa fixa quanto para instrutores parceiros prestadores de serviço por demanda regional.</p>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
+          </div>
+          <h3>Valorização Profissional</h3>
+          <p>Remuneração compatível com o mercado, bônus por desempenho pedagógico e incentivo ao aperfeiçoamento de certificações.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Perfil de Vagas Abertas -->
+    <section class="openings-section container">
+      <div class="section-header">
+        <h2 class="section-title font-display">PERFIS QUE <span class="text-fire">BUSCAMOS CONECTAR</span></h2>
+        <p class="section-desc">Confira as áreas de atuação constante em nossa rede de profissionais:</p>
+      </div>
+
+      <div class="jobs-list">
+        <div class="job-card">
+          <div class="job-info">
+            <span class="job-badge">CREA / MTE</span>
+            <h3>Instrutor de Brigada de Incêndio (Engenheiro ou TST)</h3>
+            <p>Responsável por ministrar aulas teóricas e práticas de NR-23, assinar ARTs e atestados de formação para indústrias e condomínios.</p>
+            <div class="job-tags">
+              <span>Formação Superior ou Técnica em SST</span>
+              <span>Credenciamento no Corpo de Bombeiros</span>
+              <span>Disponibilidade para Viagens Regionais</span>
+            </div>
+          </div>
+          <a href="#formulario-curriculo" class="btn-job-apply">Candidatar-se</a>
+        </div>
+
+        <div class="job-card">
+          <div class="job-info">
+            <span class="job-badge">CAMPO / PRÁTICA</span>
+            <h3>Bombeiro Civil / Instrutor Prático de Emergência</h3>
+            <p>Condução dos exercícios práticos de combate a incêndio, manuseio de mangueiras, extintores e treinamento de primeiros socorros.</p>
+            <div class="job-tags">
+              <span>Curso de Bombeiro Civil Atualizado</span>
+              <span>Didática e Comunicação Clara</span>
+              <span>Experiência em Simulação de Abandono</span>
+            </div>
+          </div>
+          <a href="#formulario-curriculo" class="btn-job-apply">Candidatar-se</a>
+        </div>
+
+        <div class="job-card">
+          <div class="job-info">
+            <span class="job-badge">COMERCIAL</span>
+            <h3>Consultor Técnico de Vendas Corporativas</h3>
+            <p>Prospecção B2B de novos clientes corporativos, industriais e condominiais para treinamentos in-company de Brigada de Incêndio.</p>
+            <div class="job-tags">
+              <span>Experiência em Vendas B2B</span>
+              <span>Conhecimento em Normas de SST (Diferencial)</span>
+              <span>Trabalho Híbrido / Remoto</span>
+            </div>
+          </div>
+          <a href="#formulario-curriculo" class="btn-job-apply">Candidatar-se</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulário de Envio de Currículo -->
+    <section id="formulario-curriculo" class="form-section container">
+      <div class="form-wrapper">
+        <div class="form-header">
+          <h2 class="font-display">ENVIE SEU <span class="text-fire">CURRÍCULO</span></h2>
+          <p>Preencha os dados abaixo para cadastrar seu perfil em nosso banco de talentos corporativo.</p>
+        </div>
+
+        <form class="careers-form" onsubmit="event.preventDefault(); alert('Obrigado! Seu perfil foi enviado com sucesso para nosso banco de talentos.');">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Nome Completo *</label>
+              <input type="text" id="name" required placeholder="Digite seu nome completo" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail de Contato *</label>
+              <input type="email" id="email" required placeholder="seuemail@exemplo.com.br" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Telefone / WhatsApp *</label>
+              <input type="tel" id="phone" required placeholder="(00) 90000-0000" />
+            </div>
+
+            <div class="form-group">
+              <label for="city">Cidade / Estado *</label>
+              <input type="text" id="city" required placeholder="Ex: Barra Velha / SC" />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="role">Área de Interesse *</label>
+              <select id="role" required>
+                <option value="" disabled selected>Selecione a vaga ou perfil</option>
+                <option value="instrutor-tst">Instrutor de Brigada (Engenheiro ou TST)</option>
+                <option value="bombeiro-civil">Bombeiro Civil / Instrutor Prático</option>
+                <option value="consultor-comercial">Consultor Técnico de Vendas (B2B)</option>
+                <option value="banco-talentos">Outras Áreas (Banco de Talentos)</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="linkedin">Link do LinkedIn ou Portfólio (Opcional)</label>
+              <input type="url" id="linkedin" placeholder="https://linkedin.com/in/seu-perfil" />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="experience">Resumo da Experiência e Certificações *</label>
+              <textarea id="experience" rows="4" required placeholder="Conte brevemente sua experiência com treinamento de brigada, registro profissional (CREA/MTE) ou qualificações de combate a incêndio..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <button type="submit" class="btn-submit-careers">Cadastrar Currículo</button>
+            <p class="privacy-note">
+              Seus dados serão tratados de forma confidencial, de acordo com a nossa <a href="/politica-de-privacidade" target="_blank">Política de Privacidade (LGPD)</a>.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  <QuoteModal />
+</Layout>
+
+<style>
+  /* Base Styles */
+  .careers-page {
+    background-color: var(--bg-main);
+    padding-top: var(--nav-height, 80px);
+    min-height: 100vh;
+    color: var(--text-main);
+  }
+
+  /* Hero Section */
+  .careers-hero {
+    position: relative;
+    padding: 5rem 0 3.5rem;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.07));
+    background: radial-gradient(circle at 50% 0%, rgba(230, 48, 0, 0.08) 0%, transparent 70%);
+  }
+
+  .careers-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .careers-glow {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 65%);
+    filter: blur(40px);
+  }
+
+  .careers-hero-container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .careers-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(230, 48, 0, 0.12);
+    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
+    color: var(--primary-light, #FF4A1A);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full, 9999px);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .careers-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.25rem;
+    color: #FFFFFF;
+  }
+
+  .text-fire {
+    color: var(--primary);
+    background: linear-gradient(135deg, #FF4A1A 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  /* Perks Section */
+  .why-us-section {
+    padding: 5rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #FFFFFF;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 650px;
+  }
+
+  .perks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .perk-card {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md, 16px);
+    padding: 2rem;
+    transition: var(--transition-fast);
+  }
+
+  .perk-card:hover {
+    border-color: var(--border-fire);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .perk-icon {
+    background: rgba(230, 48, 0, 0.12);
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .perk-card h3 {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+  }
+
+  .perk-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Jobs Section */
+  .openings-section {
+    padding: 0 1.5rem 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .jobs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .job-card {
+    background: rgba(17, 17, 17, 0.8);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md, 16px);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    transition: var(--transition-fast);
+  }
+
+  .job-card:hover {
+    border-color: var(--border-fire);
+  }
+
+  .job-info {
+    flex: 1;
+  }
+
+  .job-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .job-card h3 {
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .job-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .job-tags {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .job-tags span {
+    font-size: 0.8rem;
+    color: var(--primary-light, #FF4A1A);
+    background: rgba(230, 48, 0, 0.08);
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+  }
+
+  .btn-job-apply {
+    background: rgba(230, 48, 0, 0.15);
+    border: 1px solid var(--border-fire);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm, 8px);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: var(--transition-fast);
+  }
+
+  .btn-job-apply:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+
+  /* Form Section */
+  .form-section {
+    padding: 0 1.5rem 6rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .form-wrapper {
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(30, 20, 20, 0.95) 100%);
+    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
+    border-radius: var(--radius-lg, 24px);
+    padding: 3rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .form-header h2 {
+    font-size: 2.25rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-header p {
+    font-size: 0.975rem;
+    color: var(--text-muted);
+  }
+
+  .careers-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .full-width {
+    grid-column: span 2;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #E2E8F0;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid var(--border-light, rgba(255, 255, 255, 0.15));
+    border-radius: var(--radius-sm, 8px);
+    padding: 0.8rem 1rem;
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition-fast);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(230, 48, 0, 0.2);
+  }
+
+  .form-group select option {
+    background: #111;
+    color: #FFF;
+  }
+
+  .form-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .btn-submit-careers {
+    width: 100%;
+    max-width: 400px;
+    background: var(--gradient-fire, linear-gradient(135deg, #E63000 0%, #A82200 100%));
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--radius-sm, 8px);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 20px rgba(230, 48, 0, 0.35);
+  }
+
+  .btn-submit-careers:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(230, 48, 0, 0.5);
+  }
+
+  .privacy-note {
+    font-size: 0.8rem;
+    color: var(--text-subtle);
+    text-align: center;
+  }
+
+  .privacy-note a {
+    color: var(--primary-light);
+    text-decoration: underline;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .job-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .btn-job-apply {
+      width: 100%;
+      text-align: center;
+    }
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+    .full-width {
+      grid-column: span 1;
+    }
+    .form-wrapper {
+      padding: 1.75rem 1.25rem;
+    }
+  }
+</style>

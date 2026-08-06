@@ -1,0 +1,703 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import QuoteModal from '../components/QuoteModal.astro';
+---
+
+<Layout 
+  title="Considerações Importantes e Pré-Requisitos Táticos | BrigadaFire"
+  description="Requisitos técnicos, operacionais, de segurança e infraestrutura para a realização dos treinamentos corporativos de Brigada de Incêndio (NR-23)."
+>
+  <Header />
+
+  <main id="main-content" class="legal-page">
+    <!-- Hero Banner -->
+    <section class="legal-hero">
+      <div class="legal-hero-bg">
+        <div class="legal-glow"></div>
+      </div>
+      <div class="container legal-hero-container">
+        <div class="legal-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <span>DIRETRIZES OPERACIONAIS & SEGURANÇA</span>
+        </div>
+        <h1 class="font-display">CONSIDERAÇÕES <span class="text-fire">IMPORTANTE S</span></h1>
+        <p class="hero-subtitle">
+          Guia de pré-requisitos técnicos, normas de segurança e exigências de infraestrutura para a correta realização das etapas teóricas e práticas dos cursos de Brigada de Incêndio (NR-23 e NBR 14276).
+        </p>
+        <div class="legal-meta">
+          <span class="meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Última Atualização: <strong>Agosto de 2026</strong>
+          </span>
+          <span class="meta-divider">•</span>
+          <span class="meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Normas de Segurança em Treinamentos
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo Executivo Highlight -->
+    <section class="summary-section container">
+      <div class="summary-box">
+        <div class="summary-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+            <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <div class="summary-content">
+          <h3>Planejamento Seguro de Turmas</h3>
+          <p>
+            Para assegurar a integridade física de todos os participantes e o cumprimento dos padrões exigidos pelo <strong>Corpo de Bombeiros e Ministério do Trabalho</strong>, este documento reúne os requisitos que a empresa contratante e os colaboradores devem atender no dia do treinamento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Layout (Sidebar + Article Content) -->
+    <section class="legal-layout container">
+      <!-- Sticky Sidebar Index -->
+      <aside class="legal-sidebar">
+        <div class="sidebar-sticky">
+          <h4 class="sidebar-title">Índice dos Requisitos</h4>
+          <nav class="toc-nav" aria-label="Índice das Considerações Importantes">
+            <ul>
+              <li><a href="#secao-1" class="toc-link active"><span class="toc-num">01</span> Saúde e Aptidão Física</a></li>
+              <li><a href="#secao-2" class="toc-link"><span class="toc-num">02</span> Vestuário e EPIs</a></li>
+              <li><a href="#secao-3" class="toc-link"><span class="toc-num">03</span> Infraestrutura Teórica</a></li>
+              <li><a href="#secao-4" class="toc-link"><span class="toc-num">04</span> Área de Prática de Fogo</a></li>
+              <li><a href="#secao-5" class="toc-link"><span class="toc-num">05</span> Assiduidade e Pontualidade</a></li>
+              <li><a href="#secao-6" class="toc-link"><span class="toc-num">06</span> Documentação de Alunos</a></li>
+              <li><a href="#secao-7" class="toc-link"><span class="toc-num">07</span> Condições Climáticas</a></li>
+              <li><a href="#secao-8" class="toc-link"><span class="toc-num">08</span> Validade do Certificado</a></li>
+            </ul>
+          </nav>
+
+          <div class="sidebar-cta">
+            <p>Dúvidas táticas sobre seu espaço?</p>
+            <button type="button" onclick="openQuoteModal()" class="btn-sidebar-cta">Consultar Instrutor</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Body -->
+      <article class="legal-body">
+        <!-- Secao 1 -->
+        <section id="secao-1" class="legal-section">
+          <h2>1. Saúde e Aptidão Física dos Participantes</h2>
+          <p>
+            Os treinamentos de brigada envolvem simulação prática com combate a princípios de incêndio, manuseio de mangueiras sob pressão e suporte básico de vida (RCP).
+          </p>
+          <div class="callout-alert">
+            <h4>Critérios Mínimos de Saúde</h4>
+            <p>
+              Todos os participantes devem possuir o ASO (Atestado de Saúde Ocupacional) em dia e estar aptos para atividades físicas moderadas. Pessoas com hipertensão descontrolada, cirurgias recentes, gestantes ou restrições de mobilidade grave devem ser previamente reportadas para adaptação teórica exclusiva.
+            </p>
+          </div>
+        </section>
+
+        <!-- Secao 2 -->
+        <section id="secao-2" class="legal-section">
+          <h2>2. Vestuário Obrigatório e EPIs</h2>
+          <p>
+            Para garantir a segurança pessoal durante o combate prático a incêndio e simulação de evacuação, os alunos devem seguir rigorosamente o padrão de vestuário:
+          </p>
+          <ul class="styled-list">
+            <li><strong>Calçados:</strong> Sapato de segurança, bota ou tênis fechado com solado antiderrapante. É <strong>estritamente proibido</strong> o uso de sandálias, chinelos ou calçados com salto.</li>
+            <li><strong>Calças:</strong> Calça comprida confeccionada em algodão ou jeans reforçado. Vedado o uso de bermudas, calças de tecido sintético altamente inflamável ou vestidos/saias.</li>
+            <li><strong>Camiseta:</strong> Blusa de manga curta ou comprida de tecido de algodão.</li>
+            <li><strong>EPIs Fornecidos:</strong> A BrigadaFire disponibiliza luvas de proteção térmica, óculos de segurança e capacetes de combate para a etapa prática.</li>
+          </ul>
+        </section>
+
+        <!-- Secao 3 -->
+        <section id="secao-3" class="legal-section">
+          <h2>3. Infraestrutura da Sala para Etapa Teórica</h2>
+          <p>
+            Em treinamentos *In-Company* (nas dependências da empresa contratante), o ambiente preparado para a aula teórica deve contar com:
+          </p>
+          <div class="terms-grid">
+            <div class="term-card">
+              <h4>Acomodação e Conforto</h4>
+              <p>Sala de treinamento privativa, iluminação adequada, ambiente climatizado e assentos individuais para todos os alunos.</p>
+            </div>
+            <div class="term-card">
+              <h4>Recursos Audiovisuais</h4>
+              <p>Televisor com entrada HDMI ou Projetor (Datashow) com tela de projeção e tomadas operacionais.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Secao 4 -->
+        <section id="secao-4" class="legal-section">
+          <h2>4. Área para a Prática de Combate a Incêndio</h2>
+          <p>
+            A etapa prática requer um local seguro e controlado para o manuseio de extintores e linha de mangueira:
+          </p>
+          <ul class="styled-list">
+            <li><strong>Espaço Aberto:</strong> Pátio amplo, estacionamento limpo ou área aberta afastada de depósitos de inflamáveis, tintas ou produtos químicos.</li>
+            <li><strong>Ponto de Água:</strong> Acesso à rede de hidrantes da edificação ou ponto de água de alta vazão para simulação de pressurização de mangueiras.</li>
+            <li><strong>Extintores para Treinamento:</strong> Os extintores utilizados nos exercícios práticos devem ser disponibilizados pela empresa ou contratados previamente via logística da BrigadaFire.</li>
+          </ul>
+        </section>
+
+        <!-- Secao 5 -->
+        <section id="secao-5" class="legal-section">
+          <h2>5. Assiduidade e Pontualidade</h2>
+          <p>
+            A carga horária estipulada pela NR-23 e NBR 14276 é obrigatória. Tolerância máxima de atraso de 15 minutos no início da aula. A ausência parcial em qualquer dos módulos impede a emissão do certificado individual de conclusão.
+          </p>
+        </section>
+
+        <!-- Secao 6 -->
+        <section id="secao-6" class="legal-section">
+          <h2>6. Fornecimento da Lista de Alunos</h2>
+          <p>
+            A lista completa contendo Nome Completo, CPF e Cargo dos colaboradores deve ser entregue à BrigadaFire com pelo menos <strong>48 horas de antecedência</strong> do início do curso para a preparação prévia dos certificados e relatórios técnicos.
+          </p>
+        </section>
+
+        <!-- Secao 7 -->
+        <section id="secao-7" class="legal-section">
+          <h2>7. Condições Climáticas Adversas</h2>
+          <p>
+            Em caso de tempestades severas, vendavais ou chuvas torrenciais na data da prática externa de combate ao fogo, o instrutor responsável poderá reagendar a etapa prática por motivo de força maior e segurança dos alunos, sem prejuízo da etapa teórica já concluída.
+          </p>
+        </section>
+
+        <!-- Secao 8 -->
+        <section id="secao-8" class="legal-section">
+          <h2>8. Validade e Renovação Periódica</h2>
+          <p>
+            Conforme legislação do Corpo de Bombeiros e diretrizes de SST, o treinamento de Brigada de Incêndio possui validade de <strong>12 (doze) meses</strong>. A reciclagem anual é requisito obrigatório para a manutenção do Atestado da Brigada e renovação do AVCB da edificação.
+          </p>
+        </section>
+
+        <!-- Contact Box bottom -->
+        <div class="legal-contact-card">
+          <div class="contact-card-info">
+            <h3>Precisa adaptar o treinamento para o seu espaço?</h3>
+            <p>Nossa equipe técnica realiza a vistoria prévia e adapta o plano de treinamento à realidade de sua empresa.</p>
+          </div>
+          <div class="contact-card-actions">
+            <button type="button" onclick="openQuoteModal()" class="btn-primary-action">Solicitar Avaliação Técnica</button>
+            <a href="https://wa.me/5511999999999" target="_blank" class="btn-secondary-action">Falar no WhatsApp</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  <QuoteModal />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.legal-section');
+    const navLinks = document.querySelectorAll('.toc-link');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${currentId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
+
+<style>
+  /* Base Styles */
+  .legal-page {
+    background-color: var(--bg-main);
+    padding-top: var(--nav-height, 80px);
+    min-height: 100vh;
+    color: var(--text-main);
+  }
+
+  /* Hero Section */
+  .legal-hero {
+    position: relative;
+    padding: 5rem 0 3.5rem;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.07));
+    background: radial-gradient(circle at 50% 0%, rgba(230, 48, 0, 0.08) 0%, transparent 70%);
+  }
+
+  .legal-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .legal-glow {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 65%);
+    filter: blur(40px);
+  }
+
+  .legal-hero-container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .legal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(230, 48, 0, 0.12);
+    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
+    color: var(--primary-light, #FF4A1A);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full, 9999px);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .legal-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.25rem;
+    color: #FFFFFF;
+  }
+
+  .text-fire {
+    color: var(--primary);
+    background: linear-gradient(135deg, #FF4A1A 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 760px;
+    margin: 0 auto 1.75rem;
+  }
+
+  .legal-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-subtle, #6B7280);
+    flex-wrap: wrap;
+  }
+
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .meta-item strong {
+    color: var(--text-main);
+  }
+
+  .meta-divider {
+    color: var(--text-subtle);
+    opacity: 0.5;
+  }
+
+  /* Executive Summary */
+  .summary-section {
+    max-width: 1100px;
+    margin: 2.5rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  .summary-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: rgba(20, 20, 20, 0.7);
+    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
+    border-radius: var(--radius-lg, 20px);
+    padding: 1.75rem 2rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .summary-icon {
+    flex-shrink: 0;
+    background: rgba(230, 48, 0, 0.12);
+    border-radius: 12px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .summary-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0.4rem;
+  }
+
+  .summary-content p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Two Column Layout */
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3.5rem;
+    max-width: 1100px;
+    margin: 3.5rem auto 6rem;
+    padding: 0 1.5rem;
+  }
+
+  /* Sidebar */
+  .legal-sidebar {
+    position: relative;
+  }
+
+  .sidebar-sticky {
+    position: sticky;
+    top: calc(var(--nav-height, 80px) + 2rem);
+    background: rgba(17, 17, 17, 0.8);
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.07));
+    border-radius: var(--radius-md, 16px);
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .sidebar-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-subtle);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .toc-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm, 8px);
+    transition: var(--transition-fast);
+  }
+
+  .toc-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-subtle);
+    width: 20px;
+  }
+
+  .toc-link:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .toc-link.active {
+    color: var(--primary-light, #FF4A1A);
+    background: rgba(230, 48, 0, 0.12);
+    font-weight: 600;
+  }
+
+  .toc-link.active .toc-num {
+    color: var(--primary);
+  }
+
+  .sidebar-cta {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .sidebar-cta p {
+    font-size: 0.825rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .btn-sidebar-cta {
+    width: 100%;
+    background: rgba(230, 48, 0, 0.15);
+    border: 1px solid var(--border-fire);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-sm, 8px);
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+
+  .btn-sidebar-cta:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+
+  /* Body Content */
+  .legal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .legal-section {
+    scroll-margin-top: calc(var(--nav-height, 80px) + 2rem);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 2.5rem;
+  }
+
+  .legal-section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .legal-section h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1.25rem;
+  }
+
+  .legal-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .styled-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .styled-list li {
+    position: relative;
+    padding-left: 1.75rem;
+    font-size: 0.975rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  .styled-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  .callout-alert {
+    background: rgba(230, 48, 0, 0.08);
+    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout-alert h4 {
+    font-size: 1.05rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+  }
+
+  .callout-alert p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  .term-card {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md, 12px);
+    padding: 1.25rem 1.5rem;
+  }
+
+  .term-card h4 {
+    font-size: 1rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+  }
+
+  .term-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  .legal-contact-card {
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(30, 20, 20, 0.9) 100%);
+    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
+    border-radius: var(--radius-lg, 20px);
+    padding: 2.5rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .contact-card-info h3 {
+    font-size: 1.35rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-card-info p {
+    font-size: 0.975rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+  }
+
+  .contact-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary-action {
+    background: var(--gradient-fire, linear-gradient(135deg, #E63000 0%, #A82200 100%));
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.85rem 1.75rem;
+    border: none;
+    border-radius: var(--radius-sm, 8px);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(230, 48, 0, 0.3);
+  }
+
+  .btn-primary-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 48, 0, 0.45);
+  }
+
+  .btn-secondary-action {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid var(--border-light, rgba(255, 255, 255, 0.2));
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.85rem 1.75rem;
+    border-radius: var(--radius-sm, 8px);
+    text-decoration: none;
+    transition: var(--transition-fast);
+  }
+
+  .btn-secondary-action:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: #FFFFFF;
+  }
+
+  @media (max-width: 992px) {
+    .legal-layout {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .legal-sidebar {
+      display: none;
+    }
+    .terms-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .legal-hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+    .summary-box {
+      flex-direction: column;
+      padding: 1.25rem 1.5rem;
+    }
+    .legal-contact-card {
+      padding: 1.75rem 1.5rem;
+    }
+    .contact-card-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .btn-primary-action, .btn-secondary-action {
+      text-align: center;
+    }
+  }
+</style>

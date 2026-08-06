@@ -1,0 +1,787 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import QuoteModal from '../components/QuoteModal.astro';
+---
+
+<Layout 
+  title="Termos de Uso e Condições Gerais | BrigadaFire"
+  description="Termos de uso, condições de prestação de serviços de Treinamento de Brigada de Incêndio (NR-23), emissão de certificados e proteção de dados."
+>
+  <Header />
+
+  <main id="main-content" class="legal-page">
+    <!-- Hero Banner -->
+    <section class="legal-hero">
+      <div class="legal-hero-bg">
+        <div class="legal-glow"></div>
+        <div class="legal-grid-overlay"></div>
+      </div>
+      <div class="container legal-hero-container">
+        <div class="legal-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+          <span>TRANSPARÊNCIA & COMPLIANCE</span>
+        </div>
+        <h1 class="font-display">TERMOS DE USO E <span class="text-fire">CONDIÇÕES GERAIS</span></h1>
+        <p class="hero-subtitle">
+          Diretrizes jurídicas, operacionais e de privacidade relativas ao uso de nosso portal e à contratação dos treinamentos corporativos de Brigada de Incêndio (NR-23).
+        </p>
+        <div class="legal-meta">
+          <span class="meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Última Atualização: <strong>Agosto de 2026</strong>
+          </span>
+          <span class="meta-divider">•</span>
+          <span class="meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Versão 2.4 - Normas NR-23 / NBR 14276
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo Executivo Highlight -->
+    <section class="summary-section container">
+      <div class="summary-box">
+        <div class="summary-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="16" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12.01" y2="8"/>
+          </svg>
+        </div>
+        <div class="summary-content">
+          <h3>Resumo em Pontos Práticos</h3>
+          <p>
+            Estes termos regulam tanto a navegação em nosso portal quanto o fornecimento de treinamentos in-company de Brigada de Incêndio. Nossos cursos cumprem rigorosamente a <strong>NR-23</strong> e as diretrizes estaduais do Corpo de Bombeiros. A emissão dos certificados exige 100% de presença nas etapas teóricas e práticas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Layout (Sidebar Sticky + Article Content) -->
+    <section class="legal-layout container">
+      <!-- Sticky Sidebar Index -->
+      <aside class="legal-sidebar">
+        <div class="sidebar-sticky">
+          <h4 class="sidebar-title">Índice do Documento</h4>
+          <nav class="toc-nav" aria-label="Índice dos Termos de Uso">
+            <ul>
+              <li><a href="#secao-1" class="toc-link active"><span class="toc-num">01</span> Aceitação dos Termos</a></li>
+              <li><a href="#secao-2" class="toc-link"><span class="toc-num">02</span> Objeto dos Serviços</a></li>
+              <li><a href="#secao-3" class="toc-link"><span class="toc-num">03</span> Obrigações da Contratante</a></li>
+              <li><a href="#secao-4" class="toc-link"><span class="toc-num">04</span> Agendamento e Cancelamento</a></li>
+              <li><a href="#secao-5" class="toc-link"><span class="toc-num">05</span> Emissão de Certificados</a></li>
+              <li><a href="#secao-6" class="toc-link"><span class="toc-num">06</span> Propriedade Intelectual</a></li>
+              <li><a href="#secao-7" class="toc-link"><span class="toc-num">07</span> Proteção de Dados (LGPD)</a></li>
+              <li><a href="#secao-8" class="toc-link"><span class="toc-num">08</span> Limitação de Responsabilidade</a></li>
+              <li><a href="#secao-9" class="toc-link"><span class="toc-num">09</span> Alterações dos Termos</a></li>
+              <li><a href="#secao-10" class="toc-link"><span class="toc-num">10</span> Legislação e Foro</a></li>
+            </ul>
+          </nav>
+
+          <div class="sidebar-cta">
+            <p>Dúvidas sobre o contrato de treinamento?</p>
+            <button type="button" onclick="openQuoteModal()" class="btn-sidebar-cta">Falar com Consultor</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Legal Document Body -->
+      <article class="legal-body">
+        <!-- Secao 1 -->
+        <section id="secao-1" class="legal-section">
+          <h2>1. Aceitação e Abrangência dos Termos</h2>
+          <p>
+            Ao acessar, navegar ou solicitar proposta comercial através do portal da <strong>BrigadaFire</strong> (doravante denominada "Empresa"), você declara ter lido, compreendido e concordado integralmente com estes Termos de Uso e Condições Gerais de Prestação de Serviços.
+          </p>
+          <p>
+            Se você estiver aceitando estes Termos em nome de uma pessoa jurídica (empresa contratante), declara que possui plenos poderes legais para vinculá-la aos compromissos aqui estabelecidos. Caso não concorde com qualquer disposição aqui presente, solicitamos que interrompa imediatamente a navegação e o uso dos nossos serviços digitais.
+          </p>
+        </section>
+
+        <!-- Secao 2 -->
+        <section id="secao-2" class="legal-section">
+          <h2>2. Objeto dos Serviços Prestados</h2>
+          <p>
+            A BrigadaFire é especializada na prestação de serviços de ensino e treinamento corporativo voltados à Segurança contra Incêndio e Pânico, abrangendo:
+          </p>
+          <ul class="styled-list">
+            <li><strong>Curso de Formação e Reciclagem de Brigada de Incêndio:</strong> Conforme a Norma Regulamentadora NR-23 do Ministério do Trabalho e Emprego (MTE) e as Instruções Técnicas (IT) vigentes do Corpo de Bombeiros Militar.</li>
+            <li><strong>Simulados Práticos de Emergência e Evacuação:</strong> Planejamento e execução de exercícios simulados de abandono de área e combate a princípios de incêndio em instalações industriais, comerciais e condominiais.</li>
+            <li><strong>Elaboração de Plano de Abandono:</strong> Consultoria especializada para rotas de fuga, sinalização e dimensionamento de equipes de emergência.</li>
+            <li><strong>Primeiros Socorros Corporativos:</strong> Treinamentos de atendimento pré-hospitalar (APH) adaptados ao ambiente de trabalho.</li>
+          </ul>
+        </section>
+
+        <!-- Secao 3 -->
+        <section id="secao-3" class="legal-section">
+          <h2>3. Obrigações e Responsabilidades da Empresa Contratante</h2>
+          <p>
+            Para garantir a plena eficácia e segurança dos treinamentos presenciais e *in-company*, a empresa contratante compromete-se a:
+          </p>
+          <div class="callout-card">
+            <h4>Requisitos Operacionais Obrigatórios</h4>
+            <ul>
+              <li>Disponibilizar sala ou espaço adequado para a etapa teórica com infraestrutura audiovisual necessária.</li>
+              <li>Garantir que a área para a prática de combate a incêndio (extintores/mangueiras) atenda às condições mínimas de segurança ambiental e prevenção de acidentes.</li>
+              <li>Fornecer previamente a lista nominal e os dados cadastrais completos (Nome, CPF e Cargo) dos colaboradores participantes para a emissão dos certificados.</li>
+              <li>Assegurar a liberação dos colaboradores inscritos durante todo o horário programado para o treinamento.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Secao 4 -->
+        <section id="secao-4" class="legal-section">
+          <h2>4. Agendamento, Reagendamento e Cancelamento</h2>
+          <p>
+            A confirmação das datas de treinamento *in-company* está sujeita à disponibilidade de agenda técnica e ao aceite formal da proposta comercial enviada.
+          </p>
+          <div class="terms-grid">
+            <div class="term-card">
+              <h4>Reagendamento</h4>
+              <p>Poderá ser solicitado sem custos com até <strong>72 horas úteis</strong> de antecedência da data prevista. Solicitações posteriores podem incorrer em taxas de remarcação de deslocamento e equipe.</p>
+            </div>
+            <div class="term-card">
+              <h4>Cancelamento</h4>
+              <p>Cancelamentos notificados com antecedência superior a 5 dias úteis terão reembolso integral do sinal. Cancelamentos com prazo inferior estarão sujeitos à retenção de despesas operacionais já realizadas.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Secao 5 -->
+        <section id="secao-5" class="legal-section">
+          <h2>5. Emissão, Validade e Autenticidade de Certificados</h2>
+          <p>
+            Os certificados emitidos pela BrigadaFire possuem validade legal em todo o território nacional para comprovação perante a Fiscalização do Trabalho e vistorias do Corpo de Bombeiros (obtenção e renovação de AVCB / CLCB).
+          </p>
+          <ul class="styled-list">
+            <li><strong>Critério de Assiduidade:</strong> Somente receberão o certificado de conclusão os alunos que obtiverem <strong>100% de frequência</strong> nas aulas teóricas e demonstrativo prático exigido pela norma.</li>
+            <li><strong>Avaliação de Desempenho:</strong> É necessária a aprovação nas avaliações teórico-práticas aplicadas pelos instrutores credenciados.</li>
+            <li><strong>Segurança e Rastreabilidade:</strong> Cada certificado emitido contém código único de validação e assinatura do Engenheiro de Segurança do Trabalho e/ou Bombeiro Profissional responsável.</li>
+          </ul>
+        </section>
+
+        <!-- Secao 6 -->
+        <section id="secao-6" class="legal-section">
+          <h2>6. Propriedade Intelectual e Uso de Materiais</h2>
+          <p>
+            Todo o conteúdo presente neste portal e nos materiais didáticos (apostilas, apresentações, vídeos, manuais e questionários de fixação) é de propriedade exclusiva da BrigadaFire ou está devidamente licenciado.
+          </p>
+          <p>
+            É expressamente vedada a reprodução total ou parcial, modificação, distribuição, venda ou gravação audiovisual não autorizada dos treinamentos ministrados sem a prévia e expressa autorização por escrito dos autores.
+          </p>
+        </section>
+
+        <!-- Secao 7 -->
+        <section id="secao-7" class="legal-section">
+          <h2>7. Proteção de Dados Pessoais (LGPD)</h2>
+          <p>
+            A BrigadaFire atua em estrita observância à Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 - LGPD).
+          </p>
+          <p>
+            Os dados pessoais dos participantes (Nome, CPF, E-mail, Registro Profissional e Fotografia de Prática) coletados durante a contratação e realização dos cursos são tratados exclusivamente para fins de:
+          </p>
+          <ul class="styled-list">
+            <li>Emissão e validação de autenticidade dos Certificados de Treinamento.</li>
+            <li>Elaboração do Atestado de Formação da Brigada de Incêndio para o Corpo de Bombeiros.</li>
+            <li>Cumprimento de obrigações legais e regulatórias perante órgãos públicos.</li>
+          </ul>
+          <p>
+            Para solicitar a atualização, correção ou consulta aos seus dados pessoais armazenados, entre em contato através do nosso canal de atendimento ao encarregado de dados.
+          </p>
+        </section>
+
+        <!-- Secao 8 -->
+        <section id="secao-8" class="legal-section">
+          <h2>8. Isenção e Limitação de Responsabilidade</h2>
+          <p>
+            A atuação da BrigadaFire restringe-se ao fornecimento da capacitação técnica teórico-prática e emissão da documentação devida aos brigadistas formados.
+          </p>
+          <div class="callout-alert">
+            <h4>Observação Importante de Compliance</h4>
+            <p>
+              A contratação do treinamento de brigada não substitui a necessidade de adequação física das instalações da empresa (como manutenção de extintores, redes de hidrantes, iluminação e sinalização de emergência), cuja responsabilidade cabe exclusivamente à administração do imóvel e da empresa contratante.
+            </p>
+          </div>
+        </section>
+
+        <!-- Secao 9 -->
+        <section id="secao-9" class="legal-section">
+          <h2>9. Alterações e Atualizações destes Termos</h2>
+          <p>
+            A BrigadaFire reserva-se o direito de alterar ou atualizar estes Termos de Uso a qualquer momento, visando refletir mudanças legislativas, normativas técnicas da NR-23 ou adaptações em nossos serviços. As modificações entrarão em vigor imediatamente após sua publicação neste portal.
+          </p>
+        </section>
+
+        <!-- Secao 10 -->
+        <section id="secao-10" class="legal-section">
+          <h2>10. Legislação Aplicável e Foro Elegível</h2>
+          <p>
+            Estes Termos de Uso são regidos e interpretados segundo as leis da República Federativa do Brasil. Fica eleito o Foro da Comarca de domicílio da sede da empresa para dirimir quaisquer dúvidas, controvérsias ou litígios decorrentes deste instrumento, com renúncia expressa a qualquer outro, por mais privilegiado que seja.
+          </p>
+        </section>
+
+        <!-- Contact Box bottom -->
+        <div class="legal-contact-card">
+          <div class="contact-card-info">
+            <h3>Dúvidas sobre os Termos de Uso ou Contratação?</h3>
+            <p>Nossa equipe técnica e comercial está à disposição para esclarecer qualquer aspecto dos nossos serviços corporativos.</p>
+          </div>
+          <div class="contact-card-actions">
+            <button type="button" onclick="openQuoteModal()" class="btn-primary-action">Solicitar Proposta Comercial</button>
+            <a href="mailto:contato@brigadafire.com.br" class="btn-secondary-action">Enviar E-mail</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  <QuoteModal />
+</Layout>
+
+<script>
+  // Script para marcar a navegação ativa no índice conforme o scroll da página
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.legal-section');
+    const navLinks = document.querySelectorAll('.toc-link');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${currentId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
+
+<style>
+  /* Base Styles */
+  .legal-page {
+    background-color: var(--bg-main);
+    padding-top: var(--nav-height, 80px);
+    min-height: 100vh;
+    color: var(--text-main);
+  }
+
+  /* Hero Section */
+  .legal-hero {
+    position: relative;
+    padding: 5rem 0 3.5rem;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.07));
+    background: radial-gradient(circle at 50% 0%, rgba(230, 48, 0, 0.08) 0%, transparent 70%);
+  }
+
+  .legal-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .legal-glow {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 65%);
+    filter: blur(40px);
+  }
+
+  .legal-hero-container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .legal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(230, 48, 0, 0.12);
+    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
+    color: var(--primary-light, #FF4A1A);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full, 9999px);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .legal-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.25rem;
+    color: #FFFFFF;
+  }
+
+  .text-fire {
+    color: var(--primary);
+    background: linear-gradient(135deg, #FF4A1A 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 760px;
+    margin: 0 auto 1.75rem;
+  }
+
+  .legal-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-subtle, #6B7280);
+    flex-wrap: wrap;
+  }
+
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .meta-item strong {
+    color: var(--text-main);
+  }
+
+  .meta-divider {
+    color: var(--text-subtle);
+    opacity: 0.5;
+  }
+
+  /* Executive Summary */
+  .summary-section {
+    max-width: 1100px;
+    margin: 2.5rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  .summary-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: rgba(20, 20, 20, 0.7);
+    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
+    border-radius: var(--radius-lg, 20px);
+    padding: 1.75rem 2rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .summary-icon {
+    flex-shrink: 0;
+    background: rgba(230, 48, 0, 0.12);
+    border-radius: 12px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .summary-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0.4rem;
+  }
+
+  .summary-content p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* Two Column Layout (Sidebar + Body) */
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3.5rem;
+    max-width: 1100px;
+    margin: 3.5rem auto 6rem;
+    padding: 0 1.5rem;
+  }
+
+  /* Sidebar */
+  .legal-sidebar {
+    position: relative;
+  }
+
+  .sidebar-sticky {
+    position: sticky;
+    top: calc(var(--nav-height, 80px) + 2rem);
+    background: rgba(17, 17, 17, 0.8);
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.07));
+    border-radius: var(--radius-md, 16px);
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .sidebar-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-subtle);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .toc-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm, 8px);
+    transition: var(--transition-fast);
+  }
+
+  .toc-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-subtle);
+    width: 20px;
+  }
+
+  .toc-link:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .toc-link.active {
+    color: var(--primary-light, #FF4A1A);
+    background: rgba(230, 48, 0, 0.12);
+    font-weight: 600;
+  }
+
+  .toc-link.active .toc-num {
+    color: var(--primary);
+  }
+
+  .sidebar-cta {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .sidebar-cta p {
+    font-size: 0.825rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .btn-sidebar-cta {
+    width: 100%;
+    background: rgba(230, 48, 0, 0.15);
+    border: 1px solid var(--border-fire);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-sm, 8px);
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+
+  .btn-sidebar-cta:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+
+  /* Body Content */
+  .legal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .legal-section {
+    scroll-margin-top: calc(var(--nav-height, 80px) + 2rem);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 2.5rem;
+  }
+
+  .legal-section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .legal-section h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .legal-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .styled-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .styled-list li {
+    position: relative;
+    padding-left: 1.75rem;
+    font-size: 0.975rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  .styled-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  /* Callout Card */
+  .callout-card {
+    background: rgba(20, 20, 20, 0.8);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout-card h4 {
+    font-size: 1.05rem;
+    color: #FFFFFF;
+    margin-bottom: 0.75rem;
+  }
+
+  .callout-card ul {
+    padding-left: 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .callout-card ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Callout Alert */
+  .callout-alert {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid var(--border-alert, rgba(245, 158, 11, 0.4));
+    border-left: 4px solid var(--accent-alert, #F59E0B);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .callout-alert h4 {
+    font-size: 1.05rem;
+    color: var(--accent-alert-light, #FACC15);
+    margin-bottom: 0.5rem;
+  }
+
+  .callout-alert p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: #E2E8F0;
+  }
+
+  /* Terms Grid */
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  .term-card {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md, 12px);
+    padding: 1.25rem 1.5rem;
+  }
+
+  .term-card h4 {
+    font-size: 1rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+  }
+
+  .term-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  /* Contact Bottom Card */
+  .legal-contact-card {
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(30, 20, 20, 0.9) 100%);
+    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
+    border-radius: var(--radius-lg, 20px);
+    padding: 2.5rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .contact-card-info h3 {
+    font-size: 1.35rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-card-info p {
+    font-size: 0.975rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+  }
+
+  .contact-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary-action {
+    background: var(--gradient-fire, linear-gradient(135deg, #E63000 0%, #A82200 100%));
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.85rem 1.75rem;
+    border: none;
+    border-radius: var(--radius-sm, 8px);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(230, 48, 0, 0.3);
+  }
+
+  .btn-primary-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 48, 0, 0.45);
+  }
+
+  .btn-secondary-action {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid var(--border-light, rgba(255, 255, 255, 0.2));
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.85rem 1.75rem;
+    border-radius: var(--radius-sm, 8px);
+    text-decoration: none;
+    transition: var(--transition-fast);
+  }
+
+  .btn-secondary-action:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: #FFFFFF;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .legal-layout {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .legal-sidebar {
+      display: none; /* Em telas menores o conteúdo é corrido */
+    }
+
+    .terms-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .legal-hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .summary-box {
+      flex-direction: column;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .legal-contact-card {
+      padding: 1.75rem 1.5rem;
+    }
+
+    .contact-card-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .btn-primary-action, .btn-secondary-action {
+      text-align: center;
+    }
+  }
+</style>
+
