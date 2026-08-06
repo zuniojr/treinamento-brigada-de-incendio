@@ -83,92 +83,38 @@ import QuoteModal from '../components/QuoteModal.astro';
       </div>
     </section>
 
-    <!-- Seção Principal de Formulário e Mapa/Localização -->
+    <!-- Seção de Informações de Atendimento -->
     <section class="main-contact-section container">
-      <div class="contact-grid">
-        <!-- Coluna Esquerda: Formulário de Mensagem Direta -->
-        <div class="contact-form-box">
-          <div class="form-title-group">
-            <h2 class="font-display">ENVIE UMA <span class="text-fire">MENSAGEM</span></h2>
-            <p>Preencha os campos abaixo e responderemos em até 2 horas úteis.</p>
-          </div>
-
-          <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! Nossa equipe entrará em contato em breve.');">
-            <div class="input-row">
-              <div class="input-group">
-                <label for="contact-name">Seu Nome *</label>
-                <input type="text" id="contact-name" required placeholder="Ex: Carlos Silva" />
-              </div>
-              <div class="input-group">
-                <label for="contact-company">Empresa / Condomínio *</label>
-                <input type="text" id="contact-company" required placeholder="Nome da empresa" />
-              </div>
-            </div>
-
-            <div class="input-row">
-              <div class="input-group">
-                <label for="contact-email">E-mail Corporativo *</label>
-                <input type="email" id="contact-email" required placeholder="carlos@empresa.com.br" />
-              </div>
-              <div class="input-group">
-                <label for="contact-phone">Telefone / WhatsApp *</label>
-                <input type="tel" id="contact-phone" required placeholder="(00) 90000-0000" />
-              </div>
-            </div>
-
-            <div class="input-group">
-              <label for="contact-subject">Assunto Principal *</label>
-              <select id="contact-subject" required>
-                <option value="" disabled selected>Selecione o assunto</option>
-                <option value="orcamento">Solicitar Orçamento de Treinamento (NR-23)</option>
-                <option value="duvida-tecnica">Dúvida Técnica sobre Dimensionamento / Carga Horária</option>
-                <option value="certificados">Validação ou Reimpressão de Certificado</option>
-                <option value="parcerias">Parcerias e Vistorias Prediais</option>
-                <option value="outros">Outros Assuntos</option>
-              </select>
-            </div>
-
-            <div class="input-group">
-              <label for="contact-message">Sua Mensagem *</label>
-              <textarea id="contact-message" rows="5" required placeholder="Descreva a quantidade aproximada de colaboradores, localização da empresa ou sua dúvida técnica..."></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit-contact">Enviar Mensagem</button>
-          </form>
+      <div class="contact-info-grid">
+        <div class="info-card">
+          <h3>Horário de Atendimento</h3>
+          <p>Nossa equipe técnica comercial está disponível nos seguintes horários:</p>
+          <ul class="info-list">
+            <li><strong>Segunda a Sexta:</strong> 08:00 às 18:00</li>
+            <li><strong>Sábados:</strong> 08:00 às 12:00 (Plantão de Treinamentos In-Company)</li>
+            <li><strong>Domingos e Feriados:</strong> Fechado (Atendimento WhatsApp em plantão)</li>
+          </ul>
         </div>
 
-        <!-- Coluna Direita: Informações de Atendimento e FAQ Rápido -->
-        <div class="contact-info-box">
-          <div class="info-card">
-            <h3>Horário de Atendimento</h3>
-            <p>Nossa equipe técnica comercial está disponível nos seguintes horários:</p>
-            <ul class="info-list">
-              <li><strong>Segunda a Sexta:</strong> 08:00 às 18:00</li>
-              <li><strong>Sábados:</strong> 08:00 às 12:00 (Plantão de Treinamentos In-Company)</li>
-              <li><strong>Domingos e Feriados:</strong> Fechado (Atendimento WhatsApp em plantão)</li>
-            </ul>
+        <div class="info-card">
+          <h3>Região de Atendimento</h3>
+          <p>Atendemos presencialmente em todo o estado de <strong>Santa Catarina</strong> com estrutura móvel para simulações in-company:</p>
+          <div class="regions-badges">
+            <span>Barra Velha</span>
+            <span>Itajaí</span>
+            <span>Balneário Camboriú</span>
+            <span>Joinville</span>
+            <span>Navegantes</span>
+            <span>Blumenau</span>
+            <span>Penha</span>
+            <span>Jaraguá do Sul</span>
           </div>
+        </div>
 
-          <div class="info-card">
-            <h3>Região de Atendimento</h3>
-            <p>Atendemos presencialmente em todo o estado de <strong>Santa Catarina</strong> com estrutura móvel para simulações in-company:</p>
-            <div class="regions-badges">
-              <span>Barra Velha</span>
-              <span>Itajaí</span>
-              <span>Balneário Camboriú</span>
-              <span>Joinville</span>
-              <span>Navegantes</span>
-              <span>Blumenau</span>
-              <span>Penha</span>
-              <span>Jaraguá do Sul</span>
-            </div>
-          </div>
-
-          <div class="info-card cta-modal-card">
-            <h4>Prefere simular um orçamento online?</h4>
-            <p>Utilize nossa ferramenta rápida de cotação interativa.</p>
-            <button type="button" onclick="openQuoteModal()" class="btn-modal-trigger">Abrir Simulador de Orçamento</button>
-          </div>
+        <div class="info-card cta-modal-card">
+          <h4>Prefere simular um orçamento online?</h4>
+          <p>Utilize nossa ferramenta rápida de cotação interativa.</p>
+          <button type="button" onclick="openQuoteModal()" class="btn-modal-trigger">Abrir Simulador de Orçamento</button>
         </div>
       </div>
     </section>
@@ -356,110 +302,17 @@ import QuoteModal from '../components/QuoteModal.astro';
     color: #25D366;
   }
 
-  /* Main Contact Form & Info Grid */
+  /* Main Contact Info Grid */
   .main-contact-section {
     max-width: 1100px;
     margin: 4rem auto 6rem;
     padding: 0 1.5rem;
   }
 
-  .contact-grid {
+  .contact-info-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 3rem;
-  }
-
-  .contact-form-box {
-    background: rgba(17, 17, 17, 0.85);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg, 20px);
-    padding: 2.5rem;
-    backdrop-filter: blur(10px);
-  }
-
-  .form-title-group {
-    margin-bottom: 2rem;
-  }
-
-  .form-title-group h2 {
-    font-size: 2rem;
-    color: #FFFFFF;
-    margin-bottom: 0.4rem;
-  }
-
-  .form-title-group p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-  }
-
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .input-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-  }
-
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .input-group label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #E2E8F0;
-  }
-
-  .input-group input,
-  .input-group select,
-  .input-group textarea {
-    background: rgba(10, 10, 10, 0.8);
-    border: 1px solid var(--border-light, rgba(255, 255, 255, 0.15));
-    border-radius: var(--radius-sm, 8px);
-    padding: 0.8rem 1rem;
-    color: #FFFFFF;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.95rem;
-    outline: none;
-    transition: var(--transition-fast);
-  }
-
-  .input-group input:focus,
-  .input-group select:focus,
-  .input-group textarea:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(230, 48, 0, 0.2);
-  }
-
-  .input-group select option {
-    background: #111;
-    color: #FFF;
-  }
-
-  .btn-submit-contact {
-    background: var(--gradient-fire, linear-gradient(135deg, #E63000 0%, #A82200 100%));
-    color: #FFFFFF;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 1rem;
-    border: none;
-    border-radius: var(--radius-sm, 8px);
-    cursor: pointer;
-    transition: var(--transition-fast);
-    box-shadow: 0 4px 15px rgba(230, 48, 0, 0.3);
-    margin-top: 0.5rem;
-  }
-
-  .btn-submit-contact:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(230, 48, 0, 0.45);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.75rem;
   }
 
   /* Info Column Right */
@@ -551,19 +404,9 @@ import QuoteModal from '../components/QuoteModal.astro';
   }
 
   /* Responsive Design */
-  @media (max-width: 992px) {
-    .contact-grid {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-  }
-
   @media (max-width: 640px) {
-    .input-row {
+    .contact-info-grid {
       grid-template-columns: 1fr;
-    }
-    .contact-form-box {
-      padding: 1.75rem 1.25rem;
     }
   }
 </style>
