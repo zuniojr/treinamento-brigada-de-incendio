@@ -1,0 +1,710 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import QuoteModal from '../components/QuoteModal.astro';
+---
+
+<Layout 
+  title="Simulados de Emergência para Empresas | BrigadaFire"
+  description="Realização de simulados de incêndio e evacuação para empresas, indústrias e condomínios. Exercícios práticos obrigatórios conforme NBR 14276 e NR-23 com relatório técnico."
+>
+  <Header />
+
+  <main id="main-content" class="simulados-page">
+
+    <!-- Hero Banner -->
+    <section class="simulados-hero">
+      <div class="simulados-hero-bg">
+        <div class="simulados-glow"></div>
+      </div>
+      <div class="container simulados-hero-container">
+        <div class="simulados-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <span>EXERCÍCIO PRÁTICO OBRIGATÓRIO</span>
+        </div>
+        <h1 class="font-display">SIMULADOS DE <span class="text-fire">EMERGÊNCIA</span></h1>
+        <p class="hero-subtitle">
+          Exercícios práticos de evacuação e combate a incêndio que testam a prontidão real da sua brigada. Relatório técnico completo pós-simulado e recomendações de melhoria.
+        </p>
+        <div class="hero-cta-group">
+          <button type="button" onclick="openQuoteModal()" class="btn-hero-primary">Agendar Simulado na Minha Empresa</button>
+          <a href="https://wa.me/5511999999999" target="_blank" class="btn-hero-secondary">Falar com Especialista</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por que realizar? (Destaque) -->
+    <section class="why-section container">
+      <div class="why-grid">
+        <div class="why-text">
+          <h2 class="section-title font-display">POR QUE O SIMULADO É <span class="text-fire">OBRIGATÓRIO?</span></h2>
+          <p>A NBR 14276 (Brigada de Incêndio) e as Instruções Técnicas do Corpo de Bombeiros Militar exigem a realização de exercícios simulados com periodicidade mínima anual. A ausência do simulado pode resultar em:</p>
+          <ul class="consequence-list">
+            <li>
+              <span class="consequence-icon">⚠️</span>
+              <span><strong>Invalidação do atestado de brigada</strong> na vistoria do Corpo de Bombeiros</span>
+            </li>
+            <li>
+              <span class="consequence-icon">⚠️</span>
+              <span><strong>Autuação pela fiscalização do MTE</strong> por descumprimento da NR-23</span>
+            </li>
+            <li>
+              <span class="consequence-icon">⚠️</span>
+              <span><strong>Responsabilização civil e criminal</strong> em caso de sinistro sem treinamento comprovado</span>
+            </li>
+            <li>
+              <span class="consequence-icon">⚠️</span>
+              <span><strong>Brigadistas despreparados</strong> que falham na hora real da emergência</span>
+            </li>
+          </ul>
+        </div>
+        <div class="why-stat-col">
+          <div class="stat-card">
+            <span class="stat-number text-fire">1x</span>
+            <span class="stat-label">por ano, no mínimo</span>
+            <p>Periodicidade mínima exigida pela NBR 14276 para edificações de risco médio e alto.</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number text-fire">100%</span>
+            <span class="stat-label">dos colaboradores envolvidos</span>
+            <p>O simulado deve contemplar toda a população da edificação, não apenas os brigadistas.</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number text-fire">ART</span>
+            <span class="stat-label">disponível para o relatório</span>
+            <p>Emissão opcional de Anotação de Responsabilidade Técnica por Engenheiro de Segurança.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como Funciona (Steps) -->
+    <section class="how-it-works container">
+      <div class="section-header text-center">
+        <h2 class="section-title font-display">COMO FUNCIONA O <span class="text-fire">SIMULADO?</span></h2>
+        <p class="section-desc">Do planejamento ao relatório final, nossa equipe conduz todo o processo de forma técnica e segura.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3>Visita Técnica Prévia</h3>
+          <p>Análise da planta da edificação, identificação das rotas de fuga, localização dos pontos de encontro e avaliação da sinalização de emergência existente.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3>Planejamento do Cenário</h3>
+          <p>Definição do cenário hipotético (incêndio, explosão, vazamento), horário, alerta de início, protocolo de comunicação interna e equipe de observadores.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3>Briefing com a Brigada</h3>
+          <p>Reunião técnica confidencial somente com a brigada e coordenadores para alinhar os papéis, cronograma e critérios de avaliação do exercício.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <h3>Execução do Simulado</h3>
+          <p>Disparo do alerta, evacuação controlada, acionamento da brigada, combate simulado e triagem no ponto de encontro com medição de tempo de resposta.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">05</div>
+          <h3>Debriefing Imediato</h3>
+          <p>Reunião pós-simulado com todos os participantes para discutir os pontos positivos, falhas identificadas e melhorias urgentes a serem implementadas.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">06</div>
+          <h3>Relatório Técnico Final</h3>
+          <p>Entrega do documento oficial com tempo de evacuação, percentual de conformidade, registro fotográfico e recomendações técnicas para o próximo ciclo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- O que avaliamos (Cards) -->
+    <section class="evaluation-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title font-display">O QUE É <span class="text-fire">AVALIADO</span> NO SIMULADO?</h2>
+          <p class="section-desc">Nossos avaliadores técnicos monitoram critérios específicos durante a execução do exercício.</p>
+        </div>
+        <div class="evaluation-grid">
+          <div class="eval-card">
+            <div class="eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h4>Tempo de Evacuação</h4>
+            <p>Cronometragem do tempo total de abandono por pavimento e da edificação completa.</p>
+          </div>
+
+          <div class="eval-card">
+            <div class="eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
+              </svg>
+            </div>
+            <h4>Atuação da Brigada</h4>
+            <p>Verificação do cumprimento das funções de cada brigadista conforme o PAE vigente.</p>
+          </div>
+
+          <div class="eval-card">
+            <div class="eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </div>
+            <h4>Sistema de Alerta</h4>
+            <p>Funcionamento e audibilidade das sirenes, alarmes e meios de comunicação interna.</p>
+          </div>
+
+          <div class="eval-card">
+            <div class="eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <h4>Rotas de Fuga</h4>
+            <p>Fluidez do fluxo de evacuação, gargalos, pontos de congestionamento e obstruções.</p>
+          </div>
+
+          <div class="eval-card">
+            <div class="eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h4>Ponto de Encontro</h4>
+            <p>Organização e contagem dos colaboradores no ponto de encontro pré-definido.</p>
+          </div>
+
+          <div class="eval-card">
+            <div class="eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <h4>Registro Fotográfico</h4>
+            <p>Documentação visual para instrução de processo e comprovação do exercício realizado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-banner-section container">
+      <div class="cta-banner-box">
+        <div class="cta-content">
+          <h2 class="font-display">AGENDE O SIMULADO DA SUA <span class="text-fire">EMPRESA</span></h2>
+          <p>Nossa equipe realiza o planejamento completo, a execução e entrega o relatório técnico com validade legal.</p>
+        </div>
+        <div class="cta-actions">
+          <button type="button" onclick="openQuoteModal()" class="btn-primary-action">Agendar Simulado</button>
+          <a href="/contato" class="btn-secondary-action">Falar com a Equipe</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  <QuoteModal />
+</Layout>
+
+<style>
+  .simulados-page {
+    background-color: var(--bg-main);
+    padding-top: var(--nav-height, 80px);
+    min-height: 100vh;
+    color: var(--text-main);
+  }
+
+  /* ── Hero ── */
+  .simulados-hero {
+    position: relative;
+    padding: 5.5rem 0 4rem;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border, rgba(255,255,255,0.07));
+    background: radial-gradient(circle at 50% 0%, rgba(230, 48, 0, 0.1) 0%, transparent 70%);
+  }
+
+  .simulados-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .simulados-glow {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 50%;
+    background: radial-gradient(ellipse at center, rgba(230, 48, 0, 0.15) 0%, transparent 70%);
+    filter: blur(40px);
+  }
+
+  .simulados-hero-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .simulados-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(230, 48, 0, 0.1);
+    border: 1px solid rgba(230, 48, 0, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+  }
+
+  .simulados-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 750px;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-hero-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark, #A82200) 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 48, 0, 0.3);
+  }
+
+  .btn-hero-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 48, 0, 0.4);
+  }
+
+  .btn-hero-secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-hero-secondary:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.2);
+  }
+
+  .text-fire {
+    color: var(--primary);
+    background: linear-gradient(135deg, #FF4A1A 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ── Why Section ── */
+  .why-section {
+    padding: 6rem 0;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .why-text .section-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .why-text > p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .consequence-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .consequence-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    padding: 1rem;
+    background: rgba(230, 48, 0, 0.05);
+    border: 1px solid rgba(230, 48, 0, 0.12);
+    border-radius: 8px;
+  }
+
+  .consequence-list li strong {
+    color: var(--text-main);
+  }
+
+  .consequence-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .why-stat-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .stat-card {
+    background: rgba(20, 20, 22, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+  }
+
+  .stat-number {
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-subtle, #94A3B8);
+    margin-bottom: 0.75rem;
+  }
+
+  .stat-card p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ── How It Works ── */
+  .how-it-works {
+    padding: 0 0 6rem;
+  }
+
+  .section-header {
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .step-card {
+    background: rgba(20, 20, 22, 0.5);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .step-card:hover {
+    border-color: rgba(230, 48, 0, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .step-card:hover::before {
+    opacity: 1;
+  }
+
+  .step-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: rgba(230, 48, 0, 0.2);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .step-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+  }
+
+  .step-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── Evaluation Section ── */
+  .evaluation-section {
+    background: rgba(10, 10, 12, 0.6);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 6rem 0;
+  }
+
+  .evaluation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .eval-card {
+    background: rgba(20, 20, 22, 0.7);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.75rem;
+    transition: all 0.3s ease;
+  }
+
+  .eval-card:hover {
+    border-color: rgba(230, 48, 0, 0.3);
+    transform: translateY(-3px);
+  }
+
+  .eval-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(230, 48, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    border: 1px solid rgba(230, 48, 0, 0.15);
+  }
+
+  .eval-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+  }
+
+  .eval-card p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ── CTA Banner ── */
+  .cta-banner-section {
+    padding: 5rem 0 6rem;
+  }
+
+  .cta-banner-box {
+    background: linear-gradient(135deg, rgba(20, 20, 22, 0.9) 0%, rgba(30, 10, 5, 0.9) 100%);
+    border: 1px solid rgba(230, 48, 0, 0.3);
+    border-radius: 16px;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-banner-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='3' cy='3' r='3' fill='%23e63000' fill-opacity='0.05'/%3E%3C/svg%3E");
+    z-index: 0;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    margin-bottom: 1rem;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
+
+  .cta-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary-action {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary-action:hover {
+    background: var(--primary-dark, #A82200);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary-action {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary-action:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: white;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .why-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-cta-group {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .btn-hero-primary, .btn-hero-secondary {
+      width: 100%;
+      text-align: center;
+    }
+
+    .cta-banner-box {
+      padding: 2.5rem 1.5rem;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .btn-primary-action, .btn-secondary-action {
+      width: 100%;
+    }
+  }
+</style>
