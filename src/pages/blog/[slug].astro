@@ -1,0 +1,1357 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+// Full posts database shared with blog listing
+const allPosts = [
+  {
+    slug: "reciclagem-anual-nr23",
+    title: "A Importância Vital da Reciclagem Anual da Brigada de Incêndio (NR-23)",
+    excerpt: "Manter a equipe treinada anualmente não é apenas uma obrigação legal perante o Corpo de Bombeiros e o Ministério do Trabalho: é o divisor de águas entre um incidente controlado e uma tragédia corporativa.",
+    category: "Legislação & Normas",
+    date: "12 de Agosto, 2024",
+    readTime: "6 min de leitura",
+    author: "Eng. Roberto Silva",
+    authorRole: "Especialista em Proteção Contra Incêndio, CREA-SP",
+    authorBio: "Engenheiro de segurança com mais de 15 anos de experiência em projetos de proteção contra incêndio em grandes indústrias e condomínios logísticos. Instrutor certificado pela ABNT e palestrante em eventos do setor.",
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1400&q=80",
+    imageCaption: "Treinamento prático de combate a incêndio com extintores em ambiente corporativo.",
+    tags: ["NR-23", "Reciclagem", "Brigada de Incêndio", "Conformidade Legal"],
+    sections: [
+      { id: "obrigacao-legal", title: "A Obrigação Legal" },
+      { id: "consequencias-falta", title: "Consequências da Falta de Reciclagem" },
+      { id: "o-que-e-coberto", title: "O que é Coberto no Treinamento" },
+      { id: "frequencia-ideal", title: "Frequência e Dimensionamento" },
+      { id: "como-contratar", title: "Como Contratar Corretamente" },
+    ],
+    content: `
+<h2 id="obrigacao-legal">A Obrigação Legal: NR-23 e NBR 14276</h2>
+<p>A <strong>Norma Regulamentadora 23 (NR-23)</strong> do Ministério do Trabalho e Emprego estabelece as diretrizes mínimas de proteção contra incêndio nos ambientes de trabalho. Em conjunto com a <strong>ABNT NBR 14276</strong>, que define os critérios de composição, formação e reciclagem das brigadas, essas normas criam um conjunto de obrigações claras para empregadores de todos os portes.</p>
+<p>O ponto central: a reciclagem não é opcional. Ela é obrigatória e deve ocorrer em intervalos definidos conforme a classe de risco e a ocupação da edificação, podendo variar de 6 meses a 2 anos. Na prática, para a maioria das empresas, o intervalo recomendado — e exigido pelo Corpo de Bombeiros em vistoria — é de <strong>12 meses</strong>.</p>
+<blockquote class="pull-quote">
+  <p>"A brigada que não recicla é uma brigada que esquece. E um brigadista que esquece não protege."</p>
+  <cite>— Manual de Procedimentos do Corpo de Bombeiros SP</cite>
+</blockquote>
+<h2 id="consequencias-falta">Consequências da Falta de Reciclagem</h2>
+<p>As empresas que negligenciam a reciclagem estão sujeitas a um espectro amplo de penalidades:</p>
+<ul>
+  <li><strong>Multas do MTE:</strong> autuações que podem chegar a valores consideráveis por empregado em situação irregular.</li>
+  <li><strong>Interdição pelo Corpo de Bombeiros:</strong> sem o AVCB (Auto de Vistoria do Corpo de Bombeiros) válido, o estabelecimento pode ser fechado.</li>
+  <li><strong>Invalidação do seguro patrimonial:</strong> em caso de sinistro, as seguradoras verificam a regularidade dos treinamentos. A ausência pode resultar na negativa do pagamento da indenização.</li>
+  <li><strong>Responsabilidade civil e criminal:</strong> gestores e proprietários podem ser responsabilizados em casos de acidente com vítimas quando a brigada não estava devidamente treinada.</li>
+</ul>
+<p>O custo de um treinamento de reciclagem é uma fração mínima do custo de qualquer uma dessas consequências — sem mencionar o custo humano de uma emergência mal gerenciada.</p>
+<h2 id="o-que-e-coberto">O que é Coberto no Treinamento de Reciclagem</h2>
+<p>Um programa de reciclagem eficaz, conforme a NBR 14276, deve contemplar:</p>
+<ul>
+  <li>Revisão teórica: comportamento do fogo, triângulo do fogo e fases da combustão.</li>
+  <li>Manuseio atualizado dos equipamentos: revisão de técnicas com extintores, mangueiras e hidrantes.</li>
+  <li>Simulação de abandono de área: reforço das rotas de fuga, pontos de encontro e comando de evacuação.</li>
+  <li>Atendimento Pré-Hospitalar (APH): primeiros socorros, RCP (ressuscitação cardiopulmonar) e uso do DEA.</li>
+  <li>Atualização sobre alterações normativas relevantes do período.</li>
+</ul>
+<blockquote class="pull-quote">
+  <p>"A memória muscular só se forma com repetição. A reciclagem anual existe para garantir que, sob pressão, o brigadista reaja corretamente — não pense, aja."</p>
+  <cite>— Eng. Roberto Silva, instrutor sênior</cite>
+</blockquote>
+<h2 id="frequencia-ideal">Frequência e Dimensionamento da Brigada</h2>
+<p>O número de brigadistas e a frequência de reciclagem dependem de variáveis como: área construída total da edificação (em m²), classe de risco da atividade (baixo, médio, alto e crítico), número de turnos de trabalho, e número total de pessoas no local por turno.</p>
+<p>Uma indústria de médio porte pode necessitar de 5% a 10% do seu quadro de funcionários como brigadistas treinados e certificados. Para uma operação de 200 colaboradores em dois turnos, isso representa entre 10 e 20 brigadistas por turno — e todos precisam de reciclagem anual.</p>
+<h2 id="como-contratar">Como Contratar Corretamente um Treinamento de Reciclagem</h2>
+<p>Na hora de selecionar uma empresa de treinamento, verifique obrigatoriamente:</p>
+<ul>
+  <li><strong>Registro no Corpo de Bombeiros</strong> como empresa habilitada (para estados que exigem).</li>
+  <li><strong>Currículo dos instrutores</strong>: formação técnica comprovada em engenharia de segurança ou bombeiro militar/civil certificado.</li>
+  <li><strong>Carga horária</strong>: um treinamento de reciclagem sério tem no mínimo 4 horas presenciais.</li>
+  <li><strong>Prática com equipamento real</strong>: o treinamento deve incluir exercícios com extintor e simulação de evacuação.</li>
+  <li><strong>Certificado com validade</strong>: emitido com dados do instrutor, data e carga horária — documentação exigida em vistorias.</li>
+</ul>
+    `
+  },
+  {
+    slug: "processo-emissao-renovacao-avcb",
+    title: "Como Funciona o Processo de Emissão e Renovação do AVCB em 2024",
+    excerpt: "Guia completo com o passo a passo exigido pelo Corpo de Bombeiros para garantir a regularização da edificação e evitar multas e interdições.",
+    category: "Guia Prático",
+    date: "05 de Agosto, 2024",
+    readTime: "8 min de leitura",
+    author: "Cap. Carlos Eduardo",
+    authorRole: "Oficial do Corpo de Bombeiros (Ref.), Consultor de PPCI",
+    authorBio: "Capitão reformado do Corpo de Bombeiros com 20 anos de serviço. Atualmente consultor especializado em Planos de Prevenção e Proteção Contra Incêndio (PPCI) e projetos para obtenção do AVCB em todo o Brasil.",
+    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1400&q=80",
+    imageCaption: "Documentação e planta baixa necessários para o processo de vistoria do Corpo de Bombeiros.",
+    tags: ["AVCB", "Corpo de Bombeiros", "Regularização", "PPCI"],
+    sections: [
+      { id: "o-que-e-avcb", title: "O que é o AVCB?" },
+      { id: "quem-precisa", title: "Quem é Obrigado a Ter?" },
+      { id: "documentos", title: "Documentação Necessária" },
+      { id: "etapas-processo", title: "Etapas do Processo" },
+      { id: "renovacao", title: "Renovação do AVCB" },
+    ],
+    content: `
+<h2 id="o-que-e-avcb">O que é o AVCB?</h2>
+<p>O <strong>Auto de Vistoria do Corpo de Bombeiros (AVCB)</strong> é o documento que certifica que uma edificação atende a todos os requisitos de segurança contra incêndio e pânico exigidos pela legislação estadual e pelas normas técnicas da ABNT. Sem ele, o estabelecimento não pode operar legalmente.</p>
+<h2 id="quem-precisa">Quem é Obrigado a Ter?</h2>
+<p>A obrigatoriedade varia por estado, mas de forma geral, todos os estabelecimentos comerciais, industriais e de serviços acima de 750m² precisam do AVCB. Galpões logísticos, hospitais, shoppings e indústrias de qualquer porte geralmente possuem exigência independente da área.</p>
+<blockquote class="pull-quote">
+  <p>"O AVCB não é um gasto. É a certidão de que o seu estabelecimento não se tornará uma armadilha em caso de emergência."</p>
+  <cite>— Cap. Carlos Eduardo</cite>
+</blockquote>
+<h2 id="documentos">Documentação Necessária</h2>
+<p>Para dar entrada no processo, prepare: planta baixa atualizada com indicação de todas as medidas de segurança instaladas, memorial descritivo das medidas de proteção (PPCI), habite-se ou alvará de construção, RRT/ART do profissional responsável, e comprovante de regularidade do imóvel.</p>
+<h2 id="etapas-processo">Etapas do Processo de Obtenção</h2>
+<ul>
+  <li><strong>1. Análise prévia:</strong> levantamento das condições atuais da edificação e definição das adaptações necessárias.</li>
+  <li><strong>2. Elaboração do PPCI:</strong> desenvolvimento do Plano de Prevenção e Proteção Contra Incêndio.</li>
+  <li><strong>3. Protocolo no Corpo de Bombeiros:</strong> entrega da documentação no posto ou via PPCI Digital.</li>
+  <li><strong>4. Vistoria:</strong> visita do oficial para verificação in loco de todos os itens projetados.</li>
+  <li><strong>5. Emissão do AVCB:</strong> aprovada a vistoria, o documento é emitido com prazo de validade definido.</li>
+</ul>
+<h2 id="renovacao">Renovação do AVCB</h2>
+<p>A renovação deve ser iniciada com <strong>antecedência mínima de 90 dias</strong> antes do vencimento. O processo é similar ao da primeira emissão, podendo ser simplificado caso nenhuma alteração estrutural tenha sido feita. Atenção: um AVCB vencido tem a mesma validade jurídica de não ter o documento — ou seja, nenhuma.</p>
+    `
+  },
+  {
+    slug: "equipamentos-essenciais-combate-incendio",
+    title: "Os 5 Equipamentos Obrigatórios de Combate a Incêndio na Indústria",
+    excerpt: "Extintores, hidrantes, sinalização e alarmes: entenda como dimensionar corretamente a infraestrutura de segurança conforme a carga de incêndio.",
+    category: "Segurança",
+    date: "28 de Julho, 2024",
+    readTime: "5 min de leitura",
+    author: "Téc. Mariana Costa",
+    authorRole: "Técnica em Segurança do Trabalho, CIPA",
+    authorBio: "Técnica de segurança do trabalho com especialização em sistemas de combate a incêndio. Experiência em indústrias do setor químico e automotivo, com mais de 200 laudos de conformidade emitidos.",
+    image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1400&q=80",
+    imageCaption: "Painel de controle do sistema de alarme de incêndio em edificação industrial.",
+    tags: ["Extintores", "Hidrantes", "Alarme de Incêndio", "NBR", "Sinalização"],
+    sections: [
+      { id: "extintores", title: "1. Extintores de Incêndio" },
+      { id: "hidrantes", title: "2. Rede de Hidrantes" },
+      { id: "alarme", title: "3. Sistema de Alarme" },
+      { id: "sinalizacao", title: "4. Sinalização de Emergência" },
+      { id: "iluminacao", title: "5. Iluminação de Emergência" },
+    ],
+    content: `
+<h2 id="extintores">1. Extintores de Incêndio</h2>
+<p>O extintor é o equipamento de primeira intervenção. A classe do extintor deve ser compatível com a classe de incêndio da área: <strong>Pó Químico Seco (ABC)</strong>, <strong>CO₂</strong> para equipamentos elétricos, e <strong>Água Pressurizada</strong> para materiais sólidos. A NBR 12693 regulamenta o dimensionamento e o posicionamento.</p>
+<blockquote class="pull-quote">
+  <p>"Um extintor na posição errada ou com a classe errada de agente extintor pode ser tão inútil quanto não ter extintor algum."</p>
+  <cite>— Téc. Mariana Costa</cite>
+</blockquote>
+<h2 id="hidrantes">2. Rede de Hidrantes e Mangotinhos</h2>
+<p>Para incêndios de maior proporção, a rede de hidrantes é o recurso fundamental. A NBR 13714 define pressões mínimas, vazões e o dimensionamento da tubulação. Em indústrias de médio e alto risco, o sistema precisa incluir reservatório de incêndio independente (RI) com capacidade para 30 minutos de combate sem recarga.</p>
+<h2 id="alarme">3. Sistema de Alarme e Detecção de Incêndio</h2>
+<p>O alarme é o que permite a evacuação precoce, antes que o fogo se alastre. A NBR 17240 classifica os sistemas em categorias, exigindo detectores automáticos (fumaça, calor ou chama) e acionadores manuais distribuídos estrategicamente.</p>
+<h2 id="sinalizacao">4. Sinalização de Emergência</h2>
+<p>A NBR 13434 define todos os pictogramas, cores e dimensionamentos para placas de saída de emergência, rotas de fuga, localização de equipamentos e proibições. Uma sinalização correta permite que qualquer pessoa identifique instintivamente o caminho de saída.</p>
+<h2 id="iluminacao">5. Iluminação de Emergência</h2>
+<p>Em um incêndio, a fumaça e cortes de energia transformam qualquer ambiente em um labirinto. A iluminação de emergência, regulamentada pela NBR 10898, deve garantir mínimo de 3 lux nas rotas de fuga por até 2 horas após a falta de energia.</p>
+    `
+  },
+  {
+    slug: "primeiros-socorros-ambiente-corporativo",
+    title: "Primeiros Socorros no Trabalho: O Procedimento Passo a Passo",
+    excerpt: "Além do combate às chamas, a brigada deve dominar o Atendimento Pré-Hospitalar (APH). Saiba como agir em casos de parada cardiorrespiratória e queimaduras.",
+    category: "Saúde & Vida",
+    date: "15 de Julho, 2024",
+    readTime: "7 min de leitura",
+    author: "Dra. Beatriz Santos",
+    authorRole: "Médica do Trabalho, Especialista em APH",
+    authorBio: "Médica do trabalho com residência em medicina de urgência e emergência. Desenvolve protocolos de APH para brigadas corporativas e treina equipes em grandes empresas do setor industrial.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80",
+    imageCaption: "Simulação de RCP (ressuscitação cardiopulmonar) em treinamento de primeiros socorros corporativo.",
+    tags: ["Primeiros Socorros", "APH", "RCP", "DEA", "Queimaduras"],
+    sections: [
+      { id: "avalie-cena", title: "Avalie a Cena Antes de Tudo" },
+      { id: "rcp", title: "Protocolo de RCP" },
+      { id: "dea", title: "Uso do DEA" },
+      { id: "queimaduras", title: "Tratamento de Queimaduras" },
+      { id: "quando-chamar", title: "Quando Acionar o SAMU" },
+    ],
+    content: `
+<h2 id="avalie-cena">Avalie a Cena Antes de Tudo</h2>
+<p>A primeira regra do APH é: <strong>não crie uma segunda vítima</strong>. Antes de se aproximar, certifique-se de que a cena é segura — sem risco de colapso estrutural, fios expostos, vazamentos de gás ou outros perigos imediatos.</p>
+<p>Somente após garantir a segurança do ambiente, inicie a abordagem: <strong>Consciente? → Respira? → Tem pulso?</strong></p>
+<blockquote class="pull-quote">
+  <p>"Cada minuto sem RCP reduz em 10% as chances de sobrevivência de uma parada cardiorrespiratória. A brigada não espera — ela age."</p>
+  <cite>— Dra. Beatriz Santos</cite>
+</blockquote>
+<h2 id="rcp">Protocolo de RCP (Ressuscitação Cardiopulmonar)</h2>
+<p>Se a vítima está inconsciente, não responde e não apresenta respiração normal, inicie a RCP imediatamente:</p>
+<ul>
+  <li>Posicione a vítima em superfície rígida e plana.</li>
+  <li>Entrelace as mãos e posicione o calcanhar da mão no centro do tórax.</li>
+  <li>Realize 30 compressões torácicas em ritmo de 100–120 por minuto, com profundidade de 5–6 cm.</li>
+  <li>Após 30 compressões, realize 2 ventilações de resgate (com barreira de proteção).</li>
+  <li>Continue o ciclo de 30:2 até a chegada do SAMU ou disponibilidade do DEA.</li>
+</ul>
+<h2 id="dea">Uso do DEA (Desfibrilador Externo Automático)</h2>
+<p>Ligue o DEA imediatamente quando disponível e siga as instruções de voz do aparelho. Coloque os eletrodos conforme os diagramas e aguarde a análise do ritmo cardíaco. Se o choque for indicado, afaste todos e acione o botão. Após o choque, retome a RCP imediatamente.</p>
+<h2 id="queimaduras">Tratamento Inicial de Queimaduras</h2>
+<p>Para queimaduras de 1º e 2º grau: resfrie a área com água corrente em temperatura ambiente por 10 a 20 minutos. Nunca use gelo, creme dental ou qualquer outra substância. Cubra com curativo estéril e não estoure bolhas — elas protegem contra infecção.</p>
+<p>Para queimaduras de 3º grau ou com área superior a 10% da superfície corporal, acione o SAMU (192) imediatamente.</p>
+<h2 id="quando-chamar">Quando Acionar o SAMU (192)</h2>
+<p>Acione o SAMU em qualquer situação: vítima inconsciente, dificuldade respiratória grave, suspeita de fratura na coluna, queimaduras extensas, intoxicação por fumaça ou gases — ou sempre que houver dúvida sobre a gravidade do quadro.</p>
+    `
+  },
+  {
+    slug: "brigada-voluntaria-vs-bombeiro-civil",
+    title: "Brigada Voluntária vs. Bombeiro Civil: Qual a Diferença Legal?",
+    excerpt: "Esclareça as diferenças de formação, atuação e dimensionamento exigidos por lei para escolher o modelo ideal para seu estabelecimento.",
+    category: "Legislação & Normas",
+    date: "02 de Julho, 2024",
+    readTime: "4 min de leitura",
+    author: "Eng. Roberto Silva",
+    authorRole: "Especialista em Proteção Contra Incêndio, CREA-SP",
+    authorBio: "Engenheiro de segurança com mais de 15 anos de experiência em projetos de proteção contra incêndio em grandes indústrias e condomínios logísticos.",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80",
+    imageCaption: "Formatura de brigadistas corporativos após conclusão de treinamento de formação.",
+    tags: ["Brigada Voluntária", "Bombeiro Civil", "Lei 11.901/2009", "NBR 14276"],
+    sections: [
+      { id: "brigada-voluntaria", title: "O que é a Brigada Voluntária?" },
+      { id: "bombeiro-civil", title: "O que é o Bombeiro Civil?" },
+      { id: "diferencas", title: "Principais Diferenças" },
+      { id: "qual-escolher", title: "Qual Modelo para sua Empresa?" },
+    ],
+    content: `
+<h2 id="brigada-voluntaria">O que é a Brigada Voluntária?</h2>
+<p>A brigada de incêndio voluntária é formada por colaboradores da própria empresa que, de forma voluntária, recebem treinamento específico para atuação em emergências. É regulamentada pela <strong>NBR 14276</strong> e destina-se a ser a primeira resposta antes da chegada do Corpo de Bombeiros. Seus membros não são remunerados especificamente pela função — ela é exercida em adição às funções normais de trabalho.</p>
+<h2 id="bombeiro-civil">O que é o Bombeiro Civil?</h2>
+<p>O Bombeiro Civil é um profissional contratado especificamente para combate a incêndio, salvamento e primeiros socorros. É regulamentado pela <strong>Lei Federal 11.901/2009</strong>, que exige formação profissional específica, jornada dedicada e remuneração diferenciada. É obrigatório em estádios, hospitais com mais de 200 leitos, aeroportos e refinarias.</p>
+<blockquote class="pull-quote">
+  <p>"Confundir Brigada Voluntária com Bombeiro Civil é um erro de conformidade que pode custar caro — tanto em autuações quanto em uma emergência real."</p>
+  <cite>— Eng. Roberto Silva</cite>
+</blockquote>
+<h2 id="diferencas">Principais Diferenças</h2>
+<ul>
+  <li><strong>Vínculo:</strong> Brigadista voluntário é colaborador com treinamento adicional; Bombeiro Civil é profissional contratado para a função.</li>
+  <li><strong>Regulamentação:</strong> Brigada: NBR 14276; Bombeiro Civil: Lei 11.901/2009.</li>
+  <li><strong>Jornada:</strong> Brigadista atua em emergências no horário normal; Bombeiro Civil tem jornada dedicada à segurança.</li>
+  <li><strong>Custo:</strong> Brigada é mais econômica; Bombeiro Civil tem custo de profissional especializado.</li>
+</ul>
+<h2 id="qual-escolher">Qual Modelo é Adequado para sua Empresa?</h2>
+<p>Para a maioria das empresas — comércio, escritórios, fábricas de médio porte e galpões —, a <strong>Brigada Voluntária bem treinada é suficiente e legalmente adequada</strong>. O Bombeiro Civil é exigido apenas para as categorias específicas da Lei 11.901/2009. Consulte sempre um especialista ou o Corpo de Bombeiros do seu estado.</p>
+    `
+  },
+  {
+    slug: "prevencao-perdas-patrimoniais",
+    title: "O Impacto Financeiro da Brigada de Incêndio na Prevenção de Perdas",
+    excerpt: "Treinar colaboradores reduz significativamente sinistros e atua diretamente na diminuição da apólice do seguro patrimonial da sua empresa.",
+    category: "Gestão de Risco",
+    date: "20 de Junho, 2024",
+    readTime: "6 min de leitura",
+    author: "Fernando Alcantara",
+    authorRole: "Consultor de Gestão de Riscos Corporativos",
+    authorBio: "Especialista em gerenciamento de riscos industriais com atuação em seguradoras e consultorias nacionais. Foco em análise de exposição a perdas e desenvolvimento de programas de prevenção.",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80",
+    imageCaption: "Vista aérea de complexo industrial — patrimônio que uma brigada bem treinada ajuda a proteger.",
+    tags: ["Gestão de Risco", "Seguro Patrimonial", "ROI", "Prevenção de Perdas"],
+    sections: [
+      { id: "custo-sinistro", title: "O Real Custo de um Sinistro" },
+      { id: "impacto-seguro", title: "Impacto no Seguro Patrimonial" },
+      { id: "roi-treinamento", title: "O ROI do Treinamento" },
+    ],
+    content: `
+<h2 id="custo-sinistro">O Real Custo de um Sinistro por Incêndio</h2>
+<p>O custo direto de um incêndio — danos ao patrimônio, equipamentos e estoque — raramente é o mais alto. Os custos indiretos frequentemente superam os danos físicos em 3 a 5 vezes: perda de produção, custo de realocação temporária, dano à reputação e fuga de clientes e fornecedores.</p>
+<blockquote class="pull-quote">
+  <p>"Para cada R$ 1 de dano direto causado por incêndio, estudos apontam R$ 3 a R$ 5 de custo indireto não coberto pelo seguro."</p>
+  <cite>— Fernando Alcantara</cite>
+</blockquote>
+<h2 id="impacto-seguro">Impacto no Seguro Patrimonial</h2>
+<p>As seguradoras consideram a existência e a regularidade da brigada como fator de redução de risco. Uma empresa com brigada ativa, reciclagem em dia e AVCB válido pode obter descontos acima de 15% no prêmio anual. Em contrapartida, seguradoras podem recusar o pagamento de sinistro quando comprovam negligência na manutenção do programa de segurança.</p>
+<h2 id="roi-treinamento">O ROI do Treinamento de Brigada</h2>
+<p>O custo de um treinamento de brigada para 20 colaboradores representa, na maioria dos casos, menos de 0,5% do valor segurado do patrimônio de uma empresa de médio porte. A relação custo-benefício é inegável: um único incidente bem controlado pela brigada pode evitar perdas que superam o custo de décadas de treinamento.</p>
+    `
+  },
+  {
+    slug: "simulado-evacuacao-plano-abandono",
+    title: "Como Organizar um Simulado de Evacuação Rápido e Sem Pânico",
+    excerpt: "Dicas de planejamento para simular rotas de fuga em edifícios comerciais e plantas industriais em total conformidade com a NBR 14276.",
+    category: "Guia Prático",
+    date: "10 de Junho, 2024",
+    readTime: "5 min de leitura",
+    author: "Cap. Carlos Eduardo",
+    authorRole: "Oficial do Corpo de Bombeiros (Ref.), Consultor de PPCI",
+    authorBio: "Capitão reformado do Corpo de Bombeiros com 20 anos de serviço. Especialista em simulados de emergência e planos de abandono de edificações conforme a NBR 14276.",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=80",
+    imageCaption: "Reunião de equipe de segurança para planejamento de simulado de evacuação corporativo.",
+    tags: ["Simulado", "Plano de Abandono", "Evacuação", "NBR 14276"],
+    sections: [
+      { id: "planejamento", title: "Planejamento Prévio" },
+      { id: "papeis", title: "Definição de Papéis" },
+      { id: "execucao", title: "Execução do Simulado" },
+      { id: "debriefing", title: "Debriefing e Aprendizados" },
+    ],
+    content: `
+<h2 id="planejamento">Planejamento Prévio: O que definir antes do dia</h2>
+<p>Um simulado mal planejado gera mais pânico do que preparo. Antes do evento, defina: o cenário hipotético (onde o fogo começa), o turno e horário (evite comunicar a todos com muita antecedência para preservar a naturalidade da reação), as rotas de fuga a testar e os pontos de encontro.</p>
+<h2 id="papeis">Definição de Papéis da Brigada</h2>
+<p>No simulado, cada brigadista deve exercer sua função específica do Plano de Abandono:</p>
+<ul>
+  <li><strong>Líder de abandono:</strong> coordena a saída de um setor específico.</li>
+  <li><strong>Varredura:</strong> verifica banheiros, salas fechadas e espaços confinados antes de sair.</li>
+  <li><strong>Controle de acesso:</strong> impede o retorno de pessoas ao prédio após a evacuação.</li>
+  <li><strong>Recepção:</strong> recebe e contabiliza os evacuados no ponto de encontro.</li>
+</ul>
+<blockquote class="pull-quote">
+  <p>"Um simulado revela os pontos cegos do seu plano de abandono que nenhuma reunião de planejamento conseguiria identificar."</p>
+  <cite>— Cap. Carlos Eduardo</cite>
+</blockquote>
+<h2 id="execucao">Execução: O que medir durante o simulado</h2>
+<p>Registre: o tempo total de evacuação (da ativação do alarme até a confirmação de área evacuada), os gargalos nas rotas de fuga, eventuais comportamentos inadequados (correr, retornar ao prédio, ignorar o alarme) e a eficácia da comunicação por rádio entre os brigadistas.</p>
+<h2 id="debriefing">Debriefing: O aprendizado que vem depois</h2>
+<p>O debriefing realizado nas 24h após o simulado é tão importante quanto o exercício em si. Reúna a brigada e avalie: o que funcionou, o que falhou e quais ajustes devem ser feitos no Plano de Abandono. Documente tudo — essa documentação pode ser exigida em vistoria do Corpo de Bombeiros.</p>
+    `
+  }
+];
+
+export function getStaticPaths() {
+  return allPosts.map(post => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+
+// Get up to 3 related posts (same category first, then others, excluding current)
+const relatedPosts = [
+  ...allPosts.filter(p => p.slug !== post.slug && p.category === post.category),
+  ...allPosts.filter(p => p.slug !== post.slug && p.category !== post.category),
+].slice(0, 3);
+---
+
+<Layout
+  title={`${post.title} | Blog Brigada de Incêndio`}
+  description={post.excerpt}
+  image={post.image}
+>
+  <Header />
+
+  <!-- Signature Element: Reading Progress Bar -->
+  <div class="reading-progress-bar" id="reading-progress" role="progressbar" aria-label="Progresso de leitura" aria-valuenow={0} aria-valuemin={0} aria-valuemax={100}></div>
+
+  <main class="post-page" id="main-content">
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-bar">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Trilha de navegação">
+          <a href="/">Início</a>
+          <span class="bc-sep" aria-hidden="true">›</span>
+          <a href="/blog">Blog</a>
+          <span class="bc-sep" aria-hidden="true">›</span>
+          <span class="bc-current">{post.category}</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Post Hero Header -->
+    <section class="post-hero">
+      <div class="container">
+        <div class="post-hero-content" data-animate="fade-up">
+          <div class="post-meta-row">
+            <span class="post-category-badge">{post.category}</span>
+            <span class="meta-dot" aria-hidden="true">·</span>
+            <span class="post-meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              {post.date}
+            </span>
+            <span class="meta-dot" aria-hidden="true">·</span>
+            <span class="post-meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              {post.readTime}
+            </span>
+          </div>
+
+          <h1 class="post-title">{post.title}</h1>
+          <p class="post-excerpt">{post.excerpt}</p>
+
+          <div class="post-author-mini">
+            <div class="author-avatar-sm" aria-hidden="true">{post.author.charAt(0)}</div>
+            <div>
+              <strong>{post.author}</strong>
+              <span>{post.authorRole}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-width Hero Image -->
+    <div class="post-hero-image-wrapper">
+      <div class="container">
+        <figure class="post-hero-figure" data-animate="fade-up">
+          <img src={post.image} alt={post.title} class="post-hero-img" loading="eager" />
+          {post.imageCaption && <figcaption class="post-img-caption">{post.imageCaption}</figcaption>}
+        </figure>
+      </div>
+    </div>
+
+    <!-- Article Body + Sticky Sidebar -->
+    <div class="post-body-layout">
+      <div class="container">
+        <div class="post-layout-grid">
+
+          <!-- Main Article Content -->
+          <article class="post-article" id="post-article">
+            <div class="article-body" set:html={post.content} />
+
+            <!-- Article Tags -->
+            <div class="post-tags-row">
+              <span class="tags-label">Tags:</span>
+              <div class="post-tags-list">
+                {post.tags.map(tag => (
+                  <span class="post-tag-pill">{tag}</span>
+                ))}
+              </div>
+            </div>
+
+            <!-- Social Share -->
+            <div class="post-share-row">
+              <span class="share-label">Compartilhar:</span>
+              <div class="share-buttons">
+                <a
+                  href={`https://wa.me/?text=${encodeURIComponent(post.title)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="share-btn share-wa"
+                  aria-label="Compartilhar no WhatsApp"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  WhatsApp
+                </a>
+                <a
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://treinamentobrigadadeincendio.com.br/blog/' + post.slug)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="share-btn share-li"
+                  aria-label="Compartilhar no LinkedIn"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+
+            <!-- Author Box -->
+            <div class="author-box glass-card">
+              <div class="author-avatar-lg" aria-hidden="true">{post.author.charAt(0)}</div>
+              <div class="author-box-body">
+                <span class="author-box-label">Escrito por</span>
+                <strong class="author-box-name">{post.author}</strong>
+                <span class="author-box-role">{post.authorRole}</span>
+                <p class="author-box-bio">{post.authorBio}</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sticky Sidebar -->
+          <aside class="post-sidebar" id="post-sidebar" aria-label="Barra lateral do artigo">
+
+            <!-- Table of Contents -->
+            <div class="sidebar-toc glass-card">
+              <h2 class="toc-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                Neste artigo
+              </h2>
+              <nav class="toc-nav" id="toc-nav" aria-label="Sumário do artigo">
+                {post.sections.map(section => (
+                  <a href={`#${section.id}`} class="toc-link" data-target={section.id}>
+                    {section.title}
+                  </a>
+                ))}
+              </nav>
+            </div>
+
+            <!-- CTA Card -->
+            <div class="sidebar-cta glass-card">
+              <div class="sidebar-cta-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="var(--primary)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 class="sidebar-cta-title">Regularize a Brigada da sua Empresa</h3>
+              <p class="sidebar-cta-desc">Treinamento In-Company, conformidade com a NR-23 e certificação válida. Atendemos em todo o Brasil.</p>
+              <button onclick="openQuoteModal()" class="btn btn-primary sidebar-cta-btn" id="sidebar-orcamento-btn">
+                Solicitar Orçamento
+              </button>
+            </div>
+
+            <!-- Reading Progress Widget -->
+            <div class="sidebar-progress glass-card">
+              <div class="progress-header">
+                <span class="progress-label">Progresso de leitura</span>
+                <span class="progress-pct" id="progress-pct">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" id="progress-fill"></div>
+              </div>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Posts -->
+    {relatedPosts.length > 0 && (
+      <section class="related-section section-padding" aria-labelledby="related-heading">
+        <div class="container">
+          <div class="related-header" data-animate="fade-up">
+            <span class="eyebrow">Continue Aprendendo</span>
+            <h2 class="related-title font-display" id="related-heading">ARTIGOS RELACIONADOS</h2>
+          </div>
+
+          <div class="related-grid">
+            {relatedPosts.map((related, i) => (
+              <a href={`/blog/${related.slug}`} class="related-card glass-card" data-animate="fade-up" data-delay={String(i * 100)} aria-label={`Ler artigo: ${related.title}`}>
+                <div class="related-img-wrapper">
+                  <img src={related.image} alt="" class="related-img" loading="lazy" aria-hidden="true" />
+                  <span class="related-tag">{related.category}</span>
+                </div>
+                <div class="related-body">
+                  <span class="related-date">{related.date} · {related.readTime}</span>
+                  <h3 class="related-post-title">{related.title}</h3>
+                  <span class="related-read-more" aria-hidden="true">
+                    Ler artigo
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Bottom CTA Banner -->
+    <section class="post-cta-section" aria-labelledby="post-cta-heading">
+      <div class="container">
+        <div class="post-cta-banner glass-card" data-animate="fade-up">
+          <div class="post-cta-content">
+            <span class="eyebrow">Treinamento & Conformidade</span>
+            <h2 class="post-cta-title font-display" id="post-cta-heading">SUA EMPRESA ESTÁ PREPARADA PARA UMA EMERGÊNCIA?</h2>
+            <p class="post-cta-desc">Não espere uma vistoria ou um sinistro. Nossos especialistas desenvolvem um programa de treinamento personalizado para o porte e o risco da sua operação.</p>
+          </div>
+          <div class="post-cta-actions">
+            <button onclick="openQuoteModal()" class="btn btn-primary btn-lg" id="post-cta-orcamento-btn">
+              Solicitar Orçamento Grátis
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <a href="/blog" class="btn btn-outline" id="back-to-blog-btn">
+              ← Voltar ao Blog
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // ── Reading Progress Bar + Sidebar Widget ──────────────────
+      const progressBar   = document.getElementById('reading-progress') as HTMLElement;
+      const progressFill  = document.getElementById('progress-fill') as HTMLElement;
+      const progressPct   = document.getElementById('progress-pct') as HTMLElement;
+      const article       = document.getElementById('post-article') as HTMLElement;
+
+      function updateProgress() {
+        if (!article) return;
+        const articleTop    = article.offsetTop;
+        const articleHeight = article.offsetHeight;
+        const scrolled      = window.scrollY;
+        const winH          = window.innerHeight;
+        const raw           = (scrolled - articleTop + winH * 0.5) / articleHeight;
+        const pct           = Math.round(Math.min(Math.max(raw, 0), 1) * 100);
+
+        if (progressBar)  { progressBar.style.width = `${pct}%`; progressBar.setAttribute('aria-valuenow', String(pct)); }
+        if (progressFill) progressFill.style.width  = `${pct}%`;
+        if (progressPct)  progressPct.textContent   = `${pct}%`;
+      }
+
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      updateProgress();
+
+      // ── Table of Contents Active Heading ──────────────────────
+      const tocLinks         = document.querySelectorAll('.toc-link') as NodeListOf<HTMLAnchorElement>;
+      const sectionHeadings  = document.querySelectorAll('.post-article h2[id]') as NodeListOf<HTMLElement>;
+
+      if (sectionHeadings.length > 0) {
+        const headingObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                tocLinks.forEach(link => {
+                  link.classList.toggle('active', link.getAttribute('data-target') === id);
+                });
+              }
+            });
+          },
+          { rootMargin: '-15% 0px -70% 0px', threshold: 0 }
+        );
+        sectionHeadings.forEach(h => headingObserver.observe(h));
+      }
+    });
+  </script>
+
+  <style>
+    /* ── Reading Progress Bar (Signature Element) ── */
+    .reading-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 60%, #FF8A65 100%);
+      z-index: 2000;
+      transition: width 0.12s linear;
+      box-shadow: 0 0 14px var(--primary-glow);
+    }
+
+    /* ── Page Base ── */
+    .post-page {
+      padding-top: 5.5rem;
+    }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb-bar {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-elevated);
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--text-subtle);
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb a {
+      color: var(--text-subtle);
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover { color: var(--primary-light); }
+
+    .bc-sep { color: var(--border-light); }
+
+    .bc-current {
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    /* ── Post Hero ── */
+    .post-hero {
+      padding: 4.5rem 0 3rem 0;
+      border-bottom: 1px solid var(--border);
+      background: radial-gradient(circle at 65% 0%, rgba(230, 48, 0, 0.09) 0%, transparent 55%);
+    }
+
+    .post-hero-content { max-width: 820px; }
+
+    .post-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      color: var(--text-subtle);
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .post-category-badge {
+      background: var(--primary-dim);
+      border: 1px solid var(--primary-border);
+      color: var(--primary-light);
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .meta-dot { color: var(--border-light); }
+
+    .post-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .post-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+      margin-bottom: 1.25rem;
+    }
+
+    .post-excerpt {
+      font-size: 1.18rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 700px;
+    }
+
+    .post-author-mini {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .author-avatar-sm {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--gradient-fire);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .post-author-mini strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .post-author-mini span {
+      font-size: 0.78rem;
+      color: var(--text-subtle);
+    }
+
+    /* ── Hero Image ── */
+    .post-hero-image-wrapper { padding: 3rem 0 0 0; }
+
+    .post-hero-figure { margin: 0; }
+
+    .post-hero-img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+    }
+
+    .post-img-caption {
+      font-size: 0.82rem;
+      color: var(--text-subtle);
+      text-align: center;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+
+    /* ── Article + Sidebar Grid ── */
+    .post-body-layout { padding: 5rem 0; }
+
+    .post-layout-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* ── Article Body ── */
+    .post-article { min-width: 0; }
+
+    .article-body h2 {
+      font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+      font-weight: 800;
+      color: var(--text-main);
+      margin: 3rem 0 1.1rem 0;
+      padding-top: 1rem;
+      letter-spacing: -0.02em;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 6.5rem;
+    }
+
+    .article-body h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .article-body p {
+      font-size: 1.06rem;
+      line-height: 1.82;
+      color: var(--text-muted);
+      margin-bottom: 1.35rem;
+    }
+
+    .article-body p strong { color: var(--text-main); font-weight: 700; }
+
+    .article-body ul,
+    .article-body ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .article-body li {
+      font-size: 1.04rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    .article-body li strong { color: var(--text-main); }
+
+    .article-body ul li::marker { color: var(--primary); }
+
+    /* Pull-quote: the risk element */
+    .article-body blockquote.pull-quote {
+      position: relative;
+      margin: 2.5rem 0;
+      padding: 2rem 2rem 2rem 2.5rem;
+      background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                  linear-gradient(180deg, var(--primary-light), var(--primary)) border-box;
+      border: 0 solid transparent;
+      border-left-width: 4px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      overflow: hidden;
+    }
+
+    .article-body blockquote.pull-quote::before {
+      content: '\201C';
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 9rem;
+      line-height: 0.75;
+      color: rgba(230, 48, 0, 0.13);
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .article-body blockquote.pull-quote p {
+      position: relative;
+      font-size: 1.16rem;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 0.7rem;
+    }
+
+    .article-body blockquote.pull-quote cite {
+      position: relative;
+      display: block;
+      font-size: 0.82rem;
+      color: var(--primary-light);
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Tags ── */
+    .post-tags-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .tags-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+    }
+
+    .post-tags-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .post-tag-pill {
+      padding: 0.35rem 0.9rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      transition: var(--transition);
+      cursor: default;
+    }
+
+    .post-tag-pill:hover {
+      border-color: var(--primary-border);
+      color: var(--primary-light);
+    }
+
+    /* ── Share Row ── */
+    .post-share-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .share-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .share-buttons { display: flex; gap: 0.75rem; }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .share-btn:hover { transform: translateY(-2px); }
+
+    .share-wa:hover {
+      background: rgba(37, 211, 102, 0.12);
+      border-color: rgba(37, 211, 102, 0.4);
+      color: #25D366;
+    }
+
+    .share-li:hover {
+      background: rgba(10, 102, 194, 0.12);
+      border-color: rgba(10, 102, 194, 0.4);
+      color: #0A66C2;
+    }
+
+    /* ── Author Box ── */
+    .author-box {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(230, 48, 0, 0.05) 100%);
+      border: 1px solid var(--primary-border) !important;
+    }
+
+    .author-avatar-lg {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--gradient-fire);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    .author-box-body { display: flex; flex-direction: column; gap: 0.2rem; }
+
+    .author-box-label {
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--primary-light);
+    }
+
+    .author-box-name {
+      font-size: 1.05rem;
+      color: var(--text-main);
+    }
+
+    .author-box-role {
+      font-size: 0.82rem;
+      color: var(--text-subtle);
+      margin-bottom: 0.5rem;
+    }
+
+    .author-box-bio {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── Sticky Sidebar ── */
+    .post-sidebar {
+      position: sticky;
+      top: 6.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Table of Contents */
+    .sidebar-toc { padding: 1.5rem; }
+
+    .toc-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-subtle);
+      margin-bottom: 1.25rem;
+    }
+
+    .toc-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .toc-link {
+      display: block;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      border-radius: var(--radius-sm);
+      border-left: 2px solid transparent;
+      transition: var(--transition);
+      line-height: 1.4;
+    }
+
+    .toc-link:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.03);
+      border-left-color: var(--border-light);
+    }
+
+    .toc-link.active {
+      color: var(--primary-light);
+      background: var(--primary-dim);
+      border-left-color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* CTA Sidebar */
+    .sidebar-cta {
+      padding: 1.5rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(230, 48, 0, 0.1) 0%, var(--bg-card) 100%);
+      border: 1px solid var(--primary-border) !important;
+    }
+
+    .sidebar-cta-icon { margin-bottom: 0.85rem; }
+
+    .sidebar-cta-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+
+    .sidebar-cta-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar-cta-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Progress Widget */
+    .sidebar-progress { padding: 1.25rem 1.5rem; }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .progress-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-subtle);
+    }
+
+    .progress-pct {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary-light);
+    }
+
+    .progress-track {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+      border-radius: 999px;
+      transition: width 0.15s linear;
+    }
+
+    /* ── Related Posts ── */
+    .related-section {
+      border-top: 1px solid var(--border);
+      background: var(--bg-elevated);
+    }
+
+    .related-header { margin-bottom: 3rem; }
+
+    .related-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      letter-spacing: 0.02em;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .related-card {
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .related-img-wrapper {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .related-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+      filter: brightness(0.85);
+    }
+
+    .related-card:hover .related-img {
+      transform: scale(1.06);
+      filter: brightness(0.7);
+    }
+
+    .related-tag {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--primary-border);
+      color: var(--primary-light);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.7rem;
+      border-radius: var(--radius-full);
+    }
+
+    .related-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      flex-grow: 1;
+    }
+
+    .related-date {
+      font-size: 0.78rem;
+      color: var(--text-subtle);
+    }
+
+    .related-post-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      transition: color 0.2s;
+    }
+
+    .related-card:hover .related-post-title { color: var(--primary-light); }
+
+    .related-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      margin-top: auto;
+      padding-top: 0.75rem;
+      transition: gap 0.2s;
+    }
+
+    .related-card:hover .related-read-more { gap: 0.6rem; }
+
+    /* ── Bottom CTA Banner ── */
+    .post-cta-section { padding: 5rem 0; }
+
+    .post-cta-banner {
+      padding: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      background: linear-gradient(135deg, rgba(230, 48, 0, 0.14) 0%, var(--bg-card) 55%);
+      border: 1px solid var(--primary-border) !important;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .post-cta-banner::after {
+      content: '';
+      position: absolute;
+      right: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(230, 48, 0, 0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .post-cta-content { max-width: 600px; }
+
+    .post-cta-title {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      color: #fff;
+      margin-bottom: 0.85rem;
+      letter-spacing: 0.02em;
+    }
+
+    .post-cta-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .post-cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-lg {
+      padding: 1.1rem 2.2rem;
+      font-size: 1rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1100px) {
+      .post-layout-grid {
+        grid-template-columns: 1fr 300px;
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .post-layout-grid { grid-template-columns: 1fr; }
+
+      .post-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      .sidebar-progress { grid-column: span 2; }
+
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .post-hero-img { height: 260px; }
+
+      .post-sidebar { grid-template-columns: 1fr; }
+
+      .sidebar-progress { grid-column: span 1; }
+
+      .related-grid { grid-template-columns: 1fr; }
+
+      .post-cta-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 2rem;
+      }
+
+      .post-cta-actions {
+        width: 100%;
+        align-items: center;
+      }
+
+      .author-box {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .post-share-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .post-title { font-size: clamp(1.7rem, 7vw, 2rem); }
+
+      .post-excerpt { font-size: 1rem; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .reading-progress-bar,
+      .progress-fill {
+        transition: none;
+      }
+    }
+  </style>
+</Layout>

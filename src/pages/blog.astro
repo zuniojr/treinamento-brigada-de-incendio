@@ -157,7 +157,7 @@ const categories = ["Todos", "Legislação & Normas", "Guia Prático", "Seguran�
                 <span class="post-readtime">{featuredPost.readTime}</span>
               </div>
 
-              <h2 class="featured-title">{featuredPost.title}</h2>
+              <h2 class="featured-title"><a href={`/blog/${featuredPost.id}`} class="title-link">{featuredPost.title}</a></h2>
               <p class="featured-excerpt">{featuredPost.excerpt}</p>
 
               <div class="featured-footer">
@@ -169,7 +169,7 @@ const categories = ["Todos", "Legislação & Normas", "Guia Prático", "Seguran�
                   </div>
                 </div>
 
-                <a href="#" class="btn btn-primary btn-read">
+                <a href={`/blog/${featuredPost.id}`} class="btn btn-primary btn-read">
                   <span>Ler Artigo Completo</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
@@ -195,11 +195,11 @@ const categories = ["Todos", "Legislação & Normas", "Guia Prático", "Seguran�
               data-animate="fade-up" 
               data-delay={String((i % 3) * 100)}
             >
-              <div class="blog-img-wrapper">
+              <a href={`/blog/${post.id}`} class="blog-img-wrapper">
                 <img src={post.image} alt={post.title} class="blog-img" loading="lazy" />
                 <div class="blog-tag">{post.category}</div>
                 <div class="card-number font-display">0{i + 1}</div>
-              </div>
+              </a>
 
               <div class="blog-content">
                 <div class="blog-meta">
@@ -214,12 +214,12 @@ const categories = ["Todos", "Legislação & Normas", "Guia Prático", "Seguran�
                   </span>
                 </div>
 
-                <h3 class="blog-post-title">{post.title}</h3>
+                <h3 class="blog-post-title"><a href={`/blog/${post.id}`} class="title-link">{post.title}</a></h3>
                 <p class="blog-post-excerpt">{post.excerpt}</p>
 
                 <div class="card-footer">
                   <span class="post-author-small">Por {post.author}</span>
-                  <a href="#" class="blog-read-more" aria-label={`Ler artigo: ${post.title}`}>
+                  <a href={`/blog/${post.id}`} class="blog-read-more" aria-label={`Ler artigo: ${post.title}`}>
                     <span>Ler mais</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                   </a>
@@ -569,6 +569,16 @@ const categories = ["Todos", "Legislação & Normas", "Guia Prático", "Seguran�
       margin-bottom: 1.1rem;
       color: #fff;
       letter-spacing: -0.02em;
+    }
+
+    .title-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .title-link:hover {
+      color: var(--primary-light);
     }
 
     .featured-excerpt {
