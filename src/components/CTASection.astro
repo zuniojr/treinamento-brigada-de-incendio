@@ -37,9 +37,9 @@
       </div>
 
       <div class="cta-features">
-        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Emissão rápida de proposta</span>
-        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Atendimento em todo estado</span>
-        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Instrutores credenciados CREA/Bombeiros</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.90)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Emissão rápida de proposta</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.90)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Atendimento em todo estado</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.90)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Instrutores credenciados CREA/Bombeiros</span>
       </div>
     </div>
   </div>
@@ -50,7 +50,7 @@
     padding: 7rem 0;
     position: relative;
     overflow: hidden;
-    background: var(--bg-elevated);
+    background: #F3F4F6;
   }
 
   .cta-bg-glow {
@@ -60,7 +60,7 @@
     transform: translate(-50%, -50%);
     width: 900px;
     height: 450px;
-    background: radial-gradient(circle, rgba(230, 48, 0, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(circle, rgba(230, 48, 0, 0.06) 0%, rgba(0, 0, 0, 0) 70%);
     filter: blur(90px);
     pointer-events: none;
   }
@@ -71,17 +71,34 @@
     right: 0;
     width: 300px;
     height: 100%;
-    background: linear-gradient(135deg, transparent 50%, rgba(230, 48, 0, 0.05) 100%);
+    background: linear-gradient(135deg, transparent 50%, rgba(230, 48, 0, 0.04) 100%);
     pointer-events: none;
   }
 
   .cta-box {
     text-align: center;
-    padding: 4.5rem 3rem;
-    background: linear-gradient(135deg, rgba(20, 20, 20, 0.98) 0%, rgba(12, 12, 12, 0.98) 100%);
-    border: 1px solid var(--border-fire);
+    padding: 5rem 3rem;
+    background: linear-gradient(135deg, #E63000 0%, #A82200 100%);
+    border: none;
     border-radius: var(--radius-xl);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.70), 0 0 40px rgba(230, 48, 0, 0.15);
+    box-shadow: 0 24px 60px rgba(230, 48, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  /* Subtle texture overlay inside the CTA box */
+  .cta-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .cta-box > * {
     position: relative;
     z-index: 1;
   }
@@ -96,7 +113,7 @@
   }
 
   .cta-desc {
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.82);
     font-size: 1.1rem;
     max-width: 720px;
     margin: 0 auto 2.5rem auto;
@@ -118,16 +135,44 @@
     border-radius: var(--radius-md);
   }
 
+  /* Override btn-primary for this red background — make it white */
+  .cta-box .btn-primary {
+    background: #FFFFFF;
+    color: var(--primary);
+    border-color: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.20);
+  }
+
+  .cta-box .btn-primary:hover {
+    background: #F9FAFB;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  }
+
+  /* WhatsApp button on red background */
+  .cta-box .btn-whatsapp {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1.5px solid rgba(255, 255, 255, 0.40);
+    color: #FFFFFF;
+    backdrop-filter: blur(4px);
+  }
+
+  .cta-box .btn-whatsapp:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.60);
+    transform: translateY(-2px);
+  }
+
   .cta-features {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.75);
     font-size: 0.88rem;
     font-weight: 600;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
     padding-top: 2rem;
   }
 
@@ -135,6 +180,18 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
+  }
+
+  /* Also update the badge-alert inside for white on red */
+  .cta-box .badge-alert {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.30);
+    color: #FFFFFF;
+  }
+
+  .cta-box .badge-alert .dot {
+    background: #FFFFFF;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
   }
 
   @media (max-width: 768px) {

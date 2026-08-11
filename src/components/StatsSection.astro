@@ -97,9 +97,9 @@ const stats = [
     padding: 5.5rem 0;
     position: relative;
     overflow: hidden;
-    background: var(--bg-elevated);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    background: #FAFAFA;
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
   }
 
   .stats-glow {
@@ -109,7 +109,7 @@ const stats = [
     transform: translate(-50%, -50%);
     width: 800px;
     height: 250px;
-    background: radial-gradient(ellipse, rgba(230, 48, 0, 0.14) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(230, 48, 0, 0.07) 0%, transparent 70%);
     filter: blur(70px);
     pointer-events: none;
   }
@@ -131,11 +131,12 @@ const stats = [
     min-width: 200px;
     padding: 2rem 2.5rem;
     position: relative;
+    transition: var(--transition);
   }
 
   .stat-divider {
     width: 1px;
-    background: var(--border-light);
+    background: #D1D5DB;
     align-self: stretch;
     margin: 1rem 0;
     flex-shrink: 0;
@@ -144,13 +145,13 @@ const stats = [
   .stat-icon-wrap {
     width: 56px;
     height: 56px;
-    background: var(--primary-dim);
-    border: 1px solid var(--primary-border);
+    background: rgba(230, 48, 0, 0.08);
+    border: 1px solid rgba(230, 48, 0, 0.20);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-light);
+    color: var(--primary);
     flex-shrink: 0;
     transition: var(--transition);
   }
@@ -159,7 +160,7 @@ const stats = [
     background: var(--primary);
     border-color: var(--primary);
     color: #fff;
-    box-shadow: 0 0 24px var(--primary-glow);
+    box-shadow: 0 0 24px rgba(230, 48, 0, 0.25);
   }
 
   .stat-body {
@@ -172,7 +173,7 @@ const stats = [
     font-size: clamp(2rem, 3.5vw, 3rem);
     font-weight: 800;
     line-height: 1;
-    background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, #1A1A1A 0%, var(--primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -182,12 +183,12 @@ const stats = [
   .stat-label {
     font-size: 0.95rem;
     font-weight: 700;
-    color: var(--text-main);
+    color: #111827;
   }
 
   .stat-desc {
     font-size: 0.78rem;
-    color: var(--text-muted);
+    color: #6B7280;
   }
 
   @media (max-width: 768px) {

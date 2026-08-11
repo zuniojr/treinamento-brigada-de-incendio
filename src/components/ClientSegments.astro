@@ -85,7 +85,22 @@ const segments = [
 
 <style>
   .segments-section {
-    background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-elevated) 100%);
+    background: #F3F4F6;
+  }
+
+  /* Override section header colors for light background */
+  .segments-section .section-subtitle {
+    color: var(--primary);
+    background: rgba(230, 48, 0, 0.08);
+    border-color: rgba(230, 48, 0, 0.20);
+  }
+
+  .segments-section .section-title {
+    color: #0D0D0D;
+  }
+
+  .segments-section .section-desc {
+    color: #4B5563;
   }
 
   /* ---- Chips ---- */
@@ -102,22 +117,23 @@ const segments = [
     align-items: center;
     gap: 0.55rem;
     padding: 0.6rem 1.1rem;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
     border-radius: var(--radius-full);
     transition: var(--transition);
     cursor: default;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   }
 
   .segment-chip:hover {
-    background: var(--bg-card-hover);
-    border-color: var(--primary-border);
+    background: #FFF5F3;
+    border-color: rgba(230, 48, 0, 0.30);
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(230, 48, 0, 0.15);
+    box-shadow: 0 4px 16px rgba(230, 48, 0, 0.12);
   }
 
   .chip-icon {
-    color: var(--primary-light);
+    color: var(--primary);
     display: flex;
     align-items: center;
     transition: color 0.2s;
@@ -125,19 +141,19 @@ const segments = [
   }
 
   .segment-chip:hover .chip-icon {
-    color: var(--primary);
+    color: var(--primary-hover);
   }
 
   .chip-name {
     font-size: 0.88rem;
     font-weight: 600;
-    color: var(--text-muted);
+    color: #374151;
     white-space: nowrap;
     transition: color 0.2s;
   }
 
   .segment-chip:hover .chip-name {
-    color: var(--text-main);
+    color: #111827;
   }
 
   /* ---- Quote CTA Card ---- */

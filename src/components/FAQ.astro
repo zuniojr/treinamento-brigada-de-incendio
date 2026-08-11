@@ -108,7 +108,22 @@ const faqs = [
 
 <style>
   .faq-section {
-    background: var(--bg-main);
+    background: #FFFFFF;
+  }
+
+  /* Override section header colors for light background */
+  .faq-section .section-subtitle {
+    color: var(--primary);
+    background: rgba(230, 48, 0, 0.08);
+    border-color: rgba(230, 48, 0, 0.20);
+  }
+
+  .faq-section .section-title {
+    color: #0D0D0D;
+  }
+
+  .faq-section .section-desc {
+    color: #4B5563;
   }
 
   .faq-accordion {
@@ -120,25 +135,26 @@ const faqs = [
   }
 
   .faq-item {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+    background: #FAFAFA;
+    border: 1px solid #E5E7EB;
     border-left: 3px solid transparent;
     border-radius: var(--radius-md);
     overflow: hidden;
     transition: var(--transition);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
   }
 
   .faq-item:hover {
-    border-color: var(--border-light);
-    background: var(--bg-card-hover);
+    border-color: #D1D5DB;
+    background: #FFFFFF;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
 
   .faq-item.open {
-    border-color: var(--primary-border);
+    border-color: rgba(230, 48, 0, 0.25);
     border-left-color: var(--primary);
-    box-shadow: var(--shadow-card), 0 0 20px var(--primary-glow);
-    background: var(--bg-card-hover);
+    box-shadow: 0 6px 24px rgba(230, 48, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.06);
+    background: #FFFFFF;
   }
 
   .faq-question {
@@ -158,7 +174,7 @@ const faqs = [
   .faq-question-text {
     font-size: 1.05rem;
     font-weight: 700;
-    color: var(--text-main);
+    color: #111827;
     transition: color 0.3s ease;
     line-height: 1.4;
     letter-spacing: -0.01em;
@@ -166,15 +182,15 @@ const faqs = [
 
   .faq-question:hover .faq-question-text,
   .faq-item.open .faq-question-text {
-    color: var(--primary-light);
+    color: var(--primary);
   }
 
   .faq-icon-wrap {
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background: var(--primary-dim);
-    border: 1px solid var(--primary-border);
+    background: rgba(230, 48, 0, 0.08);
+    border: 1px solid rgba(230, 48, 0, 0.20);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,7 +204,7 @@ const faqs = [
   }
 
   .faq-icon {
-    color: var(--primary-light);
+    color: var(--primary);
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
   }
 
@@ -204,9 +220,9 @@ const faqs = [
 
   .faq-answer {
     padding: 0 1.75rem 1.6rem 1.75rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid #F3F4F6;
     padding-top: 1.25rem;
-    color: var(--text-muted);
+    color: #6B7280;
     font-size: 0.96rem;
     line-height: 1.75;
   }
