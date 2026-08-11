@@ -257,8 +257,26 @@ const courses = [
   .card-btn {
     width: 100%;
     font-size: 0.83rem;
-    padding: 0.6rem 1rem;
+    padding: 0.65rem 1rem;
     border-radius: var(--radius-sm);
+    justify-content: center;
+    border-color: #E5E7EB;
+    color: #1F2937;
+  }
+
+  .card-btn svg {
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .course-card:hover .card-btn {
+    background: var(--gradient-fire);
+    border-color: transparent;
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px var(--primary-glow);
+  }
+
+  .course-card:hover .card-btn svg {
+    transform: translateX(4px);
   }
 
   /* ---- Responsive ---- */

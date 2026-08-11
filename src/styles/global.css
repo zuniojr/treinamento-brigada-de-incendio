@@ -63,12 +63,47 @@
   --shadow-card: 0 12px 36px -8px rgba(0, 0, 0, 0.55);
   --shadow-lg:   0 24px 60px -12px rgba(0, 0, 0, 0.70);
   --shadow-glow: 0 0 30px rgba(230, 48, 0, 0.30);
-  --shadow-glow-lg: 0 0 60px rgba(230, 48, 0, 0.20);
+  --shadow-glow-lg: 0 0 60px rgba(230, 48, 0, 0.25);
+  --shadow-alert-glow: 0 0 30px rgba(245, 158, 11, 0.25);
 
   /* Transitions */
   --transition:      all 0.30s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-slow: all 0.55s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: all 0.18s ease;
+}
+
+/* Glassmorphism Panel Utilities */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+.glass-panel-elevated {
+  background: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-light);
+}
+
+/* Ambient Radial Glow Helpers */
+.glow-ambient-fire {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(230, 48, 0, 0.15) 0%, rgba(230, 48, 0, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-ambient-alert {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, rgba(245, 158, 11, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* =============================================

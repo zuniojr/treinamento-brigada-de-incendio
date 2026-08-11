@@ -36,21 +36,22 @@ const differentials = [
 <section id="diferenciais" class="section-padding differentials-section">
   <div class="container">
     <div class="section-header" data-animate="fade-up">
-      <span class="section-subtitle">Por que somos referência</span>
-      <h2 class="section-title">Diferenciais que Garantem a Segurança e Conformidade da sua Empresa</h2>
-      <p class="section-desc">Combinamos conhecimento técnico de elite com metodologias práticas focadas no aprendizado ágil dos colaboradores.</p>
+      <div class="pill-badge" style="margin-bottom: 1rem;">
+        <span class="pill-dot"></span>
+        <span>• DIFERENCIAIS TÉCNICOS</span>
+      </div>
+      <h2 class="section-title-rege">PADRÃO DE EXCELÊNCIA E CONFORMIDADE</h2>
+      <p class="section-desc-rege">Combinamos conhecimento técnico de elite com metodologias práticas focadas na segurança e eficácia das corporações.</p>
     </div>
 
     <div class="differentials-grid">
       {differentials.map((item, i) => (
         <div class="diff-card" data-animate="fade-up" data-delay={String(i * 80)}>
+          <span class="card-number">0{i + 1}</span>
           <div class="diff-icon" set:html={item.icon} />
           <div class="diff-body">
             <h3 class="diff-title">{item.title}</h3>
             <p class="diff-desc">{item.description}</p>
-          </div>
-          <div class="diff-arrow" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </div>
         </div>
       ))}
@@ -61,110 +62,126 @@ const differentials = [
 <style>
   .differentials-section {
     position: relative;
-    background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-elevated) 100%);
+    background: #F5F4F0;
+    padding: 6rem 0;
+  }
+
+  .pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 1.1rem;
+    background: rgba(230, 48, 0, 0.08);
+    border: 1px solid rgba(230, 48, 0, 0.25);
+    border-radius: var(--radius-full);
+    color: var(--primary);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .pill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary);
+  }
+
+  .section-title-rege {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 900;
+    color: #111827;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-desc-rege {
+    color: #4B5563;
+    font-size: 1.05rem;
+    max-width: 680px;
+    margin: 0 auto;
   }
 
   .differentials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1.75rem;
+    margin-top: 3.5rem;
   }
 
   .diff-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-left: 3px solid transparent;
-    border-radius: var(--radius-lg);
-    padding: 1.75rem 1.75rem 1.75rem 1.5rem;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 14px;
+    padding: 2.2rem 2rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 1.25rem;
     transition: var(--transition);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     position: relative;
     overflow: hidden;
-    cursor: default;
   }
 
-  .diff-card::before {
-    content: '';
+  .card-number {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--primary-dim) 0%, transparent 60%);
-    opacity: 0;
-    transition: opacity 0.35s ease;
+    top: 1.5rem;
+    right: 1.75rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 0.05em;
   }
 
   .diff-card:hover {
-    border-color: var(--primary);
-    border-left-color: var(--primary);
+    border-color: rgba(230, 48, 0, 0.40);
     transform: translateY(-6px);
-    box-shadow: var(--shadow-card), 0 0 30px var(--primary-glow);
-  }
-
-  .diff-card:hover::before {
-    opacity: 1;
+    box-shadow: 0 16px 32px rgba(230, 48, 0, 0.10);
   }
 
   .diff-icon {
-    width: 56px;
-    height: 56px;
-    background: var(--primary-dim);
-    border: 1px solid var(--primary-border);
-    color: var(--primary-light);
-    border-radius: var(--radius-md);
+    width: 52px;
+    height: 52px;
+    background: rgba(230, 48, 0, 0.08);
+    border: 1px solid rgba(230, 48, 0, 0.20);
+    color: var(--primary);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     transition: var(--transition);
-    position: relative;
-    z-index: 1;
   }
 
   .diff-card:hover .diff-icon {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--gradient-fire);
+    border-color: transparent;
     color: #FFFFFF;
-    box-shadow: 0 0 24px var(--primary-glow);
-    transform: scale(1.08);
+    box-shadow: 0 4px 14px var(--primary-glow);
   }
 
   .diff-body {
     flex: 1;
-    position: relative;
-    z-index: 1;
   }
 
   .diff-title {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1.12rem;
+    font-weight: 800;
     margin-bottom: 0.6rem;
-    color: var(--text-main);
+    color: #111827;
     letter-spacing: -0.01em;
+    text-transform: uppercase;
   }
 
   .diff-desc {
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    color: #6B7280;
+    font-size: 0.92rem;
     line-height: 1.65;
-  }
-
-  .diff-arrow {
-    color: var(--primary);
-    opacity: 0;
-    transform: translateX(-6px);
-    transition: var(--transition);
-    position: relative;
-    z-index: 1;
-    align-self: flex-end;
-    margin-top: auto;
-  }
-
-  .diff-card:hover .diff-arrow {
-    opacity: 1;
-    transform: translateX(0);
   }
 
   @media (max-width: 992px) {

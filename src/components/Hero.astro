@@ -22,17 +22,17 @@
 
   <div class="container hero-container">
     <div class="hero-content">
-      <!-- NR-23 Badge -->
-      <div class="badge-alert hero-badge" data-animate="fade-down" data-delay="100">
-        <span class="dot"></span>
-        <span>Atendimento às Normas NR-23 &amp; NBR 14276</span>
+      <!-- Selo Pílula estilo Regê Engenharia -->
+      <div class="pill-badge hero-badge" data-animate="fade-down" data-delay="100">
+        <span class="pill-dot"></span>
+        <span>• CAPACITAÇÃO CORPORATIVA · NR-23 &amp; NBR 14276</span>
       </div>
 
-      <!-- Main title -->
+      <!-- Main title estilo Regê Engenharia -->
       <h1 class="hero-title" data-animate="fade-up" data-delay="150">
-        <span class="hero-title-display">Treinamento</span>
-        <span class="hero-title-display text-gradient-fire">Brigada de</span>
-        <span class="hero-title-sub">Incêndio <span class="hero-for">para Empresas</span></span>
+        <span class="hero-title-solid">TREINAMENTO DE</span>
+        <span class="hero-title-stroke">BRIGADA DE INCÊNDIO</span>
+        <span class="hero-title-sub">PREVENÇÃO, COMBATE &amp; EMERGÊNCIA CORPORATIVA</span>
       </h1>
 
       <p class="hero-subtitle" data-animate="fade-up" data-delay="220">
@@ -215,46 +215,75 @@
     max-width: 820px;
   }
 
-  .hero-badge {
-    margin-bottom: 2rem;
+  /* Selo Pílula estilo Regê Engenharia */
+  .pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 1.1rem;
+    background: rgba(197, 164, 103, 0.12);
+    border: 1px solid rgba(197, 164, 103, 0.35);
+    border-radius: var(--radius-full);
+    color: #D4AF37;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
   }
 
-  /* Title — Bebas Neue for display lines */
+  .pill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #D4AF37;
+    box-shadow: 0 0 10px #D4AF37;
+  }
+
+  /* Title — Regê Engenharia Style (Solid + Outlined Stroke) */
   .hero-title {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 0.2rem;
     margin-bottom: 1.75rem;
-    line-height: 0.95;
+    line-height: 0.92;
   }
 
-  .hero-title-display {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(4rem, 8vw, 7.5rem);
-    font-weight: 400;
+  .hero-title-solid {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.5rem, 5.5vw, 5.2rem);
+    font-weight: 900;
     color: #FFFFFF;
-    letter-spacing: 0.03em;
+    letter-spacing: -0.03em;
     line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .hero-title-stroke {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.5rem, 5.5vw, 5.2rem);
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #D4AF37;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    text-transform: uppercase;
   }
 
   .hero-title-sub {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-    font-weight: 800;
-    color: #FFFFFF;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    margin-top: 0.5rem;
-  }
-
-  .hero-for {
-    color: var(--text-muted);
-    font-weight: 600;
+    font-size: clamp(0.85rem, 1.8vw, 1.15rem);
+    font-weight: 700;
+    color: #E63000;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    margin-top: 0.8rem;
+    text-transform: uppercase;
   }
 
   .hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    color: var(--text-muted);
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    color: #D1D5DB;
     line-height: 1.7;
     margin-bottom: 2.5rem;
     max-width: 640px;
