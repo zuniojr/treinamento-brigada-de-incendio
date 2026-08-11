@@ -8,8 +8,9 @@ const currentYear = new Date().getFullYear();
     <div class="footer-grid">
       <!-- Col 1: Brand Info -->
       <div class="footer-brand-col">
-        <a href="/" class="footer-logo" aria-label="Página Inicial">
-          <div class="logo-fallback" style="display:flex; align-items:center; gap:0.5rem;">
+        <a href="/" class="footer-logo" aria-label="Página Inicial - Treinamento de Brigada de Incêndio">
+          <img src="/logotipo_brigada_incendio_transparente.svg" alt="Treinamento Brigada de Incêndio" class="footer-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="logo-fallback" style="display:none; align-items:center; gap:0.5rem;">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="var(--primary)">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
@@ -110,6 +111,12 @@ const currentYear = new Date().getFullYear();
 
   .footer-logo {
     display: inline-block;
+  }
+
+  .footer-logo-img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
   }
 
   .footer-desc {
