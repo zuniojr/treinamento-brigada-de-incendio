@@ -1,16 +1,42 @@
 ---
+interface Props {
+  badge?: string;
+  titleSolid?: string;
+  titleStroke?: string;
+  titleSub?: string;
+  subtitle?: string;
+  image?: string;
+  primaryCtaText?: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
+  showStats?: boolean;
+}
+
+const {
+  badge = "CAPACITAÇÃO CORPORATIVA · NR-23 & NBR 14276",
+  titleSolid = "TREINAMENTO DE",
+  titleStroke = "BRIGADA DE INCÊNDIO",
+  titleSub = "PREVENÇÃO, COMBATE & EMERGÊNCIA CORPORATIVA",
+  subtitle = "Capacite sua equipe com treinamentos teóricos e práticos de alto nível. Proteja vidas, garanta a conformidade legal e preserve o patrimônio corporativo contra emergências.",
+  image = "/banner-bombeiros-hero.png",
+  primaryCtaText = "Solicitar Orçamento",
+  secondaryCtaText = "Falar no WhatsApp",
+  secondaryCtaLink = "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Treinamento%20de%20Brigada%20de%20Inc%C3%AAndio%20para%20minha%20empresa.",
+  showStats = true
+} = Astro.props;
 ---
 
 <section class="hero">
   <!-- Background -->
   <div class="hero-bg">
     <img
-      src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=85"
-      alt="Brigada de incêndio corporativa em treinamento prático com equipamentos de combate"
+      src={image}
+      alt="Brigada de incêndio corporativa em treinamento prático com equipamentos de combate de bombeiro"
       class="hero-img"
       loading="eager"
       width="1920"
       height="1080"
+      onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1920&q=85';"
     />
     <!-- Main overlay gradient -->
     <div class="hero-overlay"></div>
@@ -25,78 +51,79 @@
       <!-- Selo Pílula estilo Regê Engenharia -->
       <div class="pill-badge hero-badge" data-animate="fade-down" data-delay="100">
         <span class="pill-dot"></span>
-        <span>• CAPACITAÇÃO CORPORATIVA · NR-23 &amp; NBR 14276</span>
+        <span>{badge}</span>
       </div>
 
       <!-- Main title estilo Regê Engenharia -->
       <h1 class="hero-title" data-animate="fade-up" data-delay="150">
-        <span class="hero-title-solid">TREINAMENTO DE</span>
-        <span class="hero-title-stroke">BRIGADA DE INCÊNDIO</span>
-        <span class="hero-title-sub">PREVENÇÃO, COMBATE &amp; EMERGÊNCIA CORPORATIVA</span>
+        <span class="hero-title-solid">{titleSolid}</span>
+        <span class="hero-title-stroke">{titleStroke}</span>
+        {titleSub && <span class="hero-title-sub">{titleSub}</span>}
       </h1>
 
       <p class="hero-subtitle" data-animate="fade-up" data-delay="220">
-        Capacite sua equipe com treinamentos teóricos e práticos de alto nível. Proteja vidas, garanta a conformidade legal e preserve o patrimônio corporativo contra emergências.
+        {subtitle}
       </p>
 
       <div class="hero-actions" data-animate="fade-up" data-delay="300">
         <button onclick="openQuoteModal()" class="btn btn-primary btn-hero" id="hero-cta-primary">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          <span>Solicitar Orçamento</span>
+          <span>{primaryCtaText}</span>
         </button>
 
         <a
-          href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Treinamento%20de%20Brigada%20de%20Inc%C3%AAndio%20para%20minha%20empresa."
+          href={secondaryCtaLink}
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-whatsapp btn-hero"
           id="hero-cta-whatsapp"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          <span>Falar no WhatsApp</span>
+          <span>{secondaryCtaText}</span>
         </a>
       </div>
 
-      <!-- Trust stats -->
-      <div class="hero-stats" data-animate="fade-up" data-delay="420">
-        <div class="stat-item">
-          <div class="stat-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      {showStats && (
+        <div class="hero-stats" data-animate="fade-up" data-delay="420">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div>
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Conformidade NR-23</span>
+            </div>
           </div>
-          <div>
-            <span class="stat-value">100%</span>
-            <span class="stat-label">Conformidade NR-23</span>
+
+          <div class="stat-sep"></div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div>
+              <span class="stat-value">
+                <span class="hero-counter" data-counter-target="1500" data-counter-prefix="+" data-counter-suffix="">+0</span>
+              </span>
+              <span class="stat-label">Empresas Treinadas</span>
+            </div>
+          </div>
+
+          <div class="stat-sep"></div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <div>
+              <span class="stat-value">
+                <span class="hero-counter" data-counter-target="15" data-counter-prefix="" data-counter-suffix=" anos">0 anos</span>
+              </span>
+              <span class="stat-label">de Experiência</span>
+            </div>
           </div>
         </div>
-
-        <div class="stat-sep"></div>
-
-        <div class="stat-item">
-          <div class="stat-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <div>
-            <span class="stat-value">
-              <span class="hero-counter" data-counter-target="1500" data-counter-prefix="+" data-counter-suffix="">+0</span>
-            </span>
-            <span class="stat-label">Empresas Treinadas</span>
-          </div>
-        </div>
-
-        <div class="stat-sep"></div>
-
-        <div class="stat-item">
-          <div class="stat-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          </div>
-          <div>
-            <span class="stat-value">
-              <span class="hero-counter" data-counter-target="15" data-counter-prefix="" data-counter-suffix=" anos">0 anos</span>
-            </span>
-            <span class="stat-label">de Experiência</span>
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   </div>
 

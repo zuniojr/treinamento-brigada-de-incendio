@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import QuoteModal from '../components/QuoteModal.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout 
@@ -13,29 +14,17 @@ import QuoteModal from '../components/QuoteModal.astro';
   <Header />
 
   <main id="main-content" class="abandonment-page">
-    <!-- Hero Banner -->
-    <section class="abandonment-hero">
-      <div class="abandonment-hero-bg">
-        <div class="abandonment-glow"></div>
-      </div>
-      <div class="container abandonment-hero-container">
-        <div class="abandonment-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M12 2v20"></path>
-            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-          </svg>
-          <span>PREVENÇÃO & EMERGÊNCIA</span>
-        </div>
-        <h1 class="font-display">PLANO DE ABANDONO DE <span class="text-fire">ÁREA</span></h1>
-        <p class="hero-subtitle">
-          Elaboração, implantação e treinamento do Plano de Ação de Emergência (PAE). Rotas de fuga eficientes e equipe preparada para uma evacuação segura e rápida.
-        </p>
-        <div class="hero-cta-group">
-          <button type="button" onclick="openQuoteModal()" class="btn-hero-primary">Solicitar Orçamento do PAE</button>
-          <a href="https://wa.me/5511999999999" target="_blank" class="btn-hero-secondary">Falar com Especialista</a>
-        </div>
-      </div>
-    </section>
+    <Hero 
+      badge="PREVENÇÃO & EMERGÊNCIA"
+      titleSolid="PLANO DE ABANDONO DE"
+      titleStroke="ÁREA"
+      subtitle="Elaboração, implantação e treinamento do Plano de Ação de Emergência (PAE). Rotas de fuga eficientes e equipe preparada para uma evacuação segura e rápida."
+      primaryCtaText="Solicitar Orçamento do PAE"
+      secondaryCtaText="Falar com Especialista"
+      secondaryCtaLink="https://wa.me/5511999999999"
+      showStats={false}
+      image="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=85"
+    />
 
     <!-- O que inclui (Grid) -->
     <section class="services-section container">
@@ -145,122 +134,8 @@ import QuoteModal from '../components/QuoteModal.astro';
   /* Base Styles */
   .abandonment-page {
     background-color: var(--bg-main);
-    padding-top: var(--nav-height, 80px);
     min-height: 100vh;
     color: var(--text-main);
-  }
-
-  /* Hero Section */
-  .abandonment-hero {
-    position: relative;
-    padding: 5.5rem 0 4rem;
-    overflow: hidden;
-    border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.07));
-    background: radial-gradient(circle at 50% 0%, rgba(230, 48, 0, 0.1) 0%, transparent 70%);
-  }
-
-  .abandonment-hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    opacity: 0.4;
-  }
-
-  .abandonment-glow {
-    position: absolute;
-    top: -20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 50%;
-    background: radial-gradient(ellipse at center, rgba(230, 48, 0, 0.15) 0%, transparent 70%);
-    filter: blur(40px);
-  }
-
-  .abandonment-hero-container {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .abandonment-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(230, 48, 0, 0.1);
-    border: 1px solid rgba(230, 48, 0, 0.2);
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    color: var(--primary);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    margin-bottom: 1.5rem;
-  }
-
-  .abandonment-hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-  }
-
-  .hero-subtitle {
-    font-size: 1.15rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    max-width: 750px;
-  }
-
-  .hero-cta-group {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .btn-hero-primary {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(230, 48, 0, 0.3);
-  }
-
-  .btn-hero-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(230, 48, 0, 0.4);
-  }
-
-  .btn-hero-secondary {
-    background: transparent;
-    color: var(--text-main);
-    border: 1px solid var(--border);
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .btn-hero-secondary:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.2);
   }
 
   /* Services Grid Section */

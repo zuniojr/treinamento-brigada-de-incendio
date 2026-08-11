@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import QuoteModal from '../components/QuoteModal.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout 
@@ -13,29 +14,17 @@ import QuoteModal from '../components/QuoteModal.astro';
   <Header />
 
   <main id="main-content" class="incompany-page">
-    <!-- Hero Banner -->
-    <section class="incompany-hero">
-      <div class="incompany-hero-bg">
-        <div class="incompany-glow"></div>
-      </div>
-      <div class="container incompany-hero-container">
-        <div class="incompany-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-          </svg>
-          <span>TREINAMENTO NAS SUAS INSTALAÇÕES</span>
-        </div>
-        <h1 class="font-display">TREINAMENTO DE BRIGADA <span class="text-fire">IN-COMPANY</span></h1>
-        <p class="hero-subtitle">
-          Levamos toda a estrutura técnica, instrutores credenciados e equipamentos até a sua empresa. Capacite sua equipe no seu próprio ambiente de trabalho com total comodidade e conformidade legal.
-        </p>
-        <div class="hero-cta-group">
-          <button type="button" onclick="openQuoteModal()" class="btn-hero-primary">Solicitar Orçamento In-Company</button>
-          <a href="https://wa.me/5511999999999" target="_blank" class="btn-hero-secondary">Falar com Consultor no WhatsApp</a>
-        </div>
-      </div>
-    </section>
+    <Hero 
+      badge="TREINAMENTO NAS SUAS INSTALAÇÕES"
+      titleSolid="TREINAMENTO DE BRIGADA"
+      titleStroke="IN-COMPANY"
+      subtitle="Levamos toda a estrutura técnica, instrutores credenciados e equipamentos até a sua empresa. Capacite sua equipe no seu próprio ambiente de trabalho com total comodidade e conformidade legal."
+      primaryCtaText="Solicitar Orçamento In-Company"
+      secondaryCtaText="Falar com Consultor no WhatsApp"
+      secondaryCtaLink="https://wa.me/5511999999999"
+      showStats={false}
+      image="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=85"
+    />
 
     <!-- Benefícios do Treinamento In-Company Grid -->
     <section class="benefits-section container">
@@ -170,130 +159,8 @@ import QuoteModal from '../components/QuoteModal.astro';
   /* Base Styles */
   .incompany-page {
     background-color: var(--bg-main);
-    padding-top: var(--nav-height, 80px);
     min-height: 100vh;
     color: var(--text-main);
-  }
-
-  /* Hero Section */
-  .incompany-hero {
-    position: relative;
-    padding: 5.5rem 0 4rem;
-    overflow: hidden;
-    border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.07));
-    background: radial-gradient(circle at 50% 0%, rgba(230, 48, 0, 0.1) 0%, transparent 70%);
-  }
-
-  .incompany-hero-bg {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  .incompany-glow {
-    position: absolute;
-    top: -30%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 65%);
-    filter: blur(40px);
-  }
-
-  .incompany-hero-container {
-    position: relative;
-    z-index: 1;
-    max-width: 950px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 1.5rem;
-  }
-
-  .incompany-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(230, 48, 0, 0.12);
-    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
-    color: var(--primary-light, #FF4A1A);
-    padding: 0.4rem 1.2rem;
-    border-radius: var(--radius-full, 9999px);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-  }
-
-  .incompany-hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.8rem, 6.5vw, 4.75rem);
-    line-height: 1.05;
-    letter-spacing: 0.02em;
-    margin-bottom: 1.25rem;
-    color: #FFFFFF;
-  }
-
-  .text-fire {
-    color: var(--primary);
-    background: linear-gradient(135deg, #FF4A1A 0%, var(--primary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .hero-subtitle {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.15rem;
-    color: var(--text-muted);
-    line-height: 1.7;
-    max-width: 780px;
-    margin: 0 auto 2.25rem;
-  }
-
-  .hero-cta-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.25rem;
-    flex-wrap: wrap;
-  }
-
-  .btn-hero-primary {
-    background: var(--gradient-fire, linear-gradient(135deg, #E63000 0%, #A82200 100%));
-    color: #FFFFFF;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: var(--radius-sm, 8px);
-    cursor: pointer;
-    transition: var(--transition-fast);
-    box-shadow: 0 4px 20px rgba(230, 48, 0, 0.4);
-  }
-
-  .btn-hero-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(230, 48, 0, 0.55);
-  }
-
-  .btn-hero-secondary {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #FFFFFF;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    border-radius: var(--radius-sm, 8px);
-    text-decoration: none;
-    transition: var(--transition-fast);
-  }
-
-  .btn-hero-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #FFFFFF;
   }
 
   /* Benefits Section */

@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import QuoteModal from '../components/QuoteModal.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout 
@@ -14,55 +15,17 @@ import QuoteModal from '../components/QuoteModal.astro';
 
   <main id="main-content" class="formacao-page">
 
-    <!-- Hero -->
-    <section class="formacao-hero">
-      <div class="formacao-hero-bg">
-        <div class="formacao-glow"></div>
-      </div>
-      <div class="container formacao-hero-container">
-        <div class="formacao-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-          <span>CERTIFICAÇÃO NR-23 | NBR 14276</span>
-        </div>
-        <h1 class="font-display">FORMAÇÃO DE <span class="text-fire">BRIGADA DE INCÊNDIO</span></h1>
-        <p class="hero-subtitle">
-          Treinamento técnico completo para capacitação de brigadistas conforme as exigências da NR-23 e NBR 14276. Certificado com validade legal reconhecido pelo Corpo de Bombeiros Militar.
-        </p>
-        <div class="hero-cta-group">
-          <button type="button" onclick="openQuoteModal()" class="btn-hero-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1.04 3.38 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            Solicitar Proposta Comercial
-          </button>
-          <a href="https://wa.me/5511999999999" target="_blank" class="btn-hero-secondary">Tirar Dúvidas no WhatsApp</a>
-        </div>
-
-        <div class="hero-trust-bar">
-          <div class="trust-item">
-            <span class="trust-icon">✅</span>
-            <span>Conforme NR-23 do MTE</span>
-          </div>
-          <div class="trust-divider"></div>
-          <div class="trust-item">
-            <span class="trust-icon">✅</span>
-            <span>NBR 14276 ABNT</span>
-          </div>
-          <div class="trust-divider"></div>
-          <div class="trust-item">
-            <span class="trust-icon">✅</span>
-            <span>Certificado com validade legal</span>
-          </div>
-          <div class="trust-divider"></div>
-          <div class="trust-item">
-            <span class="trust-icon">✅</span>
-            <span>Instrutores com ART/CREA</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Hero 
+      badge="CERTIFICAÇÃO NR-23 | NBR 14276"
+      titleSolid="FORMAÇÃO DE"
+      titleStroke="BRIGADA DE INCÊNDIO"
+      subtitle="Treinamento técnico completo para capacitação de brigadistas conforme as exigências da NR-23 e NBR 14276. Certificado com validade legal reconhecido pelo Corpo de Bombeiros Militar."
+      primaryCtaText="Solicitar Proposta Comercial"
+      secondaryCtaText="Tirar Dúvidas no WhatsApp"
+      secondaryCtaLink="https://wa.me/5511999999999"
+      showStats={false}
+      image="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=85"
+    />
 
     <!-- O que é / Obrigatoriedade -->
     <section class="obligation-section container">
@@ -353,151 +316,8 @@ import QuoteModal from '../components/QuoteModal.astro';
 <style>
   .formacao-page {
     background-color: var(--bg-main);
-    padding-top: var(--nav-height, 80px);
     min-height: 100vh;
     color: var(--text-main);
-  }
-
-  /* ── Hero ── */
-  .formacao-hero {
-    position: relative;
-    padding: 5.5rem 0 4.5rem;
-    overflow: hidden;
-    border-bottom: 1px solid var(--border, rgba(255,255,255,0.07));
-    background: radial-gradient(circle at 50% 0%, rgba(230,48,0,0.12) 0%, transparent 70%);
-  }
-
-  .formacao-hero-bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-  }
-
-  .formacao-glow {
-    position: absolute;
-    top: -20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-    height: 60%;
-    background: radial-gradient(ellipse at center, rgba(230,48,0,0.18) 0%, transparent 70%);
-    filter: blur(50px);
-  }
-
-  .formacao-hero-container {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 950px;
-    margin: 0 auto;
-  }
-
-  .formacao-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(230,48,0,0.12);
-    border: 1px solid rgba(230,48,0,0.3);
-    padding: 0.5rem 1.1rem;
-    border-radius: 2rem;
-    color: var(--primary);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    margin-bottom: 1.5rem;
-  }
-
-  .formacao-hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    line-height: 1.05;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-  }
-
-  .hero-subtitle {
-    font-size: 1.15rem;
-    color: var(--text-muted);
-    line-height: 1.65;
-    margin-bottom: 2.5rem;
-    max-width: 750px;
-  }
-
-  .hero-cta-group {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 3rem;
-  }
-
-  .btn-hero-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    background: linear-gradient(135deg, var(--primary) 0%, #a82200 100%);
-    color: white;
-    border: none;
-    padding: 1.05rem 2.25rem;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(230,48,0,0.35);
-  }
-
-  .btn-hero-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(230,48,0,0.45);
-  }
-
-  .btn-hero-secondary {
-    background: rgba(255,255,255,0.05);
-    color: var(--text-main);
-    border: 1px solid var(--border);
-    padding: 1.05rem 2.25rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .btn-hero-secondary:hover {
-    background: rgba(255,255,255,0.1);
-    border-color: rgba(255,255,255,0.25);
-  }
-
-  .hero-trust-bar {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1.25rem 2rem;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 0.875rem;
-    color: var(--text-muted);
-  }
-
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
-  .trust-icon { font-size: 0.95rem; }
-
-  .trust-divider {
-    width: 1px;
-    height: 16px;
-    background: var(--border);
   }
 
   /* ── Obligation ── */

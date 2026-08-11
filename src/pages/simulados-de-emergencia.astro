@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import QuoteModal from '../components/QuoteModal.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout 
@@ -14,30 +15,17 @@ import QuoteModal from '../components/QuoteModal.astro';
 
   <main id="main-content" class="simulados-page">
 
-    <!-- Hero Banner -->
-    <section class="simulados-hero">
-      <div class="simulados-hero-bg">
-        <div class="simulados-glow"></div>
-      </div>
-      <div class="container simulados-hero-container">
-        <div class="simulados-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-            <polyline points="2 17 12 22 22 17"></polyline>
-            <polyline points="2 12 12 17 22 12"></polyline>
-          </svg>
-          <span>EXERCÍCIO PRÁTICO OBRIGATÓRIO</span>
-        </div>
-        <h1 class="font-display">SIMULADOS DE <span class="text-fire">EMERGÊNCIA</span></h1>
-        <p class="hero-subtitle">
-          Exercícios práticos de evacuação e combate a incêndio que testam a prontidão real da sua brigada. Relatório técnico completo pós-simulado e recomendações de melhoria.
-        </p>
-        <div class="hero-cta-group">
-          <button type="button" onclick="openQuoteModal()" class="btn-hero-primary">Agendar Simulado na Minha Empresa</button>
-          <a href="https://wa.me/5511999999999" target="_blank" class="btn-hero-secondary">Falar com Especialista</a>
-        </div>
-      </div>
-    </section>
+    <Hero 
+      badge="EXERCÍCIO PRÁTICO OBRIGATÓRIO"
+      titleSolid="SIMULADOS DE"
+      titleStroke="EMERGÊNCIA"
+      subtitle="Exercícios práticos de evacuação e combate a incêndio que testam a prontidão real da sua brigada. Relatório técnico completo pós-simulado e recomendações de melhoria."
+      primaryCtaText="Agendar Simulado na Minha Empresa"
+      secondaryCtaText="Falar com Especialista"
+      secondaryCtaLink="https://wa.me/5511999999999"
+      showStats={false}
+      image="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=85"
+    />
 
     <!-- Por que realizar? (Destaque) -->
     <section class="why-section container">

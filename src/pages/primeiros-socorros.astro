@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import QuoteModal from '../components/QuoteModal.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout 
@@ -13,28 +14,17 @@ import QuoteModal from '../components/QuoteModal.astro';
   <Header />
 
   <main id="main-content" class="firstaid-page">
-    <!-- Hero Banner -->
-    <section class="firstaid-hero">
-      <div class="firstaid-hero-bg">
-        <div class="firstaid-glow"></div>
-      </div>
-      <div class="container firstaid-hero-container">
-        <div class="firstaid-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-          </svg>
-          <span>SUPORTE BÁSICO DE VIDA & APH</span>
-        </div>
-        <h1 class="font-display">TREINAMENTO DE <span class="text-fire">PRIMEIROS SOCORROS</span></h1>
-        <p class="hero-subtitle">
-          Capacite seus colaboradores para agir com rapidez e eficiência nos primeiros minutos de uma emergência médica corporativa. RCP, manuseio de DEA, queimaduras, fraturas e contenção de hemorragias.
-        </p>
-        <div class="hero-cta-group">
-          <button type="button" onclick="openQuoteModal()" class="btn-hero-primary">Solicitar Orçamento de Primeiros Socorros</button>
-          <a href="https://wa.me/5511999999999" target="_blank" class="btn-hero-secondary">Falar com Especialista no WhatsApp</a>
-        </div>
-      </div>
-    </section>
+    <Hero 
+      badge="SUPORTE BÁSICO DE VIDA & APH"
+      titleSolid="TREINAMENTO DE"
+      titleStroke="PRIMEIROS SOCORROS"
+      subtitle="Capacite seus colaboradores para agir com rapidez e eficiência nos primeiros minutos de uma emergência médica corporativa. RCP, manuseio de DEA, queimaduras, fraturas e contenção de hemorragias."
+      primaryCtaText="Solicitar Orçamento de Primeiros Socorros"
+      secondaryCtaText="Falar com Especialista no WhatsApp"
+      secondaryCtaLink="https://wa.me/5511999999999"
+      showStats={false}
+      image="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=85"
+    />
 
     <!-- Por que Primeiros Socorros na Empresa (Destaques) -->
     <section class="importance-section container">
@@ -163,130 +153,8 @@ import QuoteModal from '../components/QuoteModal.astro';
   /* Base Styles */
   .firstaid-page {
     background-color: var(--bg-main);
-    padding-top: var(--nav-height, 80px);
     min-height: 100vh;
     color: var(--text-main);
-  }
-
-  /* Hero Section */
-  .firstaid-hero {
-    position: relative;
-    padding: 5.5rem 0 4rem;
-    overflow: hidden;
-    border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.07));
-    background: radial-gradient(circle at 50% 0%, rgba(230, 48, 0, 0.1) 0%, transparent 70%);
-  }
-
-  .firstaid-hero-bg {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  .firstaid-glow {
-    position: absolute;
-    top: -30%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 65%);
-    filter: blur(40px);
-  }
-
-  .firstaid-hero-container {
-    position: relative;
-    z-index: 1;
-    max-width: 950px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 1.5rem;
-  }
-
-  .firstaid-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(230, 48, 0, 0.12);
-    border: 1px solid var(--border-fire, rgba(230, 48, 0, 0.35));
-    color: var(--primary-light, #FF4A1A);
-    padding: 0.4rem 1.2rem;
-    border-radius: var(--radius-full, 9999px);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-  }
-
-  .firstaid-hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.8rem, 6.5vw, 4.75rem);
-    line-height: 1.05;
-    letter-spacing: 0.02em;
-    margin-bottom: 1.25rem;
-    color: #FFFFFF;
-  }
-
-  .text-fire {
-    color: var(--primary);
-    background: linear-gradient(135deg, #FF4A1A 0%, var(--primary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .hero-subtitle {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.15rem;
-    color: var(--text-muted);
-    line-height: 1.7;
-    max-width: 780px;
-    margin: 0 auto 2.25rem;
-  }
-
-  .hero-cta-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.25rem;
-    flex-wrap: wrap;
-  }
-
-  .btn-hero-primary {
-    background: var(--gradient-fire, linear-gradient(135deg, #E63000 0%, #A82200 100%));
-    color: #FFFFFF;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: var(--radius-sm, 8px);
-    cursor: pointer;
-    transition: var(--transition-fast);
-    box-shadow: 0 4px 20px rgba(230, 48, 0, 0.4);
-  }
-
-  .btn-hero-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(230, 48, 0, 0.55);
-  }
-
-  .btn-hero-secondary {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #FFFFFF;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    border-radius: var(--radius-sm, 8px);
-    text-decoration: none;
-    transition: var(--transition-fast);
-  }
-
-  .btn-hero-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #FFFFFF;
   }
 
   /* Importance Section */
