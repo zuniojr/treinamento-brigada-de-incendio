@@ -1,0 +1,374 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import QuoteModal from '../components/QuoteModal.astro';
+import StatsSection from '../components/StatsSection.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<Layout 
+  title="Sobre Nós | Especialistas em Treinamento de Brigada de Incêndio"
+  description="Conheça nossa história, missão e valores. Somos especialistas na capacitação de brigadistas, com foco na proteção da vida e do patrimônio de empresas de todos os portes."
+>
+  <Header />
+  
+  <main id="main-content">
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container relative z-10">
+        <div class="hero-content" data-animate="fade-up">
+          <span class="badge">Nossa Essência</span>
+          <h1 class="hero-title">Mais que treinamento.<br/>Formamos <span class="text-gradient">salva-vidas corporativos</span>.</h1>
+          <p class="hero-desc">
+            Há anos atuando no mercado de segurança do trabalho e prevenção de incêndios, nossa missão é clara: garantir que sua empresa esteja preparada para proteger o que mais importa: a vida de seus colaboradores e o seu patrimônio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="section-padding about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text" data-animate="fade-right">
+            <h2 class="section-title" style="text-align: left; background: none; -webkit-background-clip: unset; -webkit-text-fill-color: var(--text-main);">Nossa História & Propósito</h2>
+            <p>
+              Nascemos da percepção de que muitos treinamentos de brigada de incêndio eram teóricos demais e distantes da realidade corporativa. Decidimos mudar essa abordagem, trazendo <strong>simulações hiper-realistas</strong> e instrutores com vasta experiência em campo (bombeiros militares e civis, engenheiros de segurança e socorristas).
+            </p>
+            <p>
+              Hoje, somos referência na capacitação corporativa, com foco irrestrito na conformidade com as normas <strong>NR-23</strong> e <strong>NBR 14276</strong>, adaptando nossa metodologia ao risco específico de cada cliente – seja uma pequena fábrica ou um grande centro logístico.
+            </p>
+            
+            <div class="mission-vision">
+              <div class="mv-card">
+                <div class="mv-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                </div>
+                <h3>Missão</h3>
+                <p>Capacitar pessoas para agir com confiança, segurança e eficiência na preservação de vidas em emergências.</p>
+              </div>
+              <div class="mv-card">
+                <div class="mv-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                </div>
+                <h3>Visão</h3>
+                <p>Ser a principal referência nacional em treinamentos corporativos, inovando na didática e na prática.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-image" data-animate="fade-left">
+            <div class="image-wrapper">
+              <div class="image-overlay"></div>
+              <img src="https://images.unsplash.com/photo-1599708153386-62bf0bd18b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Treinamento prático de combate a incêndio" loading="lazy" />
+              <div class="experience-badge">
+                <span class="exp-number">+10</span>
+                <span class="exp-text">Anos de<br/>Experiência</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <StatsSection />
+    
+    <!-- Values Section -->
+    <section class="section-padding values-section">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-subtitle">O Que Nos Move</span>
+          <h2 class="section-title">Nossos Valores</h2>
+        </div>
+        
+        <div class="values-grid" data-animate="fade-up" data-delay="100">
+          <div class="value-card">
+            <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <h3>Segurança em 1º Lugar</h3>
+            <p>Nenhuma concessão é feita quando se trata de proteção à vida. Ensinamos e praticamos a cultura preventiva em cada ação e treinamento que realizamos.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div>
+            <h3>Conformidade Absoluta</h3>
+            <p>Acompanhamos rigorosamente as normativas estaduais, NBR 14276 e NR-23, garantindo validade legal de todos os certificados e tranquilidade aos gestores.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+            <h3>Empatia & Didática</h3>
+            <p>Entendemos as dores e medos dos alunos, adaptando nossa linguagem para que o aprendizado seja acessível, efetivo e transformador.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+  <QuoteModal />
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    position: relative;
+    padding: 10rem 0 6rem;
+    background: var(--bg-dark);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 50% 0%, rgba(230, 48, 0, 0.15) 0%, transparent 70%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    background: rgba(230, 48, 0, 0.1);
+    color: var(--primary-light);
+    border: 1px solid rgba(230, 48, 0, 0.3);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+  }
+
+  .text-gradient {
+    background: var(--gradient-fire);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-desc {
+    font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* About Section */
+  .about-section {
+    background: var(--bg-card);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .about-text h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-text p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+  
+  .about-text strong {
+    color: var(--text-main);
+  }
+
+  .mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .mv-card {
+    background: var(--bg-dark);
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+  }
+
+  .mv-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(230, 48, 0, 0.1);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+  }
+
+  .mv-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+  }
+
+  .mv-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: var(--text-muted);
+  }
+
+  .image-wrapper {
+    position: relative;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border);
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+  }
+
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(17,24,39,0.8) 0%, transparent 50%);
+    z-index: 1;
+  }
+
+  .experience-badge {
+    position: absolute;
+    bottom: 2rem;
+    left: -1.5rem;
+    background: var(--gradient-fire);
+    color: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+    box-shadow: 0 10px 25px rgba(230, 48, 0, 0.3);
+  }
+
+  .exp-number {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .exp-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+  }
+
+  /* Values Section */
+  .values-section {
+    background: var(--bg-dark);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .value-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: var(--radius-xl);
+    transition: var(--transition);
+    border: 1px solid var(--border);
+  }
+
+  .value-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(230, 48, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .value-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(230, 48, 0, 0.1);
+    color: var(--primary);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .value-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .value-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+  }
+
+  .value-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 992px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .experience-badge {
+      left: 1rem;
+      bottom: 1rem;
+    }
+    
+    .values-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-hero {
+      padding: 8rem 0 4rem;
+    }
+    
+    .mission-vision {
+      grid-template-columns: 1fr;
+    }
+    
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
