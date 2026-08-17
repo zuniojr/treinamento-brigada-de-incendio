@@ -1,24 +1,5 @@
 ---
 ---
-<!-- Top Bar -->
-<header class="top-bar">
-  <div class="container top-bar-inner">
-    <span class="top-bar-item">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-      </svg>
-      <span>Treinamento de Brigada de Incêndio · NR-23 e NBR 14276</span>
-    </span>
-    <span class="top-bar-sep">|</span>
-    <span class="top-bar-item">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13" aria-hidden="true">
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-      </svg>
-      <a href="https://bitlybr.net/TreinamentoBrigada" target="_blank" rel="noopener noreferrer">Fale com um especialista agora no WhatsApp</a>
-    </span>
-  </div>
-</header>
-
 
 <!-- Main Header (glassmorphism navy, sticky) -->
 <header class="main-header">
@@ -71,36 +52,6 @@
     width: 100%;
     box-sizing: border-box;
   }
-
-  /* Top Bar */
-  .top-bar {
-    background: var(--white);
-    color: var(--navy);
-    border-bottom: 1px solid rgba(27, 36, 48, 0.08);
-    font-family: var(--font-body);
-    font-size: 0.82rem;
-  }
-  .top-bar-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 0.4rem var(--spacing-sm);
-  }
-  .top-bar-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-  }
-  .top-bar-item a {
-    color: var(--navy);
-    text-decoration: none;
-    transition: var(--transition);
-  }
-  .top-bar-item a:hover { color: var(--sand-2); }
-  .top-bar-item svg { color: var(--navy); flex-shrink: 0; opacity: 0.8; }
-  .top-bar-sep { color: rgba(27, 36, 48, 0.2); font-size: 0.9rem; }
 
   /* Main Header */
   .main-header {
@@ -260,14 +211,6 @@
       letter-spacing: 2px;
     }
 
-    .top-bar-sep { display: none; }
-    .top-bar-inner { 
-      flex-direction: column; 
-      gap: 0.4rem; 
-      justify-content: center;
-      align-items: center;
-      text-align: center; 
-    }
   }
 </style>
 
