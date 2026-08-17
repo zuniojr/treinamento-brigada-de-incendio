@@ -79,16 +79,7 @@
 
 <script is:inline>
   function openQuoteModal(courseName = '') {
-    const modal = document.getElementById('quote-modal');
-    const courseInput = document.getElementById('selected_course');
-    
-    if (courseInput && courseName) {
-      courseInput.value = courseName;
-    }
-    
-    modal?.classList.add('active');
-    modal?.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+    window.open('https://bitlybr.net/TreinamentoBrigada', '_blank');
   }
 
   function closeQuoteModal() {
