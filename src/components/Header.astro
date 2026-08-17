@@ -85,8 +85,8 @@
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid var(--border);
-    padding: 0.75rem 0;
-    transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    padding: 1.5rem 0; /* Aumentado espaço em volta do logo */
+    transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
   }
 
   /* State: scrolled */
@@ -94,6 +94,7 @@
     background: rgba(10, 10, 10, 0.97);
     border-bottom-color: var(--border-fire);
     box-shadow: 0 4px 32px rgba(0, 0, 0, 0.55);
+    padding: 0.75rem 0; /* Header encolhe ao rolar a página */
   }
 
   /* ── Inner Layout ── */
@@ -113,10 +114,15 @@
   }
 
   .nav-logo-img {
-    height: 42px;
+    height: 55px; /* Logo maior no topo */
     width: auto;
     display: block;
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, height 0.4s ease;
+  }
+
+  /* Logo diminui ao rolar */
+  .main-header.is-scrolled .nav-logo-img {
+    height: 42px;
   }
 
   .nav-logo:hover .nav-logo-img {
