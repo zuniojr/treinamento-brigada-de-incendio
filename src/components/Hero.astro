@@ -39,17 +39,6 @@ const {
 
   <div class="container hero-container">
     <div class="hero-grid">
-      <div class="hero-image-wrapper" data-animate="fade-right" data-delay="300">
-        <div class="hero-image-glow"></div>
-        <img
-          src="/brigadadeincendio.png"
-          alt="Treinamento de Brigada de Incêndio"
-          class="hero-poster-img"
-          width="500"
-          height="500"
-        />
-      </div>
-
       <div class="hero-content">
         <!-- Selo Pílula estilo Regê Engenharia -->
         <div class="pill-badge hero-badge" data-animate="fade-down" data-delay="100">
@@ -128,6 +117,17 @@ const {
           </div>
         )}
       </div>
+
+      <div class="hero-image-wrapper" data-animate="fade-left" data-delay="300">
+        <div class="hero-image-glow"></div>
+        <img
+          src="/brigadadeincendio.png"
+          alt="Treinamento de Brigada de Incêndio"
+          class="hero-poster-img"
+          width="500"
+          height="500"
+        />
+      </div>
     </div>
   </div>
 
@@ -175,7 +175,7 @@ const {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 5.5rem;
+    padding-top: 3.5rem;
     padding-bottom: 7rem;
     overflow: hidden;
     background-color: #000000;
@@ -193,14 +193,14 @@ const {
     display: none;
   }
 
-  /* Main gradient overlay — clean black ambient */
+  /* Main gradient overlay — clean black ambient on the left */
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 70% 50%, rgba(20, 20, 20, 0.8) 0%, rgba(0, 0, 0, 1) 70%);
+    background: radial-gradient(circle at 25% 50%, rgba(25, 10, 10, 0.95) 0%, rgba(0, 0, 0, 1) 70%);
   }
 
-  /* Diagonal flame accent — signature element */
+  /* Diagonal flame accent — signature element on the left */
   .hero-diagonal {
     position: absolute;
     top: 0;
@@ -209,10 +209,10 @@ const {
     height: 100%;
     background: linear-gradient(
       108deg,
-      transparent 50%,
-      rgba(230, 48, 0, 0.10) 50%,
-      rgba(230, 48, 0, 0.05) 65%,
-      transparent 80%
+      transparent 15%,
+      rgba(230, 48, 0, 0.08) 30%,
+      rgba(230, 48, 0, 0.04) 45%,
+      transparent 50%
     );
     pointer-events: none;
   }
@@ -220,7 +220,7 @@ const {
   .hero-glow {
     position: absolute;
     top: 15%;
-    right: 5%;
+    left: 5%;
     width: 500px;
     height: 500px;
     background: radial-gradient(circle, rgba(230, 48, 0, 0.15) 0%, transparent 65%);
@@ -236,7 +236,7 @@ const {
 
   .hero-grid {
     display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 3rem;
     align-items: center;
   }
@@ -252,8 +252,8 @@ const {
     align-items: center;
     width: 100%;
     max-width: 450px;
-    margin-right: auto;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: 0;
   }
 
   .hero-image-glow {
