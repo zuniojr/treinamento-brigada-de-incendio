@@ -39,6 +39,17 @@ const {
 
   <div class="container hero-container">
     <div class="hero-grid">
+      <div class="hero-image-wrapper" data-animate="fade-right" data-delay="300">
+        <div class="hero-image-glow"></div>
+        <img
+          src="/brigadadeincendio.png"
+          alt="Treinamento de Brigada de Incêndio"
+          class="hero-poster-img"
+          width="500"
+          height="500"
+        />
+      </div>
+
       <div class="hero-content">
         <!-- Selo Pílula estilo Regê Engenharia -->
         <div class="pill-badge hero-badge" data-animate="fade-down" data-delay="100">
@@ -117,17 +128,6 @@ const {
           </div>
         )}
       </div>
-
-      <div class="hero-image-wrapper" data-animate="fade-left" data-delay="300">
-        <div class="hero-image-glow"></div>
-        <img
-          src="/brigadadeincendio.png"
-          alt="Treinamento de Brigada de Incêndio"
-          class="hero-poster-img"
-          width="500"
-          height="500"
-        />
-      </div>
     </div>
   </div>
 
@@ -175,7 +175,7 @@ const {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 9rem;
+    padding-top: 5.5rem;
     padding-bottom: 7rem;
     overflow: hidden;
     background-color: #000000;
@@ -220,7 +220,7 @@ const {
   .hero-glow {
     position: absolute;
     top: 15%;
-    left: 5%;
+    right: 5%;
     width: 500px;
     height: 500px;
     background: radial-gradient(circle, rgba(230, 48, 0, 0.15) 0%, transparent 65%);
@@ -236,7 +236,7 @@ const {
 
   .hero-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 0.85fr 1.15fr;
     gap: 3rem;
     align-items: center;
   }
@@ -252,7 +252,8 @@ const {
     align-items: center;
     width: 100%;
     max-width: 450px;
-    margin-left: auto;
+    margin-right: auto;
+    margin-left: 0;
   }
 
   .hero-image-glow {
