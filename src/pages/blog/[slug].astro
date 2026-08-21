@@ -342,6 +342,9 @@ const postUrl = `https://treinamentobrigadadeincendio.com.br/blog/${post.slug}`;
       padding-top: 0;
       background-color: #FFFFFF;
       color: #1E293B;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
 
     /* ═══════════════════════════════════════════════════════════
@@ -349,10 +352,11 @@ const postUrl = `https://treinamentobrigadadeincendio.com.br/blog/${post.slug}`;
        ═══════════════════════════════════════════════════════════ */
     .sp-hero {
       position: relative;
-      min-height: 500px;
+      min-height: 360px;
       display: flex;
-      align-items: flex-end;
-      padding-bottom: 4rem;
+      align-items: center;
+      padding-top: 6.5rem;
+      padding-bottom: 4.5rem;
       overflow: hidden;
       background-color: #0F172A;
     }
@@ -385,7 +389,7 @@ const postUrl = `https://treinamentobrigadadeincendio.com.br/blog/${post.slug}`;
     .sp-hero-content {
       position: relative;
       z-index: 2;
-      padding-top: 4.5rem;
+      padding-top: 0;
     }
 
     /* Badge de categoria */
@@ -1143,7 +1147,7 @@ const postUrl = `https://treinamentobrigadadeincendio.com.br/blog/${post.slug}`;
     }
 
     @media (max-width: 900px) {
-      .sp-hero { min-height: 420px; }
+      .sp-hero { min-height: auto; }
 
       .sp-layout { grid-template-columns: 1fr; }
 
@@ -1160,7 +1164,7 @@ const postUrl = `https://treinamentobrigadadeincendio.com.br/blog/${post.slug}`;
     }
 
     @media (max-width: 768px) {
-      .sp-hero { min-height: 380px; padding-bottom: 3rem; }
+      .sp-hero { min-height: auto; padding-top: 5rem; padding-bottom: 3rem; }
 
       .sp-hero-title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
 
