@@ -277,12 +277,19 @@ import CTASection from '../components/CTASection.astro';
     margin-bottom: 0.85rem;
   }
 
+  .eyebrow::before {
+    display: none;
+  }
+
   .section-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: clamp(2.1rem, 4.2vw, 3.2rem);
     font-weight: 800;
     line-height: 1.15;
     color: #0F172A;
+    -webkit-text-fill-color: #0F172A;
+    background: none;
+    background-clip: initial;
     letter-spacing: -0.025em;
     margin-bottom: 1.25rem;
   }
