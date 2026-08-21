@@ -16,7 +16,7 @@ import CTASection from '../components/CTASection.astro';
   
   <main id="main-content" class="sobre-page">
     <!-- ═══════════════════════════════════════════════
-         HERO SECTION
+         HERO SECTION — IMPACTANTE E CORPORATIVO
          ═══════════════════════════════════════════════ -->
     <section class="sobre-hero">
       <div class="sobre-hero-bg">
@@ -41,16 +41,16 @@ import CTASection from '../components/CTASection.astro';
         </p>
         <nav class="sobre-breadcrumb" aria-label="Breadcrumb">
           <a href="/">Início</a>
-          <span class="breadcrumb-sep">
+          <span class="breadcrumb-sep" aria-hidden="true">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </span>
-          <span>Sobre</span>
+          <span class="breadcrumb-current">Sobre</span>
         </nav>
       </div>
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         NOSSA HISTÓRIA (ABOUT SECTION)
+         NOSSA HISTÓRIA (ABOUT SECTION - FUNDO BRANCO CLEAN)
          ═══════════════════════════════════════════════ -->
     <section class="sobre-about section-padding">
       <div class="container">
@@ -101,14 +101,13 @@ import CTASection from '../components/CTASection.astro';
     <StatsSection />
 
     <!-- ═══════════════════════════════════════════════
-         MISSÃO, VISÃO & VALORES
+         MISSÃO, VISÃO & VALORES (FUNDO CINZA SUAVE PREMIUM)
          ═══════════════════════════════════════════════ -->
     <section class="sobre-mvv section-padding">
-      <div class="sobre-mvv-bg" aria-hidden="true"></div>
       <div class="container">
         <div class="mvv-header">
-          <span class="eyebrow eyebrow-light">PRINCÍPIOS</span>
-          <h2 class="section-title text-light">
+          <span class="eyebrow">PRINCÍPIOS</span>
+          <h2 class="section-title">
             Missão, Visão &<br/>
             <em>Valores</em>
           </h2>
@@ -119,7 +118,7 @@ import CTASection from '../components/CTASection.astro';
           <!-- Card Missão (Destaque) -->
           <div class="mvv-card mvv-card-featured">
             <div class="mvv-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
                 <path d="M2 12h20"></path>
@@ -134,7 +133,7 @@ import CTASection from '../components/CTASection.astro';
           <!-- Card Visão -->
           <div class="mvv-card">
             <div class="mvv-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
@@ -148,7 +147,7 @@ import CTASection from '../components/CTASection.astro';
           <!-- Card Valores -->
           <div class="mvv-card">
             <div class="mvv-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
@@ -162,7 +161,7 @@ import CTASection from '../components/CTASection.astro';
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         DIFERENCIAIS (GRID 01 a 06)
+         DIFERENCIAIS (FUNDO BRANCO CLEAN - GRID 01 A 06)
          ═══════════════════════════════════════════════ -->
     <section class="sobre-diff section-padding">
       <div class="container">
@@ -246,12 +245,13 @@ import CTASection from '../components/CTASection.astro';
 
 <style>
   /* ═══════════════════════════════════════════
-     ESTILOS BASE E TIPOGRAFIA
+     ESTILOS BASE E DESIGN SYSTEM (LIGHT / BRANCO CLEAN)
      ═══════════════════════════════════════════ */
   .sobre-page {
-    background-color: var(--bg-main, #0A0A0A);
-    color: var(--text-main, #FFFFFF);
+    background-color: #FFFFFF;
+    color: #1E293B;
     overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   .container {
@@ -263,50 +263,43 @@ import CTASection from '../components/CTASection.astro';
   }
 
   .section-padding {
-    padding: 6rem 0;
+    padding: 6.5rem 0;
   }
 
+  /* ── Tipografia Corporativa & Hierarquia ── */
   .eyebrow {
     display: inline-block;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 800;
-    letter-spacing: 2px;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--primary, #E63000);
-    margin-bottom: 0.75rem;
-  }
-
-  .eyebrow-light {
-    color: var(--primary-light, #FF4A1A);
+    margin-bottom: 0.85rem;
   }
 
   .section-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.1rem, 4.2vw, 3.2rem);
     font-weight: 800;
     line-height: 1.15;
-    color: #FFFFFF;
-    letter-spacing: -0.5px;
+    color: #0F172A;
+    letter-spacing: -0.025em;
     margin-bottom: 1.25rem;
   }
 
   .section-title em {
     font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  .text-light {
-    color: #FFFFFF;
+    font-weight: 500;
+    color: var(--primary, #E63000);
   }
 
   .title-underline {
-    width: 60px;
+    width: 54px;
     height: 3px;
-    background: var(--primary, #E63000);
-    border-radius: 2px;
-    margin-bottom: 2rem;
+    background: linear-gradient(90deg, var(--primary, #E63000) 0%, #FF6B4A 100%);
+    border-radius: 4px;
+    margin-bottom: 2.25rem;
   }
 
   .center-underline {
@@ -315,7 +308,7 @@ import CTASection from '../components/CTASection.astro';
   }
 
   /* ═══════════════════════════════════════════
-     HERO SECTION
+     HERO SECTION — Elegância & Impacto Corporativo
      ═══════════════════════════════════════════ */
   .sobre-hero {
     position: relative;
@@ -323,7 +316,8 @@ import CTASection from '../components/CTASection.astro';
     overflow: hidden;
     display: flex;
     align-items: flex-end;
-    min-height: 520px;
+    min-height: 500px;
+    background-color: #0F172A;
   }
 
   .sobre-hero-bg {
@@ -335,7 +329,8 @@ import CTASection from '../components/CTASection.astro';
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.7) contrast(1.1);
+    object-position: center;
+    display: block;
   }
 
   .sobre-hero-overlay {
@@ -343,9 +338,9 @@ import CTASection from '../components/CTASection.astro';
     inset: 0;
     background: linear-gradient(
       160deg,
-      rgba(10, 10, 10, 0.94) 0%,
-      rgba(10, 10, 10, 0.78) 50%,
-      rgba(10, 10, 10, 0.6) 100%
+      rgba(15, 23, 42, 0.94) 0%,
+      rgba(15, 23, 42, 0.82) 45%,
+      rgba(15, 23, 42, 0.65) 100%
     );
   }
 
@@ -357,33 +352,32 @@ import CTASection from '../components/CTASection.astro';
   .sobre-hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 0.95rem;
-    border: 1px solid rgba(230, 48, 0, 0.5);
-    border-radius: 9999px;
+    gap: 0.55rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(255, 107, 74, 0.35);
+    border-radius: var(--radius-full, 9999px);
     font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #FFFFFF;
-    background: rgba(230, 48, 0, 0.1);
+    color: #FF6B4A;
+    background: rgba(230, 48, 0, 0.15);
     backdrop-filter: blur(8px);
     margin-bottom: 1.5rem;
   }
 
   .badge-dot {
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    background: var(--primary, #E63000);
+    background: #FF6B4A;
     display: inline-block;
-    box-shadow: 0 0 10px var(--primary, #E63000);
     animation: pulse-dot 2s ease-in-out infinite;
   }
 
   @keyframes pulse-dot {
     0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(1.4); }
+    50% { opacity: 0.5; transform: scale(0.75); }
   }
 
   .sobre-hero-title {
@@ -394,30 +388,30 @@ import CTASection from '../components/CTASection.astro';
   }
 
   .title-line {
-    font-family: 'Bebas Neue', 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: -0.5px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
     color: #FFFFFF;
     text-transform: uppercase;
   }
 
   .title-accent {
-    color: var(--primary-light, #FF4A1A);
+    color: #FF6B4A;
   }
 
   .title-stroke {
-    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.65);
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.7);
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
 
   .sobre-hero-sub {
-    font-size: 1.15rem;
+    font-size: 1.12rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.75);
-    max-width: 620px;
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 640px;
     margin-bottom: 2.25rem;
   }
 
@@ -427,19 +421,17 @@ import CTASection from '../components/CTASection.astro';
     gap: 0.4rem;
     font-size: 0.8rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
   }
 
   .sobre-breadcrumb a {
-    color: var(--primary-light, #FF4A1A);
+    color: rgba(255, 255, 255, 0.65);
     text-decoration: none;
-    transition: opacity 0.2s;
+    transition: color 0.2s ease;
   }
 
-  .sobre-breadcrumb a:hover { opacity: 0.8; }
-
-  .sobre-breadcrumb span { color: rgba(255, 255, 255, 0.5); }
+  .sobre-breadcrumb a:hover {
+    color: #FF6B4A;
+  }
 
   .breadcrumb-sep {
     display: flex;
@@ -447,17 +439,22 @@ import CTASection from '../components/CTASection.astro';
     color: rgba(255, 255, 255, 0.35);
   }
 
+  .breadcrumb-current {
+    color: #FF6B4A;
+    font-weight: 600;
+  }
+
   /* ═══════════════════════════════════════════
-     NOSSA HISTÓRIA (ABOUT SECTION)
+     NOSSA HISTÓRIA (ABOUT SECTION - FUNDO BRANCO CLEAN)
      ═══════════════════════════════════════════ */
   .sobre-about {
-    background: #0D0D0D;
+    background-color: #FFFFFF;
   }
 
   .sobre-about-grid {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 4.5rem;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 5rem;
     align-items: center;
   }
 
@@ -467,10 +464,10 @@ import CTASection from '../components/CTASection.astro';
 
   .img-frame {
     position: relative;
-    border-radius: 20px;
+    border-radius: var(--radius-lg, 20px);
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid #E2E8F0;
   }
 
   .img-frame img {
@@ -479,147 +476,150 @@ import CTASection from '../components/CTASection.astro';
     object-fit: cover;
     aspect-ratio: 4/5;
     display: block;
-    transition: transform 0.6s ease;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .img-frame:hover img {
     transform: scale(1.03);
   }
 
+  /* Badge de Experiência Premium em Vermelho Corporativo */
   .sobre-exp-badge {
     position: absolute;
     bottom: -1.5rem;
     right: -1.5rem;
-    background: linear-gradient(135deg, var(--primary, #E63000) 0%, #B32400 100%);
+    background: linear-gradient(135deg, var(--primary, #E63000) 0%, #C42800 100%);
     color: #FFFFFF;
-    padding: 1.5rem 1.75rem;
+    padding: 1.4rem 1.75rem;
     border-radius: 16px;
     display: flex;
     align-items: center;
     gap: 1rem;
-    box-shadow: 0 15px 35px rgba(230, 48, 0, 0.35);
+    box-shadow: 0 12px 30px rgba(230, 48, 0, 0.28);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .exp-badge-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.2rem;
-    font-weight: 800;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
     line-height: 0.9;
+    letter-spacing: -0.03em;
   }
 
   .exp-badge-text {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.05em;
     line-height: 1.25;
   }
 
   .about-lead {
-    font-size: 1.2rem;
+    font-size: 1.22rem;
     font-weight: 600;
-    line-height: 1.6;
-    color: #FFFFFF;
+    line-height: 1.65;
+    color: #0F172A;
     margin-bottom: 1.5rem;
   }
 
   .about-body {
-    font-size: 1rem;
-    line-height: 1.75;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 1.35rem;
   }
 
   .about-body strong {
-    color: #FFFFFF;
+    color: #0F172A;
+    font-weight: 700;
   }
 
   /* ═══════════════════════════════════════════
-     MISSÃO, VISÃO & VALORES (MVV)
+     MISSÃO, VISÃO & VALORES (MVV - FUNDO CINZA SUAVE)
      ═══════════════════════════════════════════ */
   .sobre-mvv {
     position: relative;
-    background: #080808;
-    overflow: hidden;
-  }
-
-  .sobre-mvv-bg {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(230, 48, 0, 0.06) 0%, transparent 70%);
+    background-color: #F8FAFC;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
   }
 
   .mvv-header {
     text-align: center;
-    margin-bottom: 3.5rem;
-    position: relative;
-    z-index: 2;
+    margin-bottom: 4rem;
   }
 
   .sobre-mvv-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    position: relative;
-    z-index: 2;
   }
 
   .mvv-card {
-    background: rgba(18, 18, 18, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
     border-radius: 20px;
-    padding: 2.5rem 2rem;
-    backdrop-filter: blur(10px);
-    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    padding: 2.75rem 2.25rem;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   }
 
   .mvv-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(230, 48, 0, 0.4);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    border-color: rgba(230, 48, 0, 0.3);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.07);
   }
 
+  /* Card Missão com destaque sutil e elegante */
   .mvv-card-featured {
-    border-color: rgba(230, 48, 0, 0.35);
-    background: linear-gradient(180deg, rgba(230, 48, 0, 0.08) 0%, rgba(18, 18, 18, 0.9) 100%);
+    border-color: rgba(230, 48, 0, 0.25);
+    background: #FFF7F5;
   }
 
   .mvv-icon {
-    width: 58px;
-    height: 58px;
+    width: 56px;
+    height: 56px;
     border-radius: 14px;
-    background: rgba(230, 48, 0, 0.12);
-    border: 1px solid rgba(230, 48, 0, 0.3);
-    color: var(--primary-light, #FF4A1A);
+    background: rgba(230, 48, 0, 0.08);
+    border: 1px solid rgba(230, 48, 0, 0.2);
+    color: var(--primary, #E63000);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  }
+
+  .mvv-card:hover .mvv-icon {
+    background: var(--primary, #E63000);
+    color: #FFFFFF;
+    border-color: transparent;
+    transform: scale(1.05);
   }
 
   .mvv-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: 800;
-    color: #FFFFFF;
+    color: #0F172A;
     margin-bottom: 1rem;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.02em;
   }
 
   .mvv-card p {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.7);
+    color: #475569;
     margin: 0;
   }
 
   /* ═══════════════════════════════════════════
-     DIFERENCIAIS (01 A 06)
+     DIFERENCIAIS (FUNDO BRANCO CLEAN)
      ═══════════════════════════════════════════ */
   .sobre-diff {
-    background: #0D0D0D;
+    background-color: #FFFFFF;
   }
 
   .sobre-diff-header {
@@ -629,48 +629,49 @@ import CTASection from '../components/CTASection.astro';
   .sobre-diff-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .diff-item {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.35rem;
     align-items: flex-start;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.75rem;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
     border-radius: 16px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   }
 
   .diff-item:hover {
     transform: translateY(-4px);
     border-color: rgba(230, 48, 0, 0.3);
-    background: rgba(255, 255, 255, 0.04);
+    background: #FFFFFF;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
   }
 
   .diff-num {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 2.2rem;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 1;
     color: var(--primary, #E63000);
-    opacity: 0.85;
+    opacity: 0.9;
     flex-shrink: 0;
   }
 
   .diff-content h3 {
-    font-size: 1.15rem;
+    font-size: 1.12rem;
     font-weight: 800;
-    color: #FFFFFF;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.2px;
+    color: #0F172A;
+    margin-bottom: 0.45rem;
+    letter-spacing: -0.015em;
   }
 
   .diff-content p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #475569;
     margin: 0;
   }
 
@@ -706,11 +707,11 @@ import CTASection from '../components/CTASection.astro';
     }
 
     .section-padding {
-      padding: 4rem 0;
+      padding: 4.5rem 0;
     }
 
     .title-line {
-      font-size: clamp(2.5rem, 10vw, 3.8rem);
+      font-size: clamp(2.3rem, 9vw, 3.6rem);
     }
 
     .sobre-hero-sub {
@@ -723,12 +724,11 @@ import CTASection from '../components/CTASection.astro';
     }
 
     .sobre-exp-badge {
-      padding: 1.2rem 1.4rem;
+      padding: 1.1rem 1.35rem;
     }
 
     .exp-badge-num {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
     }
   }
 </style>
-
