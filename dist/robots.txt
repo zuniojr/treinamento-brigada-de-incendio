@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://treinamentobrigadadeincendio.com.br/sitemap.xml

@@ -1,5 +1,102 @@
 export const allPosts = [
   {
+    slug: "treinamento-formacao-brigada-barra-velha-sc",
+    title: "Treinamento e Formação de Brigada de Incêndio em Barra Velha e Região (SC): Guia Definitivo",
+    excerpt: "Como regularizar a brigada de incêndio em Barra Velha e no litoral norte de SC. Exigências do CBMSC, NBR 14276, carga horária, aulas práticas e emissão do atestado para o Alvará/AVCB.",
+    category: "Treinamentos & Legislação",
+    date: "22 de Agosto, 2026",
+    readTime: "10 min de leitura",
+    author: "Eng. Roberto Silva",
+    authorRole: "Especialista em Proteção Contra Incêndio, CREA-SC",
+    authorBio:
+      "Engenheiro de Segurança do Trabalho com mais de 15 anos de experiência em proteção contra incêndio e atendimento a empresas do Litoral Norte Catarinense.",
+    image:
+      "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1200&q=80",
+    imageCaption:
+      "Treinamento prático de combate a incêndio com extintores e mangueiras para brigadistas em Barra Velha SC.",
+    tags: [
+      "treinamento brigada de incêndio barra velha",
+      "curso de brigadista barra velha sc",
+      "formação de brigada de incêndio litoral norte sc",
+      "NBR 14276 SC",
+      "bombeiro militar SC brigada",
+      "atestado de brigada barra velha",
+      "curso combate a incêndio empresa SC",
+    ],
+    sections: [
+      { id: "a-realidade-da-seguranca-contra-incendio-em-barra-velha-e-litoral-norte-sc", title: "1. A Realidade em Barra Velha e Região" },
+      { id: "o-que-exige-o-corpo-de-bombeiros-militar-de-santa-catarina-cbmsc", title: "2. O que exige o CBMSC" },
+      { id: "niveis-treinamento-basico-intermediario-e-avancado", title: "3. Níveis de Treinamento" },
+      { id: "o-que-e-ensinado-no-curso-teoria-e-pratica-de-campo", title: "4. Conteúdo: Teoria e Prática" },
+      { id: "como-funciona-a-emissao-do-atestado-de-brigada-em-barra-velha", title: "5. Emissão do Atestado de Brigada" },
+      { id: "erros-comuns-na-formacao-de-brigadas-que-geram-multas-e-interdicoes", title: "6. Erros Comuns e Riscos" },
+      { id: "checklist-completo-para-agendar-o-treinamento-da-sua-empresa", title: "7. Checklist de Agendamento" },
+    ],
+    content: `
+<p>
+Barra Velha cresce em ritmo acelerado. Às margens da BR-101 e próxima a grandes polos industriais como Araquari, Joinville e Itajaí, a cidade atrai novas indústrias, centros logísticos, atacados e empreendimentos imobiliários de grande porte.
+</p>
+<p>
+Junto com esse crescimento veio a fiscalização rígida do <strong>Corpo de Bombeiros Militar de Santa Catarina (CBMSC)</strong>.
+</p>
+<p>
+Não se trata apenas de cumprir uma exigência burocrática para pendurar um papel na parede. Trata-se de sobrevivência. Na rotina de treinamentos que ministramos nas empresas da região, cansamos de ver colaboradores travarem diante de um simples extintor no primeiro exercício prático. Pessoas preparadas reagem em segundos — e esses segundos definem se um principio de incêndio vira uma fumaça passageira ou uma tragédia de milhões de reais.
+</p>
+
+<h2 id="o-que-exige-o-corpo-de-bombeiros-militar-de-santa-catarina-cbmsc">2. O que Exige o Corpo de Bombeiros Militar de Santa Catarina (CBMSC)?</h2>
+<p>
+A legislação catarinense de segurança contra incêndio e pânico é pautada pela <strong>Lei Estadual nº 16.157/2013</strong> e suas Instruções Normativas (INs). Para a formação de brigada, a referência oficial é a <strong>NBR 14276 da ABNT</strong>, harmonizada com as diretrizes do CBMSC.
+</p>
+<ul>
+  <li><strong>Profissionais Credenciados:</strong> O instrutor responsável pelo treinamento precisa ter registro e habilitação técnica reconhecida.</li>
+  <li><strong>Atestado de Brigada:</strong> A documentação emitida deve conter a relação nominativa dos brigadistas, carga horária, conteúdo ministrado e ART do responsável.</li>
+  <li><strong>Reciclagem Anual:</strong> O certificado tem validade de exatamente <strong>12 meses</strong>.</li>
+</ul>
+
+<h2 id="niveis-treinamento-basico-intermediario-e-avancado">3. Níveis de Treinamento: Básico, Intermediário e Avançado</h2>
+<p>
+Nem todas as empresas precisam da mesma carga horária. A definição depende do risco da atividade exercida e do porte do imóvel:
+</p>
+<table class="table-default">
+<thead>
+<tr><th>Nível</th><th>Carga Horária</th><th>Público Recomendado</th><th>Foco Principal</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Básico</strong></td><td>4h a 8h</td><td>Comércio local, escritórios, condomínios</td><td>Extintores, evacuação rápida, primeiros socorros essenciais</td></tr>
+<tr><td><strong>Intermediário</strong></td><td>12h a 16h</td><td>Indústrias de médio porte, galpões logísticos</td><td>Operação de hidrantes, abandono de área, suporte básico de vida</td></tr>
+<tr><td><strong>Avançado</strong></td><td>24h a 40h</td><td>Indústrias químicas, combustível, grandes complexos</td><td>Resgate técnico, combate pressurizado, equipamentos de proteção respiratória</td></tr>
+</tbody>
+</table>
+
+<h2 id="o-que-e-ensinado-no-curso-teoria-e-pratica-de-campo">4. O que é Ensinado no Curso: Teoria e Prática de Campo</h2>
+<p>
+Treinamento de brigada eficiente não se faz sentado assistindo a slides genéricos. A teoria é fundamental, mas o aprendizado real acontece na prática.
+</p>
+<p><strong>Módulo Teórico:</strong> Teoria do Fogo (classes A, B, C, D e K), sistemas de iluminação, alarme, detecção e primeiros socorros (RCP, engasgos e hemorragias).</p>
+<p><strong>Módulo Prático:</strong> Operação real de extintores de Água (AP), Pó Químico Seco (PQS) e Gás Carbônico (CO₂), manuseio de mangueiras de hidrante e simulado de abandono de área.</p>
+
+<h2 id="como-funciona-a-emissao-do-atestado-de-brigada-em-barra-velha">5. Como Funciona a Emissão do Atestado de Brigada em Barra Velha</h2>
+<p>
+Terminado o treinamento com aproveitamento mínimo dos participantes nas avaliações teórica e prática, nossa equipe emite o <strong>Atestado de Formação / Reciclagem de Brigada de Incêndio</strong> acompanhado da respectiva Anotação de Responsabilidade Técnica (ART).
+</p>
+
+<h2 id="erros-comuns-na-formacao-de-brigadas-que-geram-multas-e-interdicoes">6. Erros Comuns na Formação de Brigadas que Geram Multas e Interdições</h2>
+<ul>
+  <li><strong>Não cobrir todos os turnos de trabalho:</strong> A brigada precisa cobrir 100% dos turnos operacionais (dia e noite).</li>
+  <li><strong>Treinamento 100% EAD sem prática:</strong> Não atende às exigências da NBR 14276 nem do CBMSC em Santa Catarina.</li>
+  <li><strong>Atrasar a reciclagem anual:</strong> Deixar o certificado vencer por mais de 30 dias pode invalidar o atestado anterior.</li>
+</ul>
+
+<h2 id="checklist-completo-para-agendar-o-treinamento-da-sua-empresa">7. Checklist Completo para Agendar o Treinamento da sua Empresa</h2>
+<ul>
+  <li>Levantar o número de colaboradores fixos por turno.</li>
+  <li>Escolha voluntários proativos e motivados.</li>
+  <li>Agende o treinamento prático e teórico com instrutores credenciados.</li>
+  <li>Receba os certificados e o Atestado com ART para regularização do Alvará/AVCB.</li>
+</ul>
+`,
+  },
+  {
     slug: "dimensionamento-brigada-de-incendio",
     title: "Dimensionamento de Brigada de IncÃªndio: CÃ¡lculo Exato pela NBR 14276",
     excerpt: "Descubra como calcular o nÃºmero correto de brigadistas por turno usando a Tabela A.1 da NBR 14276. FÃ³rmula passo a passo, exemplos reais e os erros que reprovam na vistoria do AVCB.",
@@ -619,7 +716,11 @@ Para uma indústria de médio porte (grau de risco médio/alto) com 180 colabora
 <li><strong>Estrutura focada em apenas um turno:</strong> criar organograma apenas para o horário comercial (08h às 17h) e deixar a equipe noturna sem líderes designados.</li>
 <li><strong>Ausência de suplentes formais:</strong> quando o chefe de brigada entra em férias, a fábrica opera durante 30 dias sem coordenação de emergência documentada.</li>
 <li><strong>Centralização excessiva:</strong> colocar diretores ou gerentes gerais como chefes de brigada apenas pelo cargo hierárquico da empresa, sem que tenham disponibilidade física constante na planta ou preparo técnico.</li>
-<li><strong>Falta de atualização cadastral:</strong> manter colaboradores que já foram desligados no quadro do organograma exposto nos co  {
+<li><strong>Falta de atualização cadastral:</strong> manter colaboradores que já foram desligados no quadro do organograma exposto nos corredores.</li>
+</ul>
+`,
+  },
+  {
     slug: "qual-o-objetivo-da-brigada-de-incendio",
     title: "Qual o Objetivo da Brigada de Incêndio? Funções Reais, NR-23 e NBR 14276",
     excerpt: "Entenda o real papel da brigada de incêndio: 80% prevenção diária, controle de princípios de fogo, suporte básico de vida e rotas de fuga sem pânico.",
@@ -741,7 +842,11 @@ Além de proteger vidas, a implantação da brigada é obrigatória pela legisla
 <ul>
 <li><strong>NR-23:</strong> Norma regulamentadora do Ministério do Trabalho que exige medidas eficazes de prevenção e combate a incêndios em todos os estabelecimentos.</li>
 <li><strong>Legislação Estadual (Corpo de Bombeiros):</strong> a comprovação de brigada ativa e treinada é pré-requisito mandatório para renovação do AVCB ou CLCB.</li>
-<li><strong>Responsabilidade dos Administradores:</strong> empresas sem brigada  {
+<li><strong>Responsabilidade dos Administradores:</strong> empresas sem brigada treinada podem sofrer multas, interdições e recusa de cobertura de seguros.</li>
+</ul>
+`,
+  },
+  {
     slug: "treinamento-de-brigada-de-incendio-guia-completo",
     title: "Treinamento de Brigada de Incêndio: Guia Completo de Formação (NR-23 e NBR 14276)",
     excerpt: "Tudo o que sua empresa precisa saber sobre curso de brigada de incêndio: dimensionamento por turno, conteúdo prático, carga horária e emissão de ART para AVCB.",
@@ -1206,88 +1311,22 @@ Precisa emitir ou renovar o AVCB da sua edificação e regularizar o treinamento
       { id: "importancia-equipamentos", title: "A tríade da segurança: equipamentos corretos, manutenção e brigada treinada" },
       { id: "1-extintores-portateis", title: "1. Extintores portáteis e sobre-rodas (classes A, B, C e K)" },
       { id: "2-rede-hidrantes", title: "2. Rede de hidrantes, mangotinhos e reservatório técnico" },
-      { id: "3-alarme-deteccao"<tr><td><strong>Água Pressurizada (AP)</strong></td><td>Classe A</td><td>Madeira, papel, tecidos, borracha e plásticos sólidos.</td></tr>
-<tr><td><strong>Pó Químico Seco (PQS ABC)</strong></td><td>Classes A, B e C</td><td>Uso universal: sólidos, líquidos inflamáveis (tintas, solventes) e rede elétrica.</td></tr>
-<tr><td><strong>Gás Carbônico (CO₂)</strong></td><td>Classes B e C</td><td>Equipamentos eletrônicos energizados, CPDs e quadros de comando (não deixa resíduo).</td></tr>
-<tr><td><strong>Classe K (Acetato de Potássio)</strong></td><td>Classe K</td><td>Cozinhas industriais, fritadeiras e gorduras animais/vegetais superaquecidas.</td></tr>
-</tbody>
-</table>
-
-<h2 id="2-rede-hidrantes">2. Rede de hidrantes, mangotinhos e reservatório técnico</h2>
+      { id: "3-alarme-deteccao", title: "3. Sistemas de detecção precoce e alarme de incêndio" },
+    ],
+    content: `
 <p>
-Quando o princípio de incêndio evolui e ultrapassa a capacidade de um extintor manual, a <strong>rede de hidrantes (NBR 13714)</strong> entra em ação. O sistema é composto por:
-</p>
-<ul>
-<li><strong>Reservatório Técnico de Incêndio (RTI):</strong> volume de água reservado exclusivamente para combate ao fogo.</li>
-<li><strong>Conjunto Motobomba de Incêndio:</strong> bombas principais e bomba jockey para manter a pressão da rede constante.</li>
-<li><strong>Abrigos de hidrante:</strong> caixas metálicas contendo mangueiras tipo 1 ou 2, chaves Storz e esguichos reguláveis de vazão.</li>
-</ul>
-
-<h2 id="3-alarme-deteccao">3. Sistemas de detecção precoce e alarme de incêndio</h2>
-<p>
-Regulamentado pela <strong>NBR 17240</strong>, o sistema de alarme avisa os ocupantes sobre o sinistro antes que a fumaça bloqueie os corredores. Ele integra:
-</p>
-<ul>
-<li><strong>Detectores pontuais de fumaça e temperatura:</strong> dispostos nos tetos para disparar alertas automáticos no estágio embrionário do calor.</li>
-<li><strong>Acionadores manuais tipo quebre o vidro / aperte o botão:</strong> instalados ao longo das rotas de fuga a cada 30 metros.</li>
-<li><strong>Sirenes audiovisuais:</strong> emitem avisos sonoros de alta intensidade e flashes estroboscópicos para alertar pessoas com deficiência auditiva.</li>
-<li><strong>Central de alarme endereçável:</strong> indica na portaria ou sala de segurança a sala exata de onde partiu o sinal de fogo.</li>
-</ul>
-
-<h2 id="4-iluminacao-emergencia">4. Iluminação autônoma de balizamento e aclaramento</h2>
-<p>
-Em ocorrências graves, o corte de energia é um procedimento padrão para evitar choques elétricos e explosões. A <strong>NBR 10898</strong> exige iluminação autônoma para garantir visibilidade mínima:
-</p>
-<ul>
+Quando o assunto é proteção contra incêndios em estabelecimentos comerciais e ind�<ul>
 <li><strong>Blocos autônomos de LED:</strong> luminárias com baterias internas recarregáveis que acendem instantaneamente na falta de energia pública.</li>
 <li><strong>Autonomia mínima de 2 horas:</strong> tempo suficiente para a evacuação completa do prédio e trabalho das equipes de resgate.</li>
 </ul>
 
-<h2 id="5-sinalizacao-rotas">5. Sinalização fotoluminescente e rotas de fuga desobstruídas</h2>
-<p>
-A <strong>NBR 13434</strong> determina a instalação de placas com pigmentação fotoluminescente (que brilham no escuro após absorverem luz natural ou artificial):
-</p>
-<ul>
-<li>Placas de orientação e salvamento (setas indicando saídas de emergência e portas corta-fogo).</li>
-<li>Placas de identificação de equipamentos (localização de extintores e hidrantes a 1,80 m de altura).</li>
-<li>Marcação de solo com faixa amarela e vermelha sob os extintores, proibindo o depósito de objetos.</li>
-</ul>
-
-<h2 id="checklist-manutencao">Checklist de inspeção preventiva mensal</h2>
-<div class="checklist">
-<div class="checklist-item"><strong>1. Manômetros de extintores:</strong> Verifique se todos os ponteiros indicam a faixa verde de pressão.</div>
-<div class="checklist-item"><strong>2. Desobstrução total:</strong> Certifique-se de que nenhum extintor ou hidrante tenha caixas ou móveis na frente.</div>
-<div class="checklist-item"><strong>3. Teste de iluminação:</strong> Desligue o disjuntor da iluminação de emergência e confira se todas as lâmpadas acendem.</div>
-<div class="checklist-item"><strong>4. Mangueiras de hidrante:</strong> Inspecione se as mangueiras estão enroladas corretamente (aduchadas ou em espiral) e com o teste hidrostático anual em dia.</div>
-<div class="checklist-item"><strong>5. Central de alarme:</strong> Realize o teste semanal da central de monitoramento sem acionar o prédio todo.</div>
-</div>
-
-<div class="faq-section" id="faq-equipamentos">
-<h2>Perguntas Frequentes sobre Equipamentos Contra Incêndio</h2>
-
-<div class="faq-item">
-<h3>Qual é a validade da carga de um extintor de incêndio?</h3>
-<p>A recarga dos extintores de água e pó químico deve ser feita anualmente (12 meses). Para extintores de CO₂, realiza-se inspeção semestral de pesagem e recarga se houver perda de massa superior a 10%. O teste hidrostático do cilindro é obrigatório a cada 5 anos.</p>
-</div>
-
-<div class="faq-item">
-<h3>Qual a altura correta para instalar um extintor na parede?</h3>
-<p>O suporte deve ser fixado de modo que o gatilho do extintor fique a no máximo 1,60 metro do piso acabado, e a parte inferior a no mínimo 0,10 metro do chão.</p>
-</div>
-
-<div class="faq-item">
-<h3>Toda empresa precisa de rede de hidrantes?</h3>
-<p>Não. A exigência de hidrantes varia de acordo com a área construída da edificação (geralmente acima de 750 m² a 1.200 m²), ocupação e grau de risco definidos nas Instruções Técnicas estaduais.</p>
-</div>
-
-<div class="faq-item">
-<h3>Quem pode fazer a manutenção e recarga dos equipamentos?</h3>
-<p>A manutenção deve ser realizada exclusivamente por empresas credenciadas pelo Inmetro e registradas no Corpo de Bombeiros do respectivo estado.</p>
-</div>
-</div>
-
 <p>
 Sua empresa precisa de adequação de equipamentos contra incêndio e treinamento prático de brigada para operar extintores e hidrantes com segurança? <a href="/contato">Fale com nossos especialistas</a> e agende uma consultoria técnica.
+</p>
+    `
+  },
+  {
+    slug: "primeiros-socorros-ambiente-corporativo",ma consultoria técnica.
 </p>
     `
   }, `
