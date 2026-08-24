@@ -1311,22 +1311,88 @@ Precisa emitir ou renovar o AVCB da sua edificação e regularizar o treinamento
       { id: "importancia-equipamentos", title: "A tríade da segurança: equipamentos corretos, manutenção e brigada treinada" },
       { id: "1-extintores-portateis", title: "1. Extintores portáteis e sobre-rodas (classes A, B, C e K)" },
       { id: "2-rede-hidrantes", title: "2. Rede de hidrantes, mangotinhos e reservatório técnico" },
-      { id: "3-alarme-deteccao", title: "3. Sistemas de detecção precoce e alarme de incêndio" },
-    ],
-    content: `
+      { id: "3-alarme-deteccao"<tr><td><strong>Água Pressurizada (AP)</strong></td><td>Classe A</td><td>Madeira, papel, tecidos, borracha e plásticos sólidos.</td></tr>
+<tr><td><strong>Pó Químico Seco (PQS ABC)</strong></td><td>Classes A, B e C</td><td>Uso universal: sólidos, líquidos inflamáveis (tintas, solventes) e rede elétrica.</td></tr>
+<tr><td><strong>Gás Carbônico (CO₂)</strong></td><td>Classes B e C</td><td>Equipamentos eletrônicos energizados, CPDs e quadros de comando (não deixa resíduo).</td></tr>
+<tr><td><strong>Classe K (Acetato de Potássio)</strong></td><td>Classe K</td><td>Cozinhas industriais, fritadeiras e gorduras animais/vegetais superaquecidas.</td></tr>
+</tbody>
+</table>
+
+<h2 id="2-rede-hidrantes">2. Rede de hidrantes, mangotinhos e reservatório técnico</h2>
 <p>
-Quando o assunto é proteção contra incêndios em estabelecimentos comerciais e ind�<ul>
+Quando o princípio de incêndio evolui e ultrapassa a capacidade de um extintor manual, a <strong>rede de hidrantes (NBR 13714)</strong> entra em ação. O sistema é composto por:
+</p>
+<ul>
+<li><strong>Reservatório Técnico de Incêndio (RTI):</strong> volume de água reservado exclusivamente para combate ao fogo.</li>
+<li><strong>Conjunto Motobomba de Incêndio:</strong> bombas principais e bomba jockey para manter a pressão da rede constante.</li>
+<li><strong>Abrigos de hidrante:</strong> caixas metálicas contendo mangueiras tipo 1 ou 2, chaves Storz e esguichos reguláveis de vazão.</li>
+</ul>
+
+<h2 id="3-alarme-deteccao">3. Sistemas de detecção precoce e alarme de incêndio</h2>
+<p>
+Regulamentado pela <strong>NBR 17240</strong>, o sistema de alarme avisa os ocupantes sobre o sinistro antes que a fumaça bloqueie os corredores. Ele integra:
+</p>
+<ul>
+<li><strong>Detectores pontuais de fumaça e temperatura:</strong> dispostos nos tetos para disparar alertas automáticos no estágio embrionário do calor.</li>
+<li><strong>Acionadores manuais tipo quebre o vidro / aperte o botão:</strong> instalados ao longo das rotas de fuga a cada 30 metros.</li>
+<li><strong>Sirenes audiovisuais:</strong> emitem avisos sonoros de alta intensidade e flashes estroboscópicos para alertar pessoas com deficiência auditiva.</li>
+<li><strong>Central de alarme endereçável:</strong> indica na portaria ou sala de segurança a sala exata de onde partiu o sinal de fogo.</li>
+</ul>
+
+<h2 id="4-iluminacao-emergencia">4. Iluminação autônoma de balizamento e aclaramento</h2>
+<p>
+Em ocorrências graves, o corte de energia é um procedimento padrão para evitar choques elétricos e explosões. A <strong>NBR 10898</strong> exige iluminação autônoma para garantir visibilidade mínima:
+</p>
+<ul>
 <li><strong>Blocos autônomos de LED:</strong> luminárias com baterias internas recarregáveis que acendem instantaneamente na falta de energia pública.</li>
 <li><strong>Autonomia mínima de 2 horas:</strong> tempo suficiente para a evacuação completa do prédio e trabalho das equipes de resgate.</li>
 </ul>
 
+<h2 id="5-sinalizacao-rotas">5. Sinalização fotoluminescente e rotas de fuga desobstruídas</h2>
+<p>
+A <strong>NBR 13434</strong> determina a instalação de placas com pigmentação fotoluminescente (que brilham no escuro após absorverem luz natural ou artificial):
+</p>
+<ul>
+<li>Placas de orientação e salvamento (setas indicando saídas de emergência e portas corta-fogo).</li>
+<li>Placas de identificação de equipamentos (localização de extintores e hidrantes a 1,80 m de altura).</li>
+<li>Marcação de solo com faixa amarela e vermelha sob os extintores, proibindo o depósito de objetos.</li>
+</ul>
+
+<h2 id="checklist-manutencao">Checklist de inspeção preventiva mensal</h2>
+<div class="checklist">
+<div class="checklist-item"><strong>1. Manômetros de extintores:</strong> Verifique se todos os ponteiros indicam a faixa verde de pressão.</div>
+<div class="checklist-item"><strong>2. Desobstrução total:</strong> Certifique-se de que nenhum extintor ou hidrante tenha caixas ou móveis na frente.</div>
+<div class="checklist-item"><strong>3. Teste de iluminação:</strong> Desligue o disjuntor da iluminação de emergência e confira se todas as lâmpadas acendem.</div>
+<div class="checklist-item"><strong>4. Mangueiras de hidrante:</strong> Inspecione se as mangueiras estão enroladas corretamente (aduchadas ou em espiral) e com o teste hidrostático anual em dia.</div>
+<div class="checklist-item"><strong>5. Central de alarme:</strong> Realize o teste semanal da central de monitoramento sem acionar o prédio todo.</div>
+</div>
+
+<div class="faq-section" id="faq-equipamentos">
+<h2>Perguntas Frequentes sobre Equipamentos Contra Incêndio</h2>
+
+<div class="faq-item">
+<h3>Qual é a validade da carga de um extintor de incêndio?</h3>
+<p>A recarga dos extintores de água e pó químico deve ser feita anualmente (12 meses). Para extintores de CO₂, realiza-se inspeção semestral de pesagem e recarga se houver perda de massa superior a 10%. O teste hidrostático do cilindro é obrigatório a cada 5 anos.</p>
+</div>
+
+<div class="faq-item">
+<h3>Qual a altura correta para instalar um extintor na parede?</h3>
+<p>O suporte deve ser fixado de modo que o gatilho do extintor fique a no máximo 1,60 metro do piso acabado, e a parte inferior a no mínimo 0,10 metro do chão.</p>
+</div>
+
+<div class="faq-item">
+<h3>Toda empresa precisa de rede de hidrantes?</h3>
+<p>Não. A exigência de hidrantes varia de acordo com a área construída da edificação (geralmente acima de 750 m² a 1.200 m²), ocupação e grau de risco definidos nas Instruções Técnicas estaduais.</p>
+</div>
+
+<div class="faq-item">
+<h3>Quem pode fazer a manutenção e recarga dos equipamentos?</h3>
+<p>A manutenção deve ser realizada exclusivamente por empresas credenciadas pelo Inmetro e registradas no Corpo de Bombeiros do respectivo estado.</p>
+</div>
+</div>
+
 <p>
 Sua empresa precisa de adequação de equipamentos contra incêndio e treinamento prático de brigada para operar extintores e hidrantes com segurança? <a href="/contato">Fale com nossos especialistas</a> e agende uma consultoria técnica.
-</p>
-    `
-  },
-  {
-    slug: "primeiros-socorros-ambiente-corporativo",ma consultoria técnica.
 </p>
     `
   }, `

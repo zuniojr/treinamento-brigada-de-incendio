@@ -79,7 +79,22 @@
 
 <script is:inline>
   function openQuoteModal(courseName = '') {
-    window.open('https://bitlybr.net/TreinamentoBrigada', '_blank');
+    const modal = document.getElementById('quote-modal');
+    if (modal) {
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (courseName) {
+        const courseInput = document.getElementById('selected_course');
+        if (courseInput) courseInput.value = courseName;
+      }
+      setTimeout(() => {
+        const firstInput = document.getElementById('company_name');
+        if (firstInput) firstInput.focus();
+      }, 100);
+    } else {
+      window.open('https://bitlybr.net/TreinamentoBrigada', '_blank');
+    }
   }
 
   function closeQuoteModal() {
