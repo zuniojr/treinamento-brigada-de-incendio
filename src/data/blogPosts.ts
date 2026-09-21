@@ -1363,30 +1363,7 @@ A <strong>NBR 13434</strong> determina a instalação de placas com pigmentaçã
 <div class="checklist-item"><strong>1. Manômetros de extintores:</strong> Verifique se todos os ponteiros indicam a faixa verde de pressão.</div>
 <div class="checklist-item"><strong>2. Desobstrução total:</strong> Certifique-se de que nenhum extintor ou hidrante tenha caixas ou móveis na frente.</div>
 <div class="checklist-item"><strong>3. Teste de iluminação:</strong> Desligue o disjuntor da iluminação de emergência e confira se todas as lâmpadas acendem.</div>
-<div class="checklist-item"><strong>4. Mangueiras de hidrante:</strong> Inspecione se as mangueiras estão enroladas corretamente (aduchadas ou em espiral) e com o teste hidrostático anual em dia.</div>
-<div class="checklist-item"><strong>5. Central de alarme:</strong> Realize o teste semanal da central de monitoramento sem acionar o prédio todo.</div>
-</div>
-
-<div class="faq-section" id="faq-equipamentos">
-<h2>Perguntas Frequentes sobre Equipamentos Contra Incêndio</h2>
-
-<div class="faq-item">
-<h3>Qual é a validade da carga de um extintor de incêndio?</h3>
-<p>A recarga dos extintores de água e pó químico deve ser feita anualmente (12 meses). Para extintores de CO₂, realiza-se inspeção semestral de pesagem e recarga se houver perda de massa superior a 10%. O teste hidrostático do cilindro é obrigatório a cada 5 anos.</p>
-</div>
-
-<div class="faq-item">
-<h3>Qual a altura correta para instalar um extintor na parede?</h3>
-<p>O suporte deve ser fixado de modo que o gatilho do extintor fique a no máximo 1,60 metro do piso acabado, e a parte inferior a no mínimo 0,10 metro do chão.</p>
-</div>
-
-<div class="faq-item">
-<h3>Toda empresa precisa de rede de hidrantes?</h3>
-<p>Não. A exigência de hidrantes varia de acordo com a área construída da edificação (geralmente acima de 750 m² a 1.200 m²), ocupação e grau de risco definidos nas Instruções Técnicas estaduais.</p>
-</div>
-
-<div class="faq-item">
-<h3>Quem pode fazer a manutenção e recarga dos equipamentos?</h3>
+<div class="checklist-item"><strong>4. Mangueiras de hidrante:</strong> Inspecione se as mangueiras estão enroladas corret<h3>Quem pode fazer a manutenção e recarga dos equipamentos?</h3>
 <p>A manutenção deve ser realizada exclusivamente por empresas credenciadas pelo Inmetro e registradas no Corpo de Bombeiros do respectivo estado.</p>
 </div>
 </div>
@@ -1394,56 +1371,20 @@ A <strong>NBR 13434</strong> determina a instalação de placas com pigmentaçã
 <p>
 Sua empresa precisa de adequação de equipamentos contra incêndio e treinamento prático de brigada para operar extintores e hidrantes com segurança? <a href="/contato">Fale com nossos especialistas</a> e agende uma consultoria técnica.
 </p>
-    `
-  }, `
-  },inferior a no mínimo 0,10 metro do chão.</p>
-</div>
-
-<div class="faq-item">
-<h3>Toda empresa precisa de rede de hidrantes?</h3>
-<p>Não. A exigência de hidrantes varia de acordo com a área construída da edificação (geralmente acima de 750 m² a 1.200 m²), ocupação e grau de risco definidos nas Instruções Técnicas estaduais.</p>
-</div>
-
-<div class="faq-item">
-<h3>Quem pode fazer a manutenção e recarga dos equipamentos?</h3>
-<p>A manutenção deve ser realizada exclusivamente por empresas credenciadas pelo Inmetro e registradas no Corpo de Bombeiros do respectivo estado.</p>
-</div>
-</div>
-
-<p>
-Sua empresa precisa de adequação de equipamentos contra incêndio e treinamento prático de brigada para operar extintores e hidrantes com segurança? <a href="/contato">Fale com nossos especialistas</a> e agende uma consultoria técnica.
-</p>
-    `
-  },
-    content: `
-<h2 id="extintores">1. Extintores de IncÃªndio</h2>
-<p>O extintor Ã© o equipamento de primeira intervenÃ§Ã£o. A classe do extintor deve ser compatÃ­vel com a classe de incÃªndio da Ã¡rea: <strong>PÃ³ QuÃ­mico Seco (ABC)</strong>, <strong>COâ‚‚</strong> para equipamentos elÃ©tricos, e <strong>Ãgua Pressurizada</strong> para materiais sÃ³lidos. A NBR 12693 regulamenta o dimensionamento e o posicionamento.</p>
-<blockquote class="pull-quote">
-  <p>"Um extintor na posiÃ§Ã£o errada ou com a classe errada de agente extintor pode ser tÃ£o inÃºtil quanto nÃ£o ter extintor algum."</p>
-  <cite>â€” TÃ©c. Mariana Costa</cite>
-</blockquote>
-<h2 id="hidrantes">2. Rede de Hidrantes e Mangotinhos</h2>
-<p>Para incÃªndios de maior proporÃ§Ã£o, a rede de hidrantes Ã© o recurso fundamental. A NBR 13714 define pressÃµes mÃ­nimas, vazÃµes e o dimensionamento da tubulaÃ§Ã£o. Em indÃºstrias de mÃ©dio e alto risco, o sistema precisa incluir reservatÃ³rio de incÃªndio independente (RI) com capacidade para 30 minutos de combate sem recarga.</p>
-<h2 id="alarme">3. Sistema de Alarme e DetecÃ§Ã£o de IncÃªndio</h2>
-<p>O alarme Ã© o que permite a evacuaÃ§Ã£o precoce, antes que o fogo se alastre. A NBR 17240 classifica os sistemas em categorias, exigindo detectores automÃ¡ticos (fumaÃ§a, calor ou chama) e acionadores manuais distribuÃ­dos estrategicamente.</p>
-<h2 id="sinalizacao">4. SinalizaÃ§Ã£o de EmergÃªncia</h2>
-<p>A NBR 13434 define todos os pictogramas, cores e dimensionamentos para placas de saÃ­da de emergÃªncia, rotas de fuga, localizaÃ§Ã£o de equipamentos e proibiÃ§Ãµes. Uma sinalizaÃ§Ã£o correta permite que qualquer pessoa identifique instintivamente o caminho de saÃ­da.</p>
-<h2 id="iluminacao">5. IluminaÃ§Ã£o de EmergÃªncia</h2>
-<p>Em um incÃªndio, a fumaÃ§a e cortes de energia transformam qualquer ambiente em um labirinto. A iluminaÃ§Ã£o de emergÃªncia, regulamentada pela NBR 10898, deve garantir mÃ­nimo de 3 lux nas rotas de fuga por atÃ© 2 horas apÃ³s a falta de energia.</p>
     `
   },
   {
     slug: "primeiros-socorros-ambiente-corporativo",
     title: "Primeiros Socorros no Trabalho: O Procedimento Passo a Passo",
-    excerpt: "AlÃ©m do combate Ã s chamas, a brigada deve dominar o Atendimento PrÃ©-Hospitalar (APH). Saiba como agir em casos de parada cardiorrespiratÃ³ria e queimaduras.",
-    category: "SaÃºde & Vida",
+    excerpt: "Além do combate às chamas, a brigada deve dominar o Atendimento Pré-Hospitalar (APH). Saiba como agir em casos de parada cardiorrespiratória e queimaduras.",
+    category: "Saúde & Vida",
     date: "15 de Julho, 2024",
     readTime: "7 min de leitura",
     author: "Dra. Beatriz Santos",
-    authorRole: "MÃ©dica do Trabalho, Especialista em APH",
-    authorBio: "MÃ©dica do trabalho com residÃªncia em medicina de urgÃªncia e emergÃªncia. Desenvolve protocolos de APH para brigadas corporativas e treina equipes em grandes empresas do setor industrial.",
+    authorRole: "Médica do Trabalho, Especialista em APH",
+    authorBio: "Médica do trabalho com residência em medicina de urgência e emergência. Desenvolve protocolos de APH para brigadas corporativas e treina equipes em grandes empresas do setor industrial.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80",
-    imageCaption: "SimulaÃ§Ã£o de RCP (ressuscitaÃ§Ã£o cardiopulmonar) em treinamento de primeiros socorros corporativo.",
+    imageCaption: "Simulação de RCP (ressuscitação cardiopulmonar) em treinamento de primeiros socorros corporativo.",
     tags: ["Primeiros Socorros", "APH", "RCP", "DEA", "Queimaduras"],
     sections: [
       { id: "avalie-cena", title: "Avalie a Cena Antes de Tudo" },
@@ -1454,67 +1395,242 @@ Sua empresa precisa de adequação de equipamentos contra incêndio e treinament
     ],
     content: `
 <h2 id="avalie-cena">Avalie a Cena Antes de Tudo</h2>
-<p>A primeira regra do APH Ã©: <strong>nÃ£o crie uma segunda vÃ­tima</strong>. Antes de se aproximar, certifique-se de que a cena Ã© segura â€” sem risco de colapso estrutural, fios expostos, vazamentos de gÃ¡s ou outros perigos imediatos.</p>
-<p>Somente apÃ³s garantir a seguranÃ§a do ambiente, inicie a abordagem: <strong>Consciente? â†’ Respira? â†’ Tem pulso?</strong></p>
+<p>A primeira regra do APH é: <strong>não crie uma segunda vítima</strong>. Antes de se aproximar, certifique-se de que a cena é segura — sem risco de colapso estrutural, fios expostos, vazamentos de gás ou outros perigos imediatos.</p>
+<p>Somente após garantir a segurança do ambiente, inicie a abordagem: <strong>Consciente? → Respira? → Tem pulso?</strong></p>
 <blockquote class="pull-quote">
-  <p>"Cada minuto sem RCP reduz em 10% as chances de sobrevivÃªncia de uma parada cardiorrespiratÃ³ria. A brigada nÃ£o espera â€” ela age."</p>
-  <cite>â€” Dra. Beatriz Santos</cite>
+  <p>"Cada minuto sem RCP reduz em 10% as chances de sobrevivência de uma parada cardiorrespiratória. A brigada não espera — ela age."</p>
+  <cite>— Dra. Beatriz Santos</cite>
 </blockquote>
-<h2 id="rcp">Protocolo de RCP (RessuscitaÃ§Ã£o Cardiopulmonar)</h2>
-<p>Se a vÃ­tima estÃ¡ inconsciente, nÃ£o responde e nÃ£o apresenta respiraÃ§Ã£o normal, inicie a RCP imediatamente:</p>
+<h2 id="rcp">Protocolo de RCP (Ressuscitação Cardiopulmonar)</h2>
+<p>Se a vítima está inconsciente, não responde e não apresenta respiração normal, inicie a RCP imediatamente:</p>
 <ul>
-  <li>Posicione a vÃ­tima em superfÃ­cie rÃ­gida e plana.</li>
-  <li>Entrelace as mÃ£os e posicione o calcanhar da mÃ£o no centro do tÃ³rax.</li>
-  <li>Realize 30 compressÃµes torÃ¡cicas em ritmo de 100â€“120 por minuto, com profundidade de 5â€“6 cm.</li>
-  <li>ApÃ³s 30 compressÃµes, realize 2 ventilaÃ§Ãµes de resgate (com barreira de proteÃ§Ã£o).</li>
-  <li>Continue o ciclo de 30:2 atÃ© a chegada do SAMU ou disponibilidade do DEA.</li>
+  <li>Posicione a vítima em superfície rígida e plana.</li>
+  <li>Entrelace as mãos e posicione o calcanhar da mão no centro do tórax.</li>
+  <li>Realize 30 compressões torácicas em ritmo de 100–120 por minuto, com profundidade de 5–6 cm.</li>
+  <li>Após 30 compressões, realize 2 ventilações de resgate (com barreira de proteção).</li>
+  <li>Continue o ciclo de 30:2 até a chegada do SAMU ou disponibilidade do DEA.</li>
 </ul>
-<h2 id="dea">Uso do DEA (Desfibrilador Externo AutomÃ¡tico)</h2>
-<p>Ligue o DEA imediatamente quando disponÃ­vel e siga as instruÃ§Ãµes de voz do aparelho. Coloque os eletrodos conforme os diagramas e aguarde a anÃ¡lise do ritmo cardÃ­aco. Se o choque for indicado, afaste todos e acione o botÃ£o. ApÃ³s o choque, retome a RCP imediatamente.</p>
+<h2 id="dea">Uso do DEA (Desfibrilador Externo Automático)</h2>
+<p>Ligue o DEA imediatamente quando disponível e siga as instruções de voz do aparelho. Coloque os eletrodos conforme os diagramas e aguarde a análise do ritmo cardíaco. Se o choque for indicado, afaste todos e acione o botão. Após o choque, retome a RCP imediatamente.</p>
 <h2 id="queimaduras">Tratamento Inicial de Queimaduras</h2>
-<p>Para queimaduras de 1Âº e 2Âº grau: resfrie a Ã¡rea com Ã¡gua corrente em temperatura ambiente por 10 a 20 minutos. Nunca use gelo, creme dental ou qualquer outra substÃ¢ncia. Cubra com curativo estÃ©ril e nÃ£o estoure bolhas â€” elas protegem contra infecÃ§Ã£o.</p>
-<p>Para queimaduras de 3Âº grau ou com Ã¡rea superior a 10% da superfÃ­cie corporal, acione o SAMU (192) imediatamente.</p>
+<p>Para queimaduras de 1º e 2º grau: resfrie a área com água corrente em temperatura ambiente por 10 a 20 minutos. Nunca use gelo, creme dental ou qualquer outra substância. Cubra com curativo estéril e não estoure bolhas — elas protegem contra infecção.</p>
+<p>Para queimaduras de 3º grau ou com área superior a 10% da superfície corporal, acione o SAMU (192) imediatamente.</p>
 <h2 id="quando-chamar">Quando Acionar o SAMU (192)</h2>
-<p>Acione o SAMU em qualquer situaÃ§Ã£o: vÃ­tima inconsciente, dificuldade respiratÃ³ria grave, suspeita de fratura na coluna, queimaduras extensas, intoxicaÃ§Ã£o por fumaÃ§a ou gases â€” ou sempre que houver dÃºvida sobre a gravidade do quadro.</p>
+<p>Acione o SAMU em qualquer situação: vítima inconsciente, dificuldade respiratória grave, suspeita de fratura na coluna, queimaduras extensas, intoxicação por fumaça ou gases — ou sempre que houver dúvida sobre a gravidade do quadro.</p>
     `
   },
   {
     slug: "brigada-voluntaria-vs-bombeiro-civil",
-    title: "Brigada VoluntÃ¡ria vs. Bombeiro Civil: Qual a DiferenÃ§a Legal?",
-    excerpt: "EsclareÃ§a as diferenÃ§as de formaÃ§Ã£o, atuaÃ§Ã£o e dimensionamento exigidos por lei para escolher o modelo ideal para seu estabelecimento.",
-    category: "LegislaÃ§Ã£o & Normas",
+    title: "Brigada Voluntária vs Bombeiro Civil: Diferenças e Obrigações",
+    excerpt: "Entenda as diferenças legais entre brigada voluntária e bombeiro civil, quando cada modelo é exigido e qual se aplica à sua empresa. Guia prático baseado na NBR 14276 e Lei 11.901/2009.",
+    category: "Legislação & Normas",
     date: "02 de Julho, 2024",
-    readTime: "4 min de leitura",
+    readTime: "8 min de leitura",
     author: "Eng. Roberto Silva",
-    authorRole: "Especialista em ProteÃ§Ã£o Contra IncÃªndio, CREA-SP",
-    authorBio: "Engenheiro de seguranÃ§a com mais de 15 anos de experiÃªncia em projetos de proteÃ§Ã£o contra incÃªndio em grandes indÃºstrias e condomÃ­nios logÃ­sticos.",
+    authorRole: "Especialista em Proteção Contra Incêndio, CREA-SP",
+    authorBio: "Engenheiro de segurança com mais de 15 anos de experiência em projetos de proteção contra incêndio em grandes indústrias e condomínios logísticos. Já dimensionou brigadas para mais de 200 empresas em Santa Catarina e Paraná.",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80",
-    imageCaption: "Formatura de brigadistas corporativos apÃ³s conclusÃ£o de treinamento de formaÃ§Ã£o.",
-    tags: ["Brigada VoluntÃ¡ria", "Bombeiro Civil", "Lei 11.901/2009", "NBR 14276"],
+    imageCaption: "Brigadistas corporativos após conclusão de treinamento de formação pela NBR 14276.",
+    tags: [
+      "brigada voluntária",
+      "bombeiro civil",
+      "Lei 11.901/2009",
+      "NBR 14276",
+      "diferença brigada bombeiro civil",
+      "obrigatoriedade bombeiro civil",
+      "treinamento brigada de incêndio",
+    ],
     sections: [
-      { id: "brigada-voluntaria", title: "O que Ã© a Brigada VoluntÃ¡ria?" },
-      { id: "bombeiro-civil", title: "O que Ã© o Bombeiro Civil?" },
-      { id: "diferencas", title: "Principais DiferenÃ§as" },
-      { id: "qual-escolher", title: "Qual Modelo para sua Empresa?" },
+      { id: "brigada-voluntaria", title: "O que é a Brigada Voluntária?" },
+      { id: "bombeiro-civil", title: "O que é o Bombeiro Civil?" },
+      { id: "diferencas", title: "Diferenças Legais e Práticas" },
+      { id: "quando-obrigatorio", title: "Quando o Bombeiro Civil é Obrigatório?" },
+      { id: "qual-escolher", title: "Qual Modelo se Aplica à Sua Empresa?" },
+      { id: "faq", title: "Perguntas Frequentes" },
     ],
     content: `
-<h2 id="brigada-voluntaria">O que Ã© a Brigada VoluntÃ¡ria?</h2>
-<p>A brigada de incÃªndio voluntÃ¡ria Ã© formada por colaboradores da prÃ³pria empresa que, de forma voluntÃ¡ria, recebem treinamento especÃ­fico para atuaÃ§Ã£o em emergÃªncias. Ã‰ regulamentada pela <strong>NBR 14276</strong> e destina-se a ser a primeira resposta antes da chegada do Corpo de Bombeiros. Seus membros nÃ£o sÃ£o remunerados especificamente pela funÃ§Ã£o â€” ela Ã© exercida em adiÃ§Ã£o Ã s funÃ§Ãµes normais de trabalho.</p>
-<h2 id="bombeiro-civil">O que Ã© o Bombeiro Civil?</h2>
-<p>O Bombeiro Civil Ã© um profissional contratado especificamente para combate a incÃªndio, salvamento e primeiros socorros. Ã‰ regulamentado pela <strong>Lei Federal 11.901/2009</strong>, que exige formaÃ§Ã£o profissional especÃ­fica, jornada dedicada e remuneraÃ§Ã£o diferenciada. Ã‰ obrigatÃ³rio em estÃ¡dios, hospitais com mais de 200 leitos, aeroportos e refinarias.</p>
-<blockquote class="pull-quote">
-  <p>"Confundir Brigada VoluntÃ¡ria com Bombeiro Civil Ã© um erro de conformidade que pode custar caro â€” tanto em autuaÃ§Ãµes quanto em uma emergÃªncia real."</p>
-  <cite>â€” Eng. Roberto Silva</cite>
-</blockquote>
-<h2 id="diferencas">Principais DiferenÃ§as</h2>
+<p>Uma das dúvidas mais comuns que encontramos nas visitas técnicas às empresas é essa: <strong>preciso de bombeiro civil ou basta a brigada voluntária?</strong> A confusão é compreensível — os dois modelos atuam na prevenção e no combate a incêndios, mas são regulamentados por legislações completamente diferentes, com exigências, custos e perfis de atuação distintos.</p>
+
+<p>Cometer esse erro pode custar caro. Uma empresa que deveria ter bombeiro civil operando com apenas brigada voluntária está em desconformidade legal — sujeita a autuações, embargo e, em caso de sinistro, à responsabilização civil e criminal dos gestores.</p>
+
+<h2 id="brigada-voluntaria">O que é a Brigada de Incêndio Voluntária?</h2>
+
+<p>A brigada de incêndio voluntária é formada por <strong>colaboradores da própria empresa</strong> que, além de suas funções normais, recebem treinamento específico para atuar em situações de emergência — combate a princípios de incêndio, evacuação e primeiros socorros. Não há remuneração adicional específica pela função de brigadista.</p>
+
+<p>Ela é regulamentada pela <strong>NBR 14276:2006</strong> (ABNT), que define:</p>
 <ul>
-  <li><strong>VÃ­nculo:</strong> Brigadista voluntÃ¡rio Ã© colaborador com treinamento adicional; Bombeiro Civil Ã© profissional contratado para a funÃ§Ã£o.</li>
-  <li><strong>RegulamentaÃ§Ã£o:</strong> Brigada: NBR 14276; Bombeiro Civil: Lei 11.901/2009.</li>
-  <li><strong>Jornada:</strong> Brigadista atua em emergÃªncias no horÃ¡rio normal; Bombeiro Civil tem jornada dedicada Ã  seguranÃ§a.</li>
-  <li><strong>Custo:</strong> Brigada Ã© mais econÃ´mica; Bombeiro Civil tem custo de profissional especializado.</li>
+  <li>O número mínimo de brigadistas por turno, com base na área, ocupação e risco da edificação</li>
+  <li>A carga horária de treinamento teórico e prático</li>
+  <li>Os equipamentos que cada brigadista deve saber operar</li>
+  <li>A periodicidade de reciclagem (anual)</li>
 </ul>
-<h2 id="qual-escolher">Qual Modelo Ã© Adequado para sua Empresa?</h2>
-<p>Para a maioria das empresas â€” comÃ©rcio, escritÃ³rios, fÃ¡bricas de mÃ©dio porte e galpÃµes â€”, a <strong>Brigada VoluntÃ¡ria bem treinada Ã© suficiente e legalmente adequada</strong>. O Bombeiro Civil Ã© exigido apenas para as categorias especÃ­ficas da Lei 11.901/2009. Consulte sempre um especialista ou o Corpo de Bombeiros do seu estado.</p>
+
+<p>Na prática do nosso dia a dia de treinamentos, a brigada voluntária é o modelo adequado para a grande maioria das empresas brasileiras: comércio, escritórios, galpões, fábricas de pequeno e médio porte, condomínios residenciais e hospitalares de pequeno porte.</p>
+
+<blockquote class="pull-quote">
+  <p>"A brigada voluntária não é uma solução de segunda categoria. Quando bem treinada e dimensionada pela NBR 14276, ela é a resposta certa para a esmagadora maioria dos estabelecimentos comerciais e industriais do país."</p>
+  <cite>— Eng. Roberto Silva, CREA-SP</cite>
+</blockquote>
+
+<h2 id="bombeiro-civil">O que é o Bombeiro Civil?</h2>
+
+<p>O Bombeiro Civil é um <strong>profissional contratado exclusivamente para a função de segurança contra incêndio</strong>. Não é colaborador com dupla função — é um cargo dedicado, com carteira assinada, jornada específica de trabalho e piso salarial definido em convenção coletiva.</p>
+
+<p>A profissão é regulamentada pela <strong>Lei Federal 11.901, de 12 de janeiro de 2009</strong>. Para exercê-la, o profissional precisa:</p>
+<ul>
+  <li>Ter concluído curso específico de formação de Bombeiro Civil</li>
+  <li>Ser registrado no Ministério do Trabalho e Emprego</li>
+  <li>Apresentar Certificado de Qualificação Profissional (CQP) emitido por entidade credenciada</li>
+  <li>Cumprir jornada de trabalho em escala de plantão dedicada à segurança</li>
+</ul>
+
+<h2 id="diferencas">Diferenças Legais e Práticas</h2>
+
+<p>Resumindo lado a lado, as diferenças são estruturais — não apenas de nomenclatura:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Critério</th>
+      <th>Brigada Voluntária</th>
+      <th>Bombeiro Civil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Base legal</strong></td>
+      <td>NBR 14276 (ABNT)</td>
+      <td>Lei Federal 11.901/2009</td>
+    </tr>
+    <tr>
+      <td><strong>Vínculo</strong></td>
+      <td>Colaborador com treinamento adicional</td>
+      <td>Profissional contratado para a função</td>
+    </tr>
+    <tr>
+      <td><strong>Jornada</strong></td>
+      <td>Atua na emergência dentro do horário normal</td>
+      <td>Escala de plantão dedicada à segurança</td>
+    </tr>
+    <tr>
+      <td><strong>Remuneração</strong></td>
+      <td>Sem adicional obrigatório pela função</td>
+      <td>Piso salarial definido em CCT</td>
+    </tr>
+    <tr>
+      <td><strong>Custo típico</strong></td>
+      <td>Custo do treinamento (por turma)</td>
+      <td>Custo de CLT + benefícios + plantões</td>
+    </tr>
+    <tr>
+      <td><strong>Aplicação</strong></td>
+      <td>Maioria dos estabelecimentos</td>
+      <td>Estabelecimentos específicos da Lei</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="quando-obrigatorio">Quando o Bombeiro Civil é Obrigatório?</h2>
+
+<p>A Lei 11.901/2009 é clara — o Bombeiro Civil é exigido em locais de <strong>alto risco e grande concentração de pessoas</strong>. Os estabelecimentos que precisam obrigatoriamente de Bombeiro Civil incluem:</p>
+
+<ul>
+  <li>Estádios, ginásios e arenas esportivas com capacidade acima de 1.500 pessoas</li>
+  <li>Hospitais, clínicas e casas de saúde com mais de 200 leitos</li>
+  <li>Aeroportos nacionais e internacionais</li>
+  <li>Refinarias, petroquímicas e plataformas de petróleo</li>
+  <li>Indústrias químicas e de gás de alto risco</li>
+  <li>Shopping centers com área acima de 30.000 m²</li>
+  <li>Terminais portuários e retroportos com movimentação de carga perigosa</li>
+</ul>
+
+<p>Fora dessas categorias específicas, a brigada voluntária dimensionada pela NBR 14276 — com treinamento regular e reciclagem anual — é <strong>suficiente e legalmente adequada</strong>.</p>
+
+<h2 id="qual-escolher">Qual Modelo se Aplica à Sua Empresa?</h2>
+
+<p>A resposta prática: se seu estabelecimento não está na lista acima, você precisa de <strong>brigada voluntária</strong>. O erro mais comum que vemos não é a empresa usar um modelo errado — é a empresa <em>não ter nenhum dos dois</em>. Operar sem brigada formada e sem treinamento registrado coloca a empresa em descumprimento da NR-23 e das Instruções Técnicas estaduais.</p>
+
+<p>Se você gerencia um hospital de grande porte, um shopping ou uma refinaria e ainda não tem um Bombeiro Civil registrado, a situação é grave — o risco de autuação e de responsabilização em caso de acidente é real e imediato.</p>
+
+<p>Não tem certeza do que sua empresa precisa? A análise correta parte do laudo de vistoria do Corpo de Bombeiros e da IT (Instrução Técnica) do seu estado. <a href="/contato">Nossos especialistas fazem esse diagnóstico</a> e entregam o plano de adequação completo — da brigada ao AVCB.</p>
+
+<div class="faq-section">
+<h2 id="faq">Perguntas Frequentes</h2>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qual a diferença entre brigada voluntária e bombeiro civil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A brigada voluntária é formada por colaboradores da própria empresa treinados pela NBR 14276, sem remuneração extra pela função. O bombeiro civil é um profissional contratado exclusivamente para segurança contra incêndio, regulamentado pela Lei Federal 11.901/2009, com jornada dedicada e piso salarial definido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Minha empresa é obrigada a ter bombeiro civil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Somente se seu estabelecimento estiver nas categorias da Lei 11.901/2009: estádios com mais de 1.500 pessoas, hospitais com mais de 200 leitos, aeroportos, refinarias, shopping centers acima de 30.000 m² e indústrias químicas de alto risco. Para as demais empresas, a brigada voluntária é o modelo exigido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A brigada voluntária substitui o Corpo de Bombeiros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A brigada voluntária é a primeira resposta — ela age nos primeiros minutos do incêndio, antes da chegada do Corpo de Bombeiros. O objetivo é controlar princípios de incêndio e evacuar o local com segurança, não substituir o trabalho dos bombeiros militares."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Com que frequência a brigada voluntária precisa ser treinada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A NBR 14276 exige reciclagem anual para todos os membros da brigada. A formação inicial tem carga horária variável conforme o grau de risco da edificação — entre 16 e 40 horas de treinamento teórico e prático."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O bombeiro civil pode fazer o papel de brigadista voluntário?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim — e com mais qualificação. Um bombeiro civil atende aos requisitos da brigada voluntária. Porém, para os estabelecimentos que exigem apenas brigada voluntária, contratar bombeiro civil é um gasto além do necessário para a conformidade legal."
+      }
+    }
+  ]
+}
+</script>
+
+<div class="faq-item">
+<h3>Qual a diferença entre brigada voluntária e bombeiro civil?</h3>
+<p>A brigada voluntária é formada por colaboradores da própria empresa treinados pela NBR 14276, sem remuneração extra pela função. O bombeiro civil é um profissional contratado exclusivamente para segurança contra incêndio, regulamentado pela Lei Federal 11.901/2009, com jornada dedicada e piso salarial definido.</p>
+</div>
+
+<div class="faq-item">
+<h3>Minha empresa é obrigada a ter bombeiro civil?</h3>
+<p>Somente se seu estabelecimento estiver nas categorias da Lei 11.901/2009: estádios com mais de 1.500 pessoas, hospitais com mais de 200 leitos, aeroportos, refinarias, shopping centers acima de 30.000 m² e indústrias químicas de alto risco. Para as demais empresas, a brigada voluntária é o modelo exigido.</p>
+</div>
+
+<div class="faq-item">
+<h3>A brigada voluntária substitui o Corpo de Bombeiros?</h3>
+<p>Não. A brigada voluntária é a primeira resposta — ela age nos primeiros minutos do incêndio, antes da chegada do Corpo de Bombeiros. O objetivo é controlar princípios de incêndio e evacuar o local com segurança, não substituir o trabalho dos bombeiros militares.</p>
+</div>
+
+<div class="faq-item">
+<h3>Com que frequência a brigada voluntária precisa ser treinada?</h3>
+<p>A NBR 14276 exige reciclagem anual para todos os membros da brigada. A formação inicial tem carga horária variável conforme o grau de risco da edificação — entre 16 e 40 horas de treinamento teórico e prático.</p>
+</div>
+
+<div class="faq-item">
+<h3>O bombeiro civil pode fazer o papel de brigadista voluntário?</h3>
+<p>Sim — e com mais qualificação. Um bombeiro civil atende aos requisitos da brigada voluntária. Porém, para os estabelecimentos que exigem apenas brigada voluntária, contratar bombeiro civil é um gasto além do necessário para a conformidade legal.</p>
+</div>
+</div>
     `
   },
   {
